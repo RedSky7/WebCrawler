@@ -189,7 +189,7 @@ public class WebCrawler {
 
                     // Edit page as HTML
                     DatabaseHandler.editPage(pageId,
-                            duplicate ? DatabaseHandler.PAGE_TYPE_CODE.DUPLICATE : DatabaseHandler.PAGE_TYPE_CODE.HTML,
+                            duplicate ? DatabaseHandler.PAGE_TYPE_CODE.DUPLICATE : DatabaseHandler.getPageTypeCode(urlToVisit.getUrl()),
                             duplicate ? null : browser.doc.getTextContent(),
                             userAgent.response.getStatus(),
                             Timestamp.from(Instant.now()));

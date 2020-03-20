@@ -2,6 +2,7 @@ package com.company;
 
 import org.apache.commons.lang3.ObjectUtils;
 
+import javax.swing.text.html.HTML;
 import java.sql.*;
 
 public class DatabaseHandler {
@@ -234,6 +235,19 @@ public class DatabaseHandler {
         DOCX,
         PPT,
         PPTX
+    }
+
+    public static PAGE_TYPE_CODE getPageTypeCode(String url) {
+        String[] urlComponents = url.split(".");
+        switch (urlComponents[urlComponents.length - 1]) {
+            case "pdf":
+            case "doc":
+            case "docx":
+            case "xlsx":
+                return PAGE_TYPE_CODE.BINARY;
+            default:
+                return PAGE_TYPE_CODE.HTML;
+        }
     }
 
     public enum PAGE_TYPE_CODE {
