@@ -1,0 +1,6 @@
+cd C:\Program Files\PostgreSQL\12\bin
+pg_ctl.exe restart -D "..\data"
+psql -U postgres crawldb
+
+TRUNCATE TABLE crawldb.site RESTART IDENTITY CASCADE;
+\q

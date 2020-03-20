@@ -1,0 +1,2610 @@
+"C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2019.2.3\jbr\bin\java.exe" "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2019.2.3\lib\idea_rt.jar=52148:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2019.2.3\bin" -Dfile.encoding=UTF-8 -classpath D:\Documents\FRI\IEPS\out\production\IEPS;D:\Documents\FRI\IEPS\libs\jauntium0.9.jar;D:\Documents\FRI\IEPS\libs\client-combined-3.141.59.jar;D:\Documents\FRI\IEPS\libs\jaunt1.6.0.jar;D:\Documents\FRI\IEPS\libs\libs\byte-buddy-1.8.15.jar;D:\Documents\FRI\IEPS\libs\libs\commons-exec-1.3.jar;D:\Documents\FRI\IEPS\libs\libs\guava-25.0-jre.jar;D:\Documents\FRI\IEPS\libs\libs\okhttp-3.11.0.jar;D:\Documents\FRI\IEPS\libs\libs\okio-1.14.0.jar;D:\Documents\FRI\IEPS\libs\robots-1.4.3.jar;D:\Documents\FRI\IEPS\libs\commons-lang3-3.9.jar;D:\Documents\FRI\IEPS\libs\postgresql-42.2.10.jar com.company.WebCrawler
+HASH = 128, 128
+main: siteId = 1
+main: siteId = 2
+main: siteId = 3
+main: siteId = 4
+Starting ChromeDriver 80.0.3987.106 (f68069574609230cf9b635cd784cfb1bf81bb53a-refs/branch-heads/3987@{#882}) on port 37697
+Only local connections are allowed.
+Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
+[1584640816.995][WARNING]: Timed out connecting to Chrome, retrying...
+Mar 19, 2020 7:00:19 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+[1584640821.079][WARNING]: Timed out connecting to Chrome, retrying...
+frontier size = 4
+link found
+run: url = http://gov.si
+-------------------------------------
+Starting ChromeDriver 80.0.3987.106 (f68069574609230cf9b635cd784cfb1bf81bb53a-refs/branch-heads/3987@{#882}) on port 14894
+Only local connections are allowed.
+Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
+robots = User-agent: *
+Disallow: /admin
+Disallow: /resources
+Disallow: /pomoc
+
+Sitemap: https://www.gov.si/sitemap.xml
+
+
+
+[1584640825.640][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640825.976][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640826.092][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640826.193][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640826.247][WARNING]: Timed out connecting to Chrome, retrying...
+[1584640826.299][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640826.399][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640826.500][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640826.601][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640826.726][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640826.827][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640826.928][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640827.028][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640827.129][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640827.230][SEVERE]: Timed out receiving message from renderer: 0.100
+Mar 19, 2020 7:00:28 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+[1584640830.272][WARNING]: Timed out connecting to Chrome, retrying...
+frontier size = 3
+link found
+run: url = http://evem.gov.si
+-------------------------------------
+Starting ChromeDriver 80.0.3987.106 (f68069574609230cf9b635cd784cfb1bf81bb53a-refs/branch-heads/3987@{#882}) on port 8598
+Only local connections are allowed.
+Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
+File robots.txt not found for domainName = evem.gov.si
+frontierExpansion size = 37
+run: addPage url = https://www.gov.si/podrocja/obramba-varnost-in-javni-red/
+run: addPage url = https://e-uprava.gov.si/
+run: addPage url = https://www.gov.si/podrocja/promet-in-energetika/
+run: addPage url = https://www.gov.si/podrocja/zdravje/
+run: addPage url = https://www.gov.si/hu/
+run: addPage url = https://www.gov.si/zbirke/drzave/
+run: addPage url = https://www.gov.si/podrocja/podjetnistvo-in-gospodarstvo/
+run: addPage url = https://www.gov.si/podrocja/socialna-varnost/
+run: addPage url = https://www.gov.si/zbirke/javne-objave/
+run: addPage url = https://www.gov.si/podrocja/kmetijstvo-gozdarstvo-in-prehrana/
+run: addPage url = https://www.gov.si/iskanje/
+run: addPage url = https://www.gov.si/drzavni-organi/
+run: addPage url = https://www.gov.si/zbirke/
+run: addPage url = https://www.gov.si/o-spletiscu/
+run: addPage url = https://www.gov.si/zbirke/delovna-mesta/
+run: addPage url = https://www.gov.si/podrocja/okolje-in-prostor/
+run: addPage url = https://www.gov.si/podrocja/kultura/
+run: addPage url = https://www.gov.si/drzavni-organi/vlada/seje-vlade/gradiva-v-obravnavi/
+run: addPage url = https://www.gov.si/podrocja/zunanje-zadeve/
+run: addPage url = https://www.gov.si/
+run: addPage url = https://www.gov.si/podrocja/drzava-in-druzba/
+run: addPage url = https://e-uprava.gov.si/drzava-in-druzba/e-demokracija
+run: addPage url = https://www.gov.si/novice/
+run: addPage url = https://www.gov.si/teme/drzavni-prazniki-in-dela-prosti-dnevi/
+run: addPage url = https://www.gov.si/podrocja/izobrazevanje-znanost-in-sport/
+run: addPage url = https://www.gov.si/podrocja/finance-in-davki/
+run: addPage url = http://evem.gov.si/info/sistem-spot/
+run: addPage url = https://www.gov.si/en/
+run: addPage url = https://www.gov.si/sodelujte/
+run: addPage url = https://www.gov.si/podrocja/zaposlovanje-delo-in-upokojitev/
+run: addPage url = https://www.gov.si/it/
+run: addPage url = https://www.gov.si/podrocja/pravna-drzava-in-pravosodje/
+run: addPage url = https://www.gov.si/drzavni-organi/vlada/
+run: addPage url = https://www.gov.si/podrocja/druzina-otroci-in-zakonska-zveza/
+run: addPage url = https://www.gov.si/teme/koronavirus/
+run: addPage url = https://www.gov.si/dogodki/
+run: addPage url = https://www.gov.si/podrocja/
+frontier size = 39
+link found
+run: url = http://e-uprava.gov.si
+-------------------------------------
+robots = User-agent: *
+Disallow: /e-uprava/oglasnadeska.html
+Disallow: /*?view_mode*
+Disallow: /*?bold_mode*
+Disallow: /*?caps_mode*
+
+
+
+[1584640835.049][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640835.150][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640835.252][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640835.383][WARNING]: Timed out connecting to Chrome, retrying...
+[1584640835.396][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640835.497][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640835.597][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640835.799][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640836.009][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640836.111][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640836.272][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640836.373][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640836.474][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640836.576][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640836.677][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640836.779][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640836.881][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640836.982][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640837.084][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640837.185][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640837.286][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640837.387][SEVERE]: Timed out receiving message from renderer: 0.100
+Mar 19, 2020 7:00:37 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+[1584640837.488][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640837.589][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640837.700][SEVERE]: Timed out receiving message from renderer: 0.100
+setUrl: exception = No such host is known (si-ca.si)
+BAD =
+frontierExpansion size = 58
+run: addPage url = http://evem.gov.si/info/zacenjam/dovoljenja-in-pogoji/
+run: addPage url = http://evem.gov.si/info/poslujem/
+run: addPage url = http://evem.gov.si/evem/cms/news/detailEugo.evem
+run: addPage url = http://evem.gov.si/info/poslujem/zaposlovanje/pogodba-o-zaposlitvi-in-postopek-zaposlitve/
+run: addPage url = http://evem.gov.si/info/kadrovski-vmesnik/
+run: addPage url = http://evem.gov.si/info/podrocja/sektor/12022/prikaziSektor/
+run: addPage url = http://evem.gov.si/info/podrocja/sektor/12055/prikaziSektor/
+run: addPage url = https://evem.gov.si/evem/sicas/uporabnik/prijava.evem
+run: addPage url = http://evem.gov.si/info/pogoji-uporabe/
+run: addPage url = http://evem.gov.si/info/poslujem/davki/davek-na-dodano-vrednost-ddv/
+run: addPage url = http://evem.gov.si/info/pomoc-in-podpora/
+run: addPage url = http://evem.gov.si/info/poslujem/davki/vpis-v-davcni-register/
+run: addPage url = http://evem.gov.si/info/zacenjam/digitalna-potrdila/
+run: addPage url = https://evem.gov.si/evem/cert/uporabnik/prijava.evem
+run: addPage url = http://evem.gov.si/info/razmisljam/drzavne-spodbude-za-zagon/
+run: addPage url = http://evem.gov.si/info/podrocja/sektor/12024/prikaziSektor/
+run: addPage url = http://evem.gov.si/info/pomoc-in-podpora/vsebinska-podpora/
+run: addPage url = http://evem.gov.si/info/podrocja/sektor/12023/prikaziSektor/
+run: addPage url = http://evem.gov.si/info/poslujem/podpora-drzave-pri-razvoju/
+run: addPage url = http://evem.gov.si/info/piskotki
+run: addPage url = http://evem.gov.si/info/poslujem/zaposlovanje/pogodba-o-zaposlitvi-in-postopek-zaposlitve/prijava-v-obvezna-socialna-zavarovanja/
+run: addPage url = http://evem.gov.si/info/zapiram/
+run: addPage url = http://evem.gov.si/info/poslujem/davki/davek-od-dohodka-iz-dejavnosti/
+run: addPage url = http://evem.gov.si/info/vec-dogodkov
+run: addPage url = http://evem.gov.si/info/o-portalu/
+run: addPage url = https://evem.gov.si/evem/uporabnik/preusmeriNaPostopek.evem
+run: addPage url = http://evem.gov.si/info/zacenjam/poslovni-prostor/
+run: addPage url = http://evem.gov.si/info/podrocja/sektor/12056/prikaziSektor/
+run: addPage url = http://evem.gov.si/info/info/e-postopki/
+run: addPage url = http://evem.gov.si/info/tiskani-obrazci/
+run: addPage url = http://evem.gov.si/info/poslujem/vodenje-poslovnih-knjig/
+run: addPage url = http://evem.gov.si/evem/infoNovice.evem
+run: addPage url = http://evem.gov.si/info/piskotki/
+run: addPage url = http://evem.gov.si/info/poslujem/zaposlovanje/
+run: addPage url = http://evem.gov.si/info/poslujem/odgovorno-poslovanje/
+run: addPage url = http://evem.gov.si/info/poslujem/davki/prispevki-za-socialno-varnost/
+run: addPage url = http://evem.gov.si/info/zacenjam/zelim-ustanoviti-podjetje/
+run: addPage url = http://evem.gov.si/info/poslujem/zaposlovanje/avtorska-pogodba/
+run: addPage url = http://evem.gov.si/info/razmisljam/poslovni-nacrt/
+run: addPage url = http://evem.gov.si/info/zacenjam/
+run: addPage url = http://evem.gov.si/info/poslujem/davki/
+run: addPage url = http://evem.gov.si/info/podrocja/sektor/12021/prikaziSektor/
+run: addPage url = http://evem.gov.si/evem/
+run: addPage url = http://evem.gov.si/info/razmisljam/
+run: addPage url = http://evem.gov.si/info/zapiram/zapiranje-gospodarske-druzbe/
+run: addPage url = http://evem.gov.si/info/vmesnik-nadomestila/
+run: addPage url = http://evem.gov.si/info/poslujem/davki/davek-od-dohodka-pravnih-oseb/
+run: addPage url = http://evem.gov.si/info/koticek-za-razvijalce/
+run: addPage url = http://evem.gov.si/info/podrocja/sektor/12020/prikaziSektor/
+run: addPage url = http://evem.gov.si/info/zapiram/zapiranje-sp/
+run: addPage url = http://evem.gov.si/info/pomoc-in-podpora/navodila-za-izvedbo-e-postopkov/
+run: addPage url = http://evem.gov.si/info/razmisljam/poslovna-ideja/
+run: addPage url = http://evem.gov.si/info/poslujem/varnost-in-zdravje-pri-delu/
+run: addPage url = http://evem.gov.si/info/poslujem/zaposlovanje/podjemna-pogodba/
+run: addPage url = http://evem.gov.si/info/pomoc-in-podpora/navodila-za-izvedbo-e-postopkov/pooblascanje-oseb-za-opravljanje-postopkov-prek-portala-e-vem/
+run: addPage url = http://evem.gov.si/info/vec-dogodkov/tiskani-obrazci/
+run: addPage url = http://evem.gov.si/evem/drzavljani/zacetna.evem
+run: addPage url = http://evem.gov.si/info/razmisljam/nacini-opravljanja-dejavnosti/
+frontier size = 96
+link found
+run: url = http://e-prostor.gov.si
+-------------------------------------
+[1584640839.409][WARNING]: Timed out connecting to Chrome, retrying...
+robots = User-Agent: *
+Allow: /
+Disallow: /fileadmin/global/
+Disallow: /fileadmin/user_upload/MVN_obcine_obrazci/
+Disallow: /t3lib/
+Disallow: /nc/
+Disallow: *no_cache*
+Disallow: /*cHash
+Disallow: /typo3/
+Disallow: /urednik/
+Disallow: /typo3conf/
+Disallow: /typo3temp/
+Disallow: /*?id=*
+Disallow: /*&type=98
+Disallow: /*&type=100Sitemap: http://www.e-prostor.gov.si/?eID=dd_googlesitemap
+[1584640841.286][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640841.387][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640841.487][SEVERE]: Timed out receiving message from renderer: 0.100
+frontier size = 95
+link found
+run: url = https://www.gov.si/podrocja/obramba-varnost-in-javni-red/
+-------------------------------------
+Starting ChromeDriver 80.0.3987.106 (f68069574609230cf9b635cd784cfb1bf81bb53a-refs/branch-heads/3987@{#882}) on port 35319
+Only local connections are allowed.
+Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
+[1584640841.588][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640841.689][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640841.789][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640842.063][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640842.163][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640842.267][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640842.381][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640842.482][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640842.583][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640842.684][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640842.785][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640842.885][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640842.986][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640843.087][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640843.188][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640843.582][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640843.682][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640843.783][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640843.883][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640843.985][SEVERE]: Timed out receiving message from renderer: 0.100
+BAD =
+[1584640844.085][SEVERE]: Timed out receiving message from renderer: 0.100
+BAD =
+frontierExpansion size = 48
+run: addPage url = https://e-uprava.gov.si/aktualno/prireditve-in-shodi
+run: addPage url = https://e-uprava.gov.si/podrocja/nepremicnine-in-okolje
+run: addPage url = https://e-uprava.gov.si/pomoc-kontakt/pomoc-pri-uporabi
+run: addPage url = https://e-uprava.gov.si/podrocja/delo-upokojitev
+run: addPage url = https://e-uprava.gov.si/podrocja/drzava-druzba
+run: addPage url = https://e-uprava.gov.si/podrocja/vloge
+run: addPage url = https://e-uprava.gov.si/podrocja/izobrazevanje-kultura
+run: addPage url = https://e-uprava.gov.si/javne-evidence/druge-javne-evidence
+run: addPage url = https://e-uprava.gov.si/podrocja/druzina-otroci-zakonska-zveza
+run: addPage url = https://e-uprava.gov.si/pomoc-kontakt/izjava-o-dostopnosti
+run: addPage url = https://e-uprava.gov.si/aktualno/novice/oddaja-vlog-za-potrdila-iz-kazenske-evidence1
+run: addPage url = https://e-uprava.gov.si/podrocja/podjetnistvo
+run: addPage url = https://e-uprava.gov.si/o-e-upravi/piskotki
+run: addPage url = https://e-uprava.gov.si/it
+run: addPage url = https://e-uprava.gov.si/drzava-in-druzba/anonimne-prijave
+run: addPage url = https://e-uprava.gov.si/javne-evidence/odtujeni-osebni-dokumenti
+run: addPage url = https://e-uprava.gov.si/o-e-upravi/pogoji-uporabe
+run: addPage url = https://e-uprava.gov.si/aktualno/statistika-uporabe
+run: addPage url = https://e-uprava.gov.si/podrocja/druzina-otroci-zakonska-zveza/pravice-prejemki-druzine/otroski-dodatek
+run: addPage url = https://e-uprava.gov.si/aktualno/napovednik
+run: addPage url = https://e-uprava.gov.si/javne-evidence/motorna-vozila
+run: addPage url = https://e-uprava.gov.si/aktualno/novice/porocanje-premozenjskega-stanja
+run: addPage url = https://e-uprava.gov.si/podrocja/drzava-druzba/porocanje-komisiji-za-preprecevanje-korupcije/prijava-premozenjskega-stanja
+run: addPage url = https://e-uprava.gov.si/javne-evidence/prosti-termini
+run: addPage url = https://e-uprava.gov.si/pomoc-kontakt/vodici
+run: addPage url = https://e-uprava.gov.si/pomoc-kontakt/predlogi-uporabnikov
+run: addPage url = https://e-uprava.gov.si/podrocja/promet
+run: addPage url = https://e-uprava.gov.si/pomoc-kontakt/vprasanja-in-mnenja
+run: addPage url = https://e-uprava.gov.si/aktualno/novice/upravni-postopki-na-spletu
+run: addPage url = https://e-uprava.gov.si/podrocja/osebni-dokumenti-potrdila-selitev
+run: addPage url = https://e-uprava.gov.si/en
+run: addPage url = https://e-uprava.gov.si/podrocja/davki
+run: addPage url = https://e-uprava.gov.si/javne-evidence/plovila
+run: addPage url = https://e-uprava.gov.si/drzava-in-druzba/vsebine-prilagojene-gluhim
+run: addPage url = https://e-uprava.gov.si/podrocja/osebni-dokumenti-potrdila-selitev/selitev-prijava-odjava-prebivalisca/prijava-odjava-zacasnega-prebivalisca
+run: addPage url = https://e-uprava.gov.si/podrocja/potovanja-vizumi
+run: addPage url = https://e-uprava.gov.si/moja-euprava
+run: addPage url = https://e-uprava.gov.si/aktualno/novice
+run: addPage url = https://e-uprava.gov.si/podrocja/sociala-zdravje-smrt
+run: addPage url = https://e-uprava.gov.si/o-e-upravi/o-e-upravi
+run: addPage url = https://e-uprava.gov.si/podrocja/kmetijstvo-gozdarstvo-prehrana
+run: addPage url = https://e-uprava.gov.si/hu
+run: addPage url = https://e-uprava.gov.si/drzava-in-druzba/javni-sektor
+run: addPage url = https://e-uprava.gov.si/si
+run: addPage url = https://e-uprava.gov.si/podrocja/osebni-dokumenti-potrdila-selitev/potrdila-izpiski/potrdilo-iz-kazenske-evidence
+run: addPage url = https://e-uprava.gov.si/pomoc-kontakt/pomoc-pri-uporabi/uporaba-modula-moja-euprava
+run: addPage url = https://e-uprava.gov.si/aktualno/novice/prodaja-subvencioniranih-vozovnic0
+run: addPage url = https://e-uprava.gov.si/aktualno/koristne-povezave
+frontier size = 142
+link found
+run: url = https://e-uprava.gov.si/
+-------------------------------------
+[1584640844.186][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640844.287][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640844.388][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640844.488][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640844.540][WARNING]: Timed out connecting to Chrome, retrying...
+[1584640844.589][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640844.687][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640844.690][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640844.788][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640844.790][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640844.888][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640844.891][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640844.993][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640844.994][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640845.095][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640845.095][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640845.196][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640845.196][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640845.296][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640845.297][SEVERE]: Timed out receiving message from renderer: 0.100
+message: UserAgent.sendHEAD; Connection error
+requestUrl: https://e-uprava.gov.si/
+response: [none]
+	at com.jaunt.UserAgent.a(SourceFile:2793)
+	at com.jaunt.UserAgent.sendHEAD(SourceFile:2719)
+	at com.company.WebCrawler$CrawlerThread.handleHEAD(WebCrawler.java:247)
+	at com.company.WebCrawler$CrawlerThread.run(WebCrawler.java:159)
+frontier size = 141
+link found
+run: url = http://evem.gov.si/info/sistem-spot/
+-------------------------------------
+[1584640845.398][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640845.399][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640845.499][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640845.600][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640845.701][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640845.704][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640845.803][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640845.805][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640845.906][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640845.910][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640846.010][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640846.112][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640846.322][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640846.403][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640846.504][SEVERE]: Timed out receiving message from renderer: 0.100
+Mar 19, 2020 7:00:46 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+[1584640846.605][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640846.706][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640846.807][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640846.910][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640847.012][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640847.114][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640847.216][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640847.318][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640847.419][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640847.581][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640847.807][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640847.944][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640848.044][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640848.146][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640848.561][WARNING]: Timed out connecting to Chrome, retrying...
+frontier size = 140
+link found
+run: url = https://www.gov.si/podrocja/promet-in-energetika/
+-------------------------------------
+Starting ChromeDriver 80.0.3987.106 (f68069574609230cf9b635cd784cfb1bf81bb53a-refs/branch-heads/3987@{#882}) on port 12133
+Only local connections are allowed.
+Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
+[1584640851.305][SEVERE]: Timed out receiving message from renderer: 0.100
+setUrl: exception = No such host is known (eprostor.sigov.si)
+[1584640851.677][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640851.838][SEVERE]: Timed out receiving message from renderer: 0.100
+frontierExpansion size = 7
+run: addPage url = https://www.gov.si/podrocja/obramba-varnost-in-javni-red/
+run: addPage url = https://www.gov.si/podrocja/obramba-varnost-in-javni-red/varnost-drzave/
+run: addPage url = https://www.gov.si/podrocja/obramba-varnost-in-javni-red/varstvo-pred-naravnimi-in-drugimi-nesrecami/
+org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "unq_url_idx"
+  Detail: Key (url)=(https://www.gov.si/podrocja/obramba-varnost-in-javni-red/) already exists.
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2510)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2245)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:311)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:447)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:368)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:159)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:125)
+	at com.company.DatabaseHandler.addPage(DatabaseHandler.java:103)
+	at com.company.WebCrawler$CrawlerThread.run(WebCrawler.java:216)
+addLink: one of id's is -1.
+run: addPage url = https://www.gov.si/en/policies/defence-civil-protection-and-public-order/
+run: addPage url = https://www.gov.si/drzavni-organi/ministrstva/ministrstvo-za-obrambo/
+run: addPage url = https://www.gov.si/podrocja/obramba-varnost-in-javni-red/obramba-drzave/
+run: addPage url = https://www.gov.si/podrocja/obramba-varnost-in-javni-red/javni-red/
+setUrl: exception = No such host is known (prostor3.sigov.si)
+frontier size = 146
+link found
+run: url = https://e-uprava.gov.si/drzava-in-druzba/e-demokracija
+-------------------------------------
+[1584640851.948][SEVERE]: Timed out receiving message from renderer: 0.100
+setUrl: exception = eprostor.sigov.si
+message: UserAgent.sendHEAD; Connection error
+requestUrl: https://e-uprava.gov.si/drzava-in-druzba/e-demokracija
+response: [none]
+	at com.jaunt.UserAgent.a(SourceFile:2793)
+	at com.jaunt.UserAgent.sendHEAD(SourceFile:2719)
+	at com.company.WebCrawler$CrawlerThread.handleHEAD(WebCrawler.java:247)
+	at com.company.WebCrawler$CrawlerThread.run(WebCrawler.java:159)
+frontier size = 145
+link found
+run: url = http://evem.gov.si/info/zacenjam/dovoljenja-in-pogoji/
+-------------------------------------
+setUrl: exception = prostor3.sigov.si
+setUrl: exception = eprostor.sigov.si
+setUrl: exception = Expected scheme-specific part at index 7: mailto:
+frontierExpansion size = 37
+run: addPage url = https://www.e-prostor.gov.si/zbirke-prostorskih-podatkov/topografski-in-kartografski-podatki/digitalni-model-visin/
+run: addPage url = https://www.e-prostor.gov.si/aktualno-arhiv/
+run: addPage url = http://e-uprava.gov.si/
+run: addPage url = https://www.e-prostor.gov.si/piskotki/
+run: addPage url = https://www.e-prostor.gov.si/pogoji-uporabe/
+run: addPage url = https://www.e-prostor.gov.si/zbirke-prostorskih-podatkov/topografski-in-kartografski-podatki/register-zemljepisnih-imen/
+run: addPage url = https://www.e-prostor.gov.si/aplikacije/
+run: addPage url = http://www.e-prostor.gov.si/fileadmin/DPKS/Transformacija_v_novi_KS/Aplikacije/3tra.zip
+run: addPage url = https://www.e-prostor.gov.si/zbirke-prostorskih-podatkov/drzavni-prostorski-koordinatni-sistem/
+run: addPage url = https://www.e-prostor.gov.si/fileadmin/narocanje/obr_za_narocilo.doc
+run: addPage url = https://www.e-prostor.gov.si/metapodatki/
+run: addPage url = https://www.e-prostor.gov.si/zbirke-prostorskih-podatkov/nepremicnine/drzavna-meja/
+run: addPage url = https://www.e-prostor.gov.si/fileadmin/Spletni_servisi/Obvestilo_uporabnikom_servisi_storitve_eprostor.pdf
+run: addPage url = https://www.e-prostor.gov.si/dostopnost/
+run: addPage url = https://www.e-prostor.gov.si/zbirke-prostorskih-podatkov/nepremicnine/register-nepremicnin/
+run: addPage url = https://www.e-prostor.gov.si/dostop-do-podatkov/dostop-do-podatkov/mapa/vzorci-podatkov/
+run: addPage url = https://www.e-prostor.gov.si/aktualno/preklic-uporabe-objavljenih-dokumentov-za-ks-in-ren/
+run: addPage url = https://www.e-prostor.gov.si/izobrazevanja/izobrazevanje-geodetov-po-zgeod-1/
+run: addPage url = https://www.e-prostor.gov.si/zbirke-prostorskih-podatkov/zbirka-vrednotenja-nepremicnin/
+run: addPage url = https://www.e-prostor.gov.si/zbirke-prostorskih-podatkov/nepremicnine/register-prostorskih-enot/
+run: addPage url = https://www.e-prostor.gov.si/zbirke-prostorskih-podatkov/topografski-in-kartografski-podatki/topografski-podatki-in-karte/
+run: addPage url = https://www.e-prostor.gov.si/varstvo-osebnih-podatkov-in-uporaba-informacij-javnega-znacaja/
+run: addPage url = https://www.e-prostor.gov.si/dostop-do-podatkov/dostop-do-podatkov/
+run: addPage url = https://www.gov.si/drzavni-organi/organi-v-sestavi/geodetska-uprava/
+run: addPage url = https://www.e-prostor.gov.si/o-portalu/
+run: addPage url = https://www.e-prostor.gov.si/zbirke-prostorskih-podatkov/zbirni-kataster-gospodarske-javne-infrastrukture/
+run: addPage url = https://www.e-prostor.gov.si/zbirke-prostorskih-podatkov/topografski-in-kartografski-podatki/ortofoto/
+run: addPage url = https://www.e-prostor.gov.si/kontakt/
+run: addPage url = https://www.e-prostor.gov.si/
+run: addPage url = https://www.e-prostor.gov.si/zbirke-prostorskih-podatkov/nepremicnine/kataster-stavb/
+run: addPage url = https://www.e-prostor.gov.si/zbirke-prostorskih-podatkov/topografski-in-kartografski-podatki/aerofotografije/
+run: addPage url = https://www.e-prostor.gov.si/zbirke-prostorskih-podatkov/nepremicnine/zemljiski-kataster/
+run: addPage url = https://www.e-prostor.gov.si/kolofon/
+run: addPage url = https://www.e-prostor.gov.si/brezplacni-podatki/
+run: addPage url = https://www.e-prostor.gov.si/access-to-geodetic-data/ordering-data/
+run: addPage url = https://www.e-prostor.gov.si/informacije/
+run: addPage url = https://www.e-prostor.gov.si/aktualno/sprememba-v-predvidenih-podatkovnih-strukturah-ren-in-ev-po-01042020/
+frontier size = 181
+link found
+run: url = https://www.e-prostor.gov.si/zbirke-prostorskih-podatkov/topografski-in-kartografski-podatki/digitalni-model-visin/
+-------------------------------------
+[1584640853.271][SEVERE]: Timed out receiving message from renderer: 0.100
+setUrl: exception = Expected scheme-specific part at index 11: javascript:
+[1584640853.373][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640853.473][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640853.574][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640853.630][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640853.675][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640853.731][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640853.766][WARNING]: Timed out connecting to Chrome, retrying...
+[1584640853.832][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640853.933][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640854.033][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640854.134][SEVERE]: Timed out receiving message from renderer: 0.100
+BAD =
+frontierExpansion size = 16
+run: addPage url = http://evem.gov.si/info/vmesnik-ebol-in-endm/
+run: addPage url = http://evem.gov.si/info/spot-tocke-in-notarji/razlike-med-tockami-spot/
+run: addPage url = http://evem.gov.si/info/razmisljam/analiza-poslovnega-okolja-in-konkurence/
+run: addPage url = http://evem.gov.si/info/arhiv-novic/
+run: addPage url = http://evem.gov.si/info/sistem-spot/spot-svetovanje/
+run: addPage url = http://evem.gov.si/info/tocke-spot-zemljevid/
+run: addPage url = http://evem.gov.si/info/poslujem/financiranje/
+run: addPage url = http://evem.gov.si/info/pridobitev-polozaja-tocke-spot-registracija/
+run: addPage url = http://evem.gov.si/info/sistem-spot/spot-global/
+run: addPage url = http://evem.gov.si/info/sistem-spot/spot-registracija/
+run: addPage url = http://evem.gov.si/info/razmisljam/spodbude-za-podjetnistvo/
+run: addPage url = http://evem.gov.si/info/zacenjam/zelim-ustanoviti-podjetje/kdaj-se-morate-obvezno-oglasiti-pri-notarju-ko-ustanavljate-podjetje/
+run: addPage url = http://evem.gov.si/info/
+run: addPage url = http://evem.gov.si/
+run: addPage url = http://evem.gov.si/info/spot-tocke-in-notarji/
+run: addPage url = http://evem.gov.si/info/pomoc-in-podpora/uporabniska-navodila-za-e-postopke-na-portalu-spot-evem/
+[1584640854.235][SEVERE]: Timed out receiving message from renderer: 0.100
+frontier size = 196
+[1584640854.335][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640854.436][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640854.537][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640854.638][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640854.738][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640854.839][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640854.939][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640855.082][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640855.282][SEVERE]: Timed out receiving message from renderer: 0.100
+frontier size = 196
+[1584640855.383][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640855.483][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640855.584][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640855.685][SEVERE]: Timed out receiving message from renderer: 0.100
+Mar 19, 2020 7:00:55 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+frontier size = 196
+link found
+run: url = https://www.gov.si/podrocja/zdravje/
+-------------------------------------
+frontierExpansion size = 10
+run: addPage url = https://www.gov.si/podrocja/promet-in-energetika/letalski-promet/
+run: addPage url = https://www.gov.si/en/policies/transport-and-energy/
+run: addPage url = https://www.gov.si/podrocja/promet-in-energetika/
+run: addPage url = https://www.gov.si/podrocja/promet-in-energetika/zicniske-naprave-za-prevoz-oseb/
+run: addPage url = https://www.gov.si/drzavni-organi/ministrstva/ministrstvo-za-infrastrukturo/
+run: addPage url = https://www.gov.si/podrocja/promet-in-energetika/zelezniski-promet/
+run: addPage url = https://www.gov.si/podrocja/promet-in-energetika/energetika/
+run: addPage url = https://www.gov.si/podrocja/promet-in-energetika/cestni-promet/
+run: addPage url = https://www.gov.si/podrocja/promet-in-energetika/trajnostna-mobilnost/
+run: addPage url = https://www.gov.si/podrocja/promet-in-energetika/pomorski-promet/
+org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "unq_url_idx"
+  Detail: Key (url)=(https://www.gov.si/podrocja/promet-in-energetika/) already exists.
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2510)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2245)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:311)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:447)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:368)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:159)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:125)
+	at com.company.DatabaseHandler.addPage(DatabaseHandler.java:103)
+	at com.company.WebCrawler$CrawlerThread.run(WebCrawler.java:216)
+addLink: one of id's is -1.
+frontier size = 205
+link found
+run: url = http://evem.gov.si/info/poslujem/
+-------------------------------------
+[1584640857.706][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640857.790][WARNING]: Timed out connecting to Chrome, retrying...
+[1584640857.808][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640857.910][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640858.012][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640858.113][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640858.215][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640858.317][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640858.418][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640858.519][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640858.621][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640858.759][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640858.939][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640859.135][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640859.236][SEVERE]: Timed out receiving message from renderer: 0.100
+setUrl: exception = Expected scheme-specific part at index 7: mailto:
+frontierExpansion size = 6
+run: addPage url = https://www.e-prostor.gov.si/zbirke-prostorskih-podatkov/nepremicnine/
+run: addPage url = https://www.e-prostor.gov.si/zbirke-prostorskih-podatkov/topografski-in-kartografski-podatki/digitalni-model-visin/
+run: addPage url = https://www.e-prostor.gov.si/zbirke-prostorskih-podatkov/topografski-in-kartografski-podatki/digitalni-model-visin/digitalni-model-visin-z-locljivostjo-dmv-125-dmv-25-dmv-100/
+run: addPage url = https://www.e-prostor.gov.si/zbirke-prostorskih-podatkov/etn/
+run: addPage url = https://www.e-prostor.gov.si/zbirke-prostorskih-podatkov/topografski-in-kartografski-podatki/digitalni-model-visin/digitalni-model-visin-5-x-5-m-dmv-5/
+run: addPage url = https://www.e-prostor.gov.si/zbirke-prostorskih-podatkov/topografski-in-kartografski-podatki/
+org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "unq_url_idx"
+  Detail: Key (url)=(https://www.e-prostor.gov.si/zbirke-prostorskih-podatkov/topografski-in-kartografski-podatki/digitalni-model-visin/) already exists.
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2510)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2245)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:311)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:447)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:368)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:159)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:125)
+	at com.company.DatabaseHandler.addPage(DatabaseHandler.java:103)
+	at com.company.WebCrawler$CrawlerThread.run(WebCrawler.java:216)
+addLink: one of id's is -1.
+[1584640859.337][SEVERE]: Timed out receiving message from renderer: 0.100
+frontier size = 210
+link found
+run: url = https://e-uprava.gov.si/aktualno/prireditve-in-shodi
+-------------------------------------
+[1584640859.438][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640859.538][SEVERE]: Timed out receiving message from renderer: 0.100
+message: UserAgent.sendHEAD; Connection error
+requestUrl: https://e-uprava.gov.si/aktualno/prireditve-in-shodi
+response: [none]
+	at com.jaunt.UserAgent.a(SourceFile:2793)
+	at com.jaunt.UserAgent.sendHEAD(SourceFile:2719)
+	at com.company.WebCrawler$CrawlerThread.handleHEAD(WebCrawler.java:247)
+	at com.company.WebCrawler$CrawlerThread.run(WebCrawler.java:159)
+frontier size = 209
+link found
+run: url = https://www.e-prostor.gov.si/aktualno-arhiv/
+-------------------------------------
+frontier size = 208
+setUrl: exception = Expected scheme-specific part at index 11: javascript:
+frontier size = 208
+setUrl: exception = Expected scheme-specific part at index 11: javascript:
+BAD =
+frontierExpansion size = 5
+run: addPage url = http://evem.gov.si/info/dovoljenja/
+run: addPage url = http://evem.gov.si/info/skd-seznam/
+run: addPage url = http://evem.gov.si/info/dejavnosti/
+run: addPage url = http://evem.gov.si/info/poklici-in-strokovni-kadri/
+run: addPage url = http://evem.gov.si/info/podrocja/
+frontier size = 213
+link found
+run: url = https://www.gov.si/hu/
+-------------------------------------
+frontier size = 212
+frontierExpansion size = 9
+run: addPage url = https://www.gov.si/podrocja/zdravje/
+run: addPage url = https://www.gov.si/en/policies/health/
+run: addPage url = https://www.gov.si/podrocja/zdravje/dostopnost-in-varnost-zdravstvenega-varstva/
+run: addPage url = https://www.gov.si/podrocja/zdravje/organiziranost-zdravstvenega-varstva/
+run: addPage url = https://www.gov.si/podrocja/zdravje/dolgotrajna-oskrba/
+run: addPage url = https://www.gov.si/podrocja/zdravje/upravljanje-in-ravnanje-s-kemikalijami/
+run: addPage url = https://www.gov.si/podrocja/zdravje/varstvo-pred-sevanji/
+run: addPage url = https://www.gov.si/drzavni-organi/ministrstva/ministrstvo-za-zdravje/
+run: addPage url = https://www.gov.si/podrocja/zdravje/preventiva-in-skrb-za-zdravje/
+org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "unq_url_idx"
+  Detail: Key (url)=(https://www.gov.si/podrocja/zdravje/) already exists.
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2510)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2245)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:311)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:447)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:368)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:159)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:125)
+	at com.company.DatabaseHandler.addPage(DatabaseHandler.java:103)
+	at com.company.WebCrawler$CrawlerThread.run(WebCrawler.java:216)
+addLink: one of id's is -1.
+frontier size = 221
+link found
+run: url = http://evem.gov.si/evem/cms/news/detailEugo.evem
+-------------------------------------
+[1584640862.673][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640862.773][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640862.875][SEVERE]: Timed out receiving message from renderer: 0.100
+frontier size = 220
+[1584640862.977][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640863.079][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640863.180][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640863.281][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640863.382][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640863.483][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640863.585][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640863.701][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640863.804][SEVERE]: Timed out receiving message from renderer: 0.100
+frontier size = 220
+[1584640863.905][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640864.006][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640864.107][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640864.208][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640864.309][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640864.333][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640864.411][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640864.434][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640864.512][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640864.535][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640864.615][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640864.637][SEVERE]: Timed out receiving message from renderer: 0.100
+setUrl: exception = Expected scheme-specific part at index 11: javascript:
+[1584640864.716][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640864.738][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640864.821][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640864.839][SEVERE]: Timed out receiving message from renderer: 0.100
+frontier size = 220
+link found
+run: url = https://e-uprava.gov.si/podrocja/nepremicnine-in-okolje
+-------------------------------------
+[1584640864.940][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640864.956][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640865.040][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640865.060][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640865.142][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640865.162][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640865.246][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640865.263][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640865.346][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640865.363][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640865.448][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640865.464][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640865.549][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640865.574][SEVERE]: Timed out receiving message from renderer: 0.100
+BAD =
+[1584640865.675][SEVERE]: Timed out receiving message from renderer: 0.100
+frontierExpansion size = 4
+run: addPage url = http://evem.gov.si/info/zacenjam/zelim-ustanoviti-podjetje/poslovne-oblike/prijava-sprememb-podatkov-v-poslovni-register-slovenije/
+run: addPage url = http://evem.gov.si/info/poslujem/zaposlovanje/socialna-varnost-in-zavarovanja/
+run: addPage url = http://evem.gov.si/info/poslujem/razvoj-podjetja/
+run: addPage url = http://evem.gov.si/info/poslujem/informacije-o-tujih-trgih/
+message: UserAgent.sendHEAD; Connection error
+requestUrl: https://e-uprava.gov.si/podrocja/nepremicnine-in-okolje
+response: [none]
+	at com.jaunt.UserAgent.a(SourceFile:2793)
+	at com.jaunt.UserAgent.sendHEAD(SourceFile:2719)
+	at com.company.WebCrawler$CrawlerThread.handleHEAD(WebCrawler.java:247)
+	at com.company.WebCrawler$CrawlerThread.run(WebCrawler.java:159)
+[1584640865.777][SEVERE]: Timed out receiving message from renderer: 0.100
+frontier size = 219
+link found
+run: url = https://www.e-prostor.gov.si/piskotki/
+-------------------------------------
+frontier size = 222
+setUrl: exception = Expected scheme-specific part at index 7: mailto:
+frontierExpansion size = 47
+run: addPage url = https://www.e-prostor.gov.si/aktualno-arhiv/date/2018/03/
+run: addPage url = https://www.e-prostor.gov.si/aktualno-arhiv/date/2018/05/
+run: addPage url = https://www.e-prostor.gov.si/aktualno-arhiv/date/2016/10/
+run: addPage url = https://www.e-prostor.gov.si/aktualno/dostopnost-portala-prostor-slepim-in-slabovidnim/
+run: addPage url = https://www.e-prostor.gov.si/aktualno-arhiv/
+run: addPage url = https://www.e-prostor.gov.si/aktualno-arhiv/date/2018/09/
+run: addPage url = https://www.e-prostor.gov.si/aktualno/javna-razgrnitev-predloga-modelov-vrednotenja/
+run: addPage url = https://www.e-prostor.gov.si/aktualno-arhiv/date/2019/03/
+run: addPage url = https://www.e-prostor.gov.si/aktualno-arhiv/date/2017/05/
+run: addPage url = https://www.e-prostor.gov.si/aktualno-arhiv/date/2019/01/
+run: addPage url = https://www.e-prostor.gov.si/aktualno-arhiv/date/2017/11/
+run: addPage url = https://www.e-prostor.gov.si/aktualno-arhiv/date/2019/07/
+run: addPage url = https://www.e-prostor.gov.si/aktualno-arhiv/date/2019/05/
+run: addPage url = https://www.e-prostor.gov.si/aktualno-arhiv/page/3/
+run: addPage url = https://www.e-prostor.gov.si/aktualno-arhiv/date/2020/02/
+run: addPage url = https://www.e-prostor.gov.si/aktualno-arhiv/date/2019/09/
+run: addPage url = https://www.e-prostor.gov.si/fileadmin/Aktualno/Dopis_Izracun_vrednosti_spremembe_podatkov.pdf
+run: addPage url = https://www.e-prostor.gov.si/aktualno-arhiv/date/2016/06/
+run: addPage url = https://www.e-prostor.gov.si/aktualno-arhiv/date/2016/08/
+run: addPage url = https://www.e-prostor.gov.si/aktualno-arhiv/date/2016/12/
+run: addPage url = https://www.e-prostor.gov.si/aktualno-arhiv/date/2018/11/
+run: addPage url = https://www.e-prostor.gov.si/aktualno-arhiv/date/2016/02/
+run: addPage url = https://www.e-prostor.gov.si/aktualno-arhiv/date/2018/01/
+org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "unq_url_idx"
+  Detail: Key (url)=(https://www.e-prostor.gov.si/aktualno-arhiv/) already exists.
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2510)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2245)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:311)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:447)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:368)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:159)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:125)
+	at com.company.DatabaseHandler.addPage(DatabaseHandler.java:103)
+	at com.company.WebCrawler$CrawlerThread.run(WebCrawler.java:216)
+addLink: one of id's is -1.
+run: addPage url = https://www.e-prostor.gov.si/aktualno-arhiv/page/7/
+run: addPage url = https://e-uprava.gov.si/moja-euprava/premozenje/nepremicnine
+run: addPage url = https://www.e-prostor.gov.si/zbirke-prostorskih-podatkov/drzavni-prostorski-koordinatni-sistem/horizontalna-sestavina/stalne-postaje-drzavnega-omrezja-gnss-signal/
+run: addPage url = https://www.e-prostor.gov.si/aktualno-arhiv/date/2018/08/
+run: addPage url = https://www.e-prostor.gov.si/skupno/
+run: addPage url = https://www.e-prostor.gov.si/aktualno-arhiv/date/2019/10/
+run: addPage url = https://www.e-prostor.gov.si/fileadmin/Aktualno/REN_EV_01042020/Dopis_oe.pdf
+run: addPage url = https://www.e-prostor.gov.si/aktualno/aplikacija-osebni-vpogled-v-nepremicnine-ne-deluje/
+run: addPage url = https://www.e-prostor.gov.si/aktualno-arhiv/date/2017/04/
+run: addPage url = https://www.e-prostor.gov.si/aktualno-arhiv/date/2017/02/
+run: addPage url = https://www.e-prostor.gov.si/aktualno-arhiv/date/2019/06/
+run: addPage url = https://www.e-prostor.gov.si/aktualno-arhiv/date/2017/12/
+run: addPage url = https://www.e-prostor.gov.si/aktualno-arhiv/date/2019/04/
+run: addPage url = https://www.e-prostor.gov.si/aktualno-arhiv/page/2/
+run: addPage url = https://www.e-prostor.gov.si/aktualno-arhiv/date/2016/09/
+run: addPage url = https://www.e-prostor.gov.si/aktualno-arhiv/date/2020/03/
+run: addPage url = https://www.e-prostor.gov.si/aktualno-arhiv/date/2019/08/
+run: addPage url = https://www.e-prostor.gov.si/aktualno-arhiv/date/2016/05/
+run: addPage url = https://www.e-prostor.gov.si/aktualno/objavljeno-je-porocilo-o-slovenskem-nepremicninskem-trgu-za-prvo-polletje-2019/
+run: addPage url = https://www.e-prostor.gov.si/aktualno-arhiv/date/2018/10/
+run: addPage url = https://www.e-prostor.gov.si/aktualno-arhiv/date/2016/01/
+run: addPage url = https://www.e-prostor.gov.si/aktualno-arhiv/date/2018/12/
+run: addPage url = https://www.e-prostor.gov.si/aktualno-arhiv/date/2016/03/
+run: addPage url = https://www.e-prostor.gov.si/aktualno-arhiv/date/2018/02/
+frontier size = 269
+[1584640866.532][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640866.633][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640866.735][SEVERE]: Timed out receiving message from renderer: 0.100
+frontier size = 269
+link found
+run: url = https://www.gov.si/zbirke/drzave/
+-------------------------------------
+[1584640866.838][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640866.938][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640867.039][SEVERE]: Timed out receiving message from renderer: 0.100
+frontier size = 268
+[1584640867.240][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640867.340][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640867.441][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640867.541][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640867.643][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640867.743][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640867.844][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640867.946][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640868.047][SEVERE]: Timed out receiving message from renderer: 0.100
+frontier size = 268
+link found
+run: url = http://evem.gov.si/info/poslujem/zaposlovanje/pogodba-o-zaposlitvi-in-postopek-zaposlitve/
+-------------------------------------
+[1584640868.241][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640868.421][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640868.521][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640868.575][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640868.622][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640868.745][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640868.845][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640868.946][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640869.047][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640869.168][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640869.269][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640869.370][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640869.470][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640869.571][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640869.671][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640869.772][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640869.923][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640870.023][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640870.124][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640870.224][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640870.325][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640870.490][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640870.616][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640870.718][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640870.818][SEVERE]: Timed out receiving message from renderer: 0.100
+setUrl: exception = Expected scheme-specific part at index 4: tel:
+setUrl: exception = Expected scheme-specific part at index 7: mailto:
+setUrl: exception = Expected scheme-specific part at index 4: tel:
+setUrl: exception = Expected scheme-specific part at index 7: mailto:
+[1584640870.919][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640871.020][SEVERE]: Timed out receiving message from renderer: 0.100
+frontierExpansion size = 12
+run: addPage url = https://e-uprava.gov.si/hu/podrocja-hu/kmetijstvo-ribistvo-lov-hu/kmetijske-dejavnosti-hu/pridobitev-statusa-kmeta-hu
+run: addPage url = https://e-uprava.gov.si/hu/podrocja-hu/nepremicnine-in-okolje-hu/geodetski-podatki-hu/dostop-do-geodetski-podatkov
+run: addPage url = https://www.gov.si/hu/temak/koronavirus/
+run: addPage url = https://www.gov.si/hu/allamigazgatasi-szervek/a-koezigazgatasi-egysegek/lendva/
+run: addPage url = https://www.gov.si/hu/allamigazgatasi-szervek/a-koezigazgatasi-egysegek/koezigazgatasi-egyseg-murska-sobota/
+run: addPage url = https://www.gov.si/hu/a-honlaprol/
+run: addPage url = https://www.gov.si/hu/allamigazgatasi-szervek/
+run: addPage url = https://e-uprava.gov.si/hu/podrocja-hu/druzina-otroci-zakonska-zveza-hu/vrtci-in-varovanje-otrok-hu/subvencija-placilo-vrtca-hu
+run: addPage url = https://e-uprava.gov.si/hu/podrocja-hu/osebni-dokumenti-potrdila-selitev-hu/osebni-dokumenti-digitalno-potrdilo-hu/pridobitev-digitalnega-potrdila-za-elektronsko-poslovanje-za-fizicne-osebe-hu
+run: addPage url = https://www.gov.si/hu/
+run: addPage url = https://www.gov.si/hu/nyilvantartasok/
+run: addPage url = https://www.gov.si/hu/hirek/
+org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "unq_url_idx"
+  Detail: Key (url)=(https://www.gov.si/hu/) already exists.
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2510)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2245)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:311)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:447)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:368)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:159)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:125)
+	at com.company.DatabaseHandler.addPage(DatabaseHandler.java:103)
+	at com.company.WebCrawler$CrawlerThread.run(WebCrawler.java:216)
+addLink: one of id's is -1.
+frontier size = 279
+link found
+run: url = https://e-uprava.gov.si/pomoc-kontakt/pomoc-pri-uporabi
+-------------------------------------
+message: UserAgent.sendHEAD; Connection error
+requestUrl: https://e-uprava.gov.si/pomoc-kontakt/pomoc-pri-uporabi
+response: [none]
+	at com.jaunt.UserAgent.a(SourceFile:2793)
+	at com.jaunt.UserAgent.sendHEAD(SourceFile:2719)
+	at com.company.WebCrawler$CrawlerThread.handleHEAD(WebCrawler.java:247)
+	at com.company.WebCrawler$CrawlerThread.run(WebCrawler.java:159)
+frontier size = 278
+link found
+run: url = https://www.e-prostor.gov.si/pogoji-uporabe/
+-------------------------------------
+setUrl: exception = No such host is known (si-ca.si)
+[1584640871.904][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640872.005][SEVERE]: Timed out receiving message from renderer: 0.100
+BAD =
+frontierExpansion size = 1
+run: addPage url = http://evem.gov.si/evem/cms/news/detailEugo.evem
+org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "unq_url_idx"
+  Detail: Key (url)=(http://evem.gov.si/evem/cms/news/detailEugo.evem) already exists.
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2510)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2245)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:311)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:447)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:368)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:159)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:125)
+	at com.company.DatabaseHandler.addPage(DatabaseHandler.java:103)
+	at com.company.WebCrawler$CrawlerThread.run(WebCrawler.java:216)
+addLink: one of id's is -1.
+frontier size = 278
+link found
+run: url = https://www.gov.si/podrocja/podjetnistvo-in-gospodarstvo/
+-------------------------------------
+[1584640872.105][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640872.206][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640872.308][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640872.408][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640872.634][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640872.735][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640872.836][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640872.937][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640873.038][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640873.140][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640873.240][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640873.341][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640873.444][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640873.544][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640873.646][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640873.749][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640873.914][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640874.091][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640874.192][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640874.306][SEVERE]: Timed out receiving message from renderer: 0.100
+setUrl: exception = Expected scheme-specific part at index 11: javascript:
+[1584640874.407][SEVERE]: Timed out receiving message from renderer: 0.100
+setUrl: exception = Expected scheme-specific part at index 7: mailto:
+[1584640874.508][SEVERE]: Timed out receiving message from renderer: 0.100
+frontierExpansion size = 1
+run: addPage url = https://www.e-prostor.gov.si/piskotki/
+org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "unq_url_idx"
+  Detail: Key (url)=(https://www.e-prostor.gov.si/piskotki/) already exists.
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2510)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2245)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:311)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:447)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:368)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:159)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:125)
+	at com.company.DatabaseHandler.addPage(DatabaseHandler.java:103)
+	at com.company.WebCrawler$CrawlerThread.run(WebCrawler.java:216)
+addLink: one of id's is -1.
+frontier size = 278
+link found
+run: url = http://evem.gov.si/info/kadrovski-vmesnik/
+-------------------------------------
+frontierExpansion size = 25
+run: addPage url = https://www.gov.si/drzavni-organi/ministrstva/ministrstvo-za-zunanje-zadeve/
+run: addPage url = https://www.gov.si/zbirke/drzave/armenija/
+run: addPage url = https://www.gov.si/zbirke/drzave/albanija/
+run: addPage url = https://www.gov.si/zbirke/drzave/aruba/
+run: addPage url = https://www.gov.si/zbirke/drzave/
+run: addPage url = https://www.gov.si/zbirke/drzave/anguilla/
+run: addPage url = https://www.gov.si/zbirke/drzave/kitajska/
+run: addPage url = https://www.gov.si/zbirke/drzave/azerbajdzan/
+run: addPage url = https://www.gov.si/zbirke/drzave/spanija/
+run: addPage url = https://www.gov.si/zbirke/drzave/antigua-in-barbuda/
+run: addPage url = https://www.gov.si/zbirke/drzave/zdruzene-drzave-amerike/
+run: addPage url = https://www.gov.si/zbirke/drzave/argentina/
+run: addPage url = https://www.gov.si/zbirke/drzave/angola/
+run: addPage url = https://www.gov.si/zbirke/drzave/srbija/
+run: addPage url = https://www.gov.si/zbirke/drzave/italija/
+run: addPage url = https://www.gov.si/zbirke/drzave/azori/
+run: addPage url = https://www.gov.si/zbirke/drzave/juzna-koreja/
+run: addPage url = https://www.gov.si/zbirke/drzave/alzirija/
+org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "unq_url_idx"
+  Detail: Key (url)=(https://www.gov.si/zbirke/drzave/) already exists.
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2510)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2245)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:311)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:447)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:368)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:159)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:125)
+	at com.company.DatabaseHandler.addPage(DatabaseHandler.java:103)
+	at com.company.WebCrawler$CrawlerThread.run(WebCrawler.java:216)
+addLink: one of id's is -1.
+[1584640874.610][SEVERE]: Timed out receiving message from renderer: 0.100
+run: addPage url = https://www.gov.si/zbirke/drzave/andora/
+run: addPage url = https://www.gov.si/zbirke/drzave/ameriska-samoa/
+run: addPage url = https://www.gov.si/en/registries/countries/
+run: addPage url = https://www.gov.si/zbirke/drzave/afganistan/
+run: addPage url = https://www.gov.si/zbirke/drzave/iran/
+run: addPage url = https://www.gov.si/zbirke/drzave/avstrija/
+run: addPage url = https://www.gov.si/zbirke/drzave/avstralija/
+frontier size = 302
+[1584640874.712][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640874.739][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640874.840][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640874.941][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640875.205][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640875.305][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640875.406][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640875.507][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640875.609][SEVERE]: Timed out receiving message from renderer: 0.100
+frontier size = 302
+[1584640875.711][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640875.812][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640875.913][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640876.015][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640876.116][SEVERE]: Timed out receiving message from renderer: 0.100
+setUrl: exception = Expected scheme-specific part at index 11: javascript:
+[1584640876.217][SEVERE]: Timed out receiving message from renderer: 0.100
+setUrl: exception = No such host is known (ess.gov.si)
+setUrl: exception = ess.gov.si
+[1584640876.402][SEVERE]: Timed out receiving message from renderer: 0.100
+setUrl: exception = ess.gov.si
+[1584640876.525][SEVERE]: Timed out receiving message from renderer: 0.100
+setUrl: exception = ess.gov.si
+setUrl: exception = ess.gov.si
+setUrl: exception = ess.gov.si
+frontier size = 302
+link found
+run: url = https://e-uprava.gov.si/podrocja/delo-upokojitev
+-------------------------------------
+[1584640876.685][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640876.786][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640876.887][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640876.987][SEVERE]: Timed out receiving message from renderer: 0.100
+BAD =
+[1584640877.088][SEVERE]: Timed out receiving message from renderer: 0.100
+frontierExpansion size = 4
+run: addPage url = http://evem.gov.si/info/poslujem/zaposlovanje/pogodba-o-zaposlitvi-in-postopek-zaposlitve/odpoved-ali-prenehanje-pogodbe-o-zaposlitvi/
+run: addPage url = http://evem.gov.si/info/poslujem/zaposlovanje/pogodba-o-zaposlitvi-in-postopek-zaposlitve/sprememba-podatkov-v-obveznih-socialnih-zavarovanjih/
+run: addPage url = http://evem.gov.si/info/e-postopki/
+run: addPage url = http://evem.gov.si/info/poslujem/zaposlovanje/pogodba-o-zaposlitvi-in-postopek-zaposlitve/odjava-iz-obveznih-socialnih-zavarovanj/
+frontier size = 305
+link found
+run: url = https://www.gov.si/podrocja/socialna-varnost/
+-------------------------------------
+message: UserAgent.sendHEAD; Connection error
+requestUrl: https://e-uprava.gov.si/podrocja/delo-upokojitev
+response: [none]
+	at com.jaunt.UserAgent.a(SourceFile:2793)
+	at com.jaunt.UserAgent.sendHEAD(SourceFile:2719)
+	at com.company.WebCrawler$CrawlerThread.handleHEAD(WebCrawler.java:247)
+	at com.company.WebCrawler$CrawlerThread.run(WebCrawler.java:159)
+frontier size = 304
+link found
+run: url = https://www.e-prostor.gov.si/zbirke-prostorskih-podatkov/topografski-in-kartografski-podatki/register-zemljepisnih-imen/
+-------------------------------------
+[1584640878.039][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640878.070][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640878.140][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640878.241][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640878.248][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640878.342][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640878.349][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640878.443][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640878.450][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640878.543][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640878.631][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640878.644][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640878.732][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640878.745][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640878.834][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640878.848][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640878.935][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640879.036][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640879.084][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640879.186][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640879.225][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640879.287][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640879.326][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640879.388][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640879.456][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640879.490][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640879.557][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640879.592][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640879.695][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640879.726][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640879.797][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640879.852][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640879.898][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640879.953][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640879.998][SEVERE]: Timed out receiving message from renderer: 0.100
+setUrl: exception = Expected scheme-specific part at index 7: mailto:
+frontierExpansion size = 1
+run: addPage url = https://www.e-prostor.gov.si/pogoji-uporabe/
+org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "unq_url_idx"
+  Detail: Key (url)=(https://www.e-prostor.gov.si/pogoji-uporabe/) already exists.
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2510)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2245)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:311)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:447)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:368)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:159)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:125)
+	at com.company.DatabaseHandler.addPage(DatabaseHandler.java:103)
+	at com.company.WebCrawler$CrawlerThread.run(WebCrawler.java:216)
+addLink: one of id's is -1.
+frontier size = 304
+link found
+run: url = http://evem.gov.si/info/podrocja/sektor/12022/prikaziSektor/
+-------------------------------------
+[1584640880.054][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640880.099][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640880.154][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640880.200][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640880.255][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640880.356][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640880.389][SEVERE]: Timed out receiving message from renderer: 0.100
+frontierExpansion size = 11
+run: addPage url = https://www.gov.si/podrocja/podjetnistvo-in-gospodarstvo/meroslovje/
+run: addPage url = https://www.gov.si/podrocja/podjetnistvo-in-gospodarstvo/
+run: addPage url = https://www.gov.si/drzavni-organi/ministrstva/ministrstvo-za-gospodarski-razvoj-in-tehnologijo/
+run: addPage url = https://www.gov.si/podrocja/podjetnistvo-in-gospodarstvo/podjetnistvo/
+run: addPage url = https://www.gov.si/podrocja/podjetnistvo-in-gospodarstvo/prost-pretok-storitev-in-proizvodov/
+run: addPage url = https://www.gov.si/podrocja/podjetnistvo-in-gospodarstvo/varstvo-potrosnikov-in-konkurence/
+run: addPage url = https://www.gov.si/podrocja/podjetnistvo-in-gospodarstvo/lesarstvo/
+run: addPage url = https://www.gov.si/en/policies/business-and-economy/
+run: addPage url = https://www.gov.si/podrocja/podjetnistvo-in-gospodarstvo/turizem/
+run: addPage url = https://www.gov.si/podrocja/podjetnistvo-in-gospodarstvo/tehnoloski-razvoj/
+run: addPage url = https://www.gov.si/podrocja/podjetnistvo-in-gospodarstvo/mednarodno-gospodarsko-sodelovanje/
+org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "unq_url_idx"
+  Detail: Key (url)=(https://www.gov.si/podrocja/podjetnistvo-in-gospodarstvo/) already exists.
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2510)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2245)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:311)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:447)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:368)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:159)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:125)
+	at com.company.DatabaseHandler.addPage(DatabaseHandler.java:103)
+	at com.company.WebCrawler$CrawlerThread.run(WebCrawler.java:216)
+addLink: one of id's is -1.
+frontier size = 314
+[1584640880.565][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640880.703][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640880.832][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640880.933][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640881.034][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640881.136][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640881.240][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640881.340][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640881.443][SEVERE]: Timed out receiving message from renderer: 0.100
+frontier size = 314
+setUrl: exception = Expected scheme-specific part at index 11: javascript:
+setUrl: exception = Expected scheme-specific part at index 11: javascript:
+frontier size = 314
+link found
+run: url = https://www.gov.si/zbirke/javne-objave/
+-------------------------------------
+BAD =
+frontierExpansion size = 4
+run: addPage url = http://evem.gov.si/info/data/user_upload/navodila/Jernej/Prijava_odjemalca_eHRS.docx
+run: addPage url = http://evem.gov.si/info/data/user_upload/navodila/Opis_postopka_za_uporabo_HRS_vmesnika_16.11.17.doc
+run: addPage url = http://evem.gov.si/info/data/user_upload/hrs/Podelitev_pooblastila_za_procesna_dejanja_v_postopkih_VEM_prek_kadrovskega_vmesnika-novo.zip
+run: addPage url = http://evem.gov.si/info/data/user_upload/hrs/Pogosta_vprasanja_kadrovski_vmesnik_Marec_2017.doc
+frontier size = 317
+link found
+run: url = https://e-uprava.gov.si/podrocja/drzava-druzba
+-------------------------------------
+message: UserAgent.sendHEAD; Connection error
+requestUrl: https://e-uprava.gov.si/podrocja/drzava-druzba
+response: [none]
+	at com.jaunt.UserAgent.a(SourceFile:2793)
+	at com.jaunt.UserAgent.sendHEAD(SourceFile:2719)
+	at com.company.WebCrawler$CrawlerThread.handleHEAD(WebCrawler.java:247)
+	at com.company.WebCrawler$CrawlerThread.run(WebCrawler.java:159)
+frontier size = 316
+link found
+run: url = https://www.e-prostor.gov.si/aplikacije/
+-------------------------------------
+[1584640883.477][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640883.578][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640883.680][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640883.783][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640883.884][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640884.369][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640884.470][SEVERE]: Timed out receiving message from renderer: 0.100
+frontierExpansion size = 7
+run: addPage url = https://www.gov.si/drzavni-organi/ministrstva/ministrstvo-za-delo-druzino-socialne-zadeve-in-enake-moznosti/
+run: addPage url = https://www.gov.si/podrocja/socialna-varnost/varstvo-oseb-s-posebnimi-potrebami/
+run: addPage url = https://www.gov.si/en/policies/social-security/
+run: addPage url = https://www.gov.si/podrocja/socialna-varnost/invalidi-vojni-veterani-in-zrtve-vojnega-nasilja/
+run: addPage url = https://www.gov.si/podrocja/socialna-varnost/
+run: addPage url = https://www.gov.si/podrocja/socialna-varnost/varstvo-starejsih/
+run: addPage url = https://www.gov.si/podrocja/socialna-varnost/socialne-pomoci-subvencije-in-znizana-placila/
+org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "unq_url_idx"
+  Detail: Key (url)=(https://www.gov.si/podrocja/socialna-varnost/) already exists.
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2510)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2245)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:311)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:447)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:368)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:159)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:125)
+	at com.company.DatabaseHandler.addPage(DatabaseHandler.java:103)
+	at com.company.WebCrawler$CrawlerThread.run(WebCrawler.java:216)
+addLink: one of id's is -1.
+frontier size = 322
+link found
+run: url = http://evem.gov.si/info/podrocja/sektor/12055/prikaziSektor/
+-------------------------------------
+setUrl: exception = Expected scheme-specific part at index 11: javascript:
+setUrl: exception = Expected scheme-specific part at index 7: mailto:
+frontierExpansion size = 1
+run: addPage url = https://www.e-prostor.gov.si/zbirke-prostorskih-podatkov/topografski-in-kartografski-podatki/register-zemljepisnih-imen/
+org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "unq_url_idx"
+  Detail: Key (url)=(https://www.e-prostor.gov.si/zbirke-prostorskih-podatkov/topografski-in-kartografski-podatki/register-zemljepisnih-imen/) already exists.
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2510)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2245)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:311)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:447)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:368)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:159)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:125)
+	at com.company.DatabaseHandler.addPage(DatabaseHandler.java:103)
+	at com.company.WebCrawler$CrawlerThread.run(WebCrawler.java:216)
+addLink: one of id's is -1.
+frontier size = 322
+frontier size = 322
+link found
+run: url = https://www.gov.si/podrocja/kmetijstvo-gozdarstvo-in-prehrana/
+-------------------------------------
+setUrl: exception = Expected scheme-specific part at index 11: javascript:
+setUrl: exception = Expected scheme-specific part at index 11: javascript:
+setUrl: exception = No such host is known (prostor3.sigov.si)
+setUrl: exception = No such host is known (eprostor.sigov.si)
+setUrl: exception = Expected scheme-specific part at index 11: javascript:
+setUrl: exception = Expected scheme-specific part at index 11: javascript:
+setUrl: exception = Expected scheme-specific part at index 7: mailto:
+frontierExpansion size = 8
+run: addPage url = https://www.e-prostor.gov.si/fileadmin/Aplikacije/Javni_vpogled_v_nepremicnine/Koncept_javnega_vpogleda_2012_v1_3.pdf
+run: addPage url = http://www.e-prostor.gov.si/dostop-do-podatkov/vpogledi-v-podatke/
+run: addPage url = https://www.e-prostor.gov.si/fileadmin/Aplikacije/Javni_vpogled_v_nepremicnine/Navodilo_identifikatorji.pdf
+run: addPage url = https://www.e-prostor.gov.si/aplikacije/
+run: addPage url = https://www.e-prostor.gov.si/fileadmin/Aplikacije/eZKN/10_Uporabniska_navodila-2.pdf
+run: addPage url = https://www.e-prostor.gov.si/aplikacije/page/2/
+run: addPage url = https://www.e-prostor.gov.si/dostop-do-podatkov/vpogledi-v-podatke/mapa/registracija-uporabnikov/
+run: addPage url = https://www.e-prostor.gov.si/fileadmin/Aplikacije/Javni_vpogled_v_ETN/ETN-cene_navodila_za_uporabo_2019-09-27.pdf
+org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "unq_url_idx"
+  Detail: Key (url)=(https://www.e-prostor.gov.si/aplikacije/) already exists.
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2510)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2245)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:311)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:447)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:368)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:159)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:125)
+	at com.company.DatabaseHandler.addPage(DatabaseHandler.java:103)
+	at com.company.WebCrawler$CrawlerThread.run(WebCrawler.java:216)
+addLink: one of id's is -1.
+frontier size = 329
+link found
+run: url = https://e-uprava.gov.si/podrocja/vloge
+-------------------------------------
+frontierExpansion size = 22
+run: addPage url = https://www.gov.si/zbirke/javne-objave/izgradnja-gozdne-ceste-krvavcji-vrh-dobravice-200319150003/
+run: addPage url = https://www.gov.si/zbirke/javne-objave/storitve-prilagajanja-na-vodo-in-ucenja-plavanja-na-kopaliscu-tivoli-kodeljevo-in-kolezija-za-obdobje-1-leta-200318161002/
+run: addPage url = https://www.gov.si/zbirke/javne-objave/priprava-predloga-pilotnega-monitoringa-ter-izvedba-pilotnega-monitoringa-za-vrednotenje-vplivov-podvodnega-hrupa-zaradi-plovbe-pomorski-promet-rekreativna-plovba-na-morske-sesalce-200319081003/
+run: addPage url = https://www.gov.si/zbirke/javne-objave/izgradnja-prizidka-k-os-braslovce-200319142005/
+run: addPage url = https://www.gov.si/zbirke/javne-objave/jedrska-bioloska-kemicna-in-radioloska-zascitna-oprema-200319101002/
+run: addPage url = https://www.gov.si/zbirke/javne-objave/os-riharda-jakopica-i-faza-rusitev-in-izgradnja-prizidka-200319151008/
+run: addPage url = https://www.gov.si/zbirke/javne-objave/jn-za-dobavo-racunalniske-opreme-za-obdobje-enega-leta-200319142004/
+run: addPage url = https://www.gov.si/zbirke/javne-objave/obnova-lesenega-mostu-cez-krko-v-cerkljah-ob-krki-200319120003/
+run: addPage url = https://www.gov.si/zbirke/javne-objave/narocilo-storitev-kosnje-obracanja-grabljenje-baliranje-prevozi-in-dela-s-kmetijsko-mehanizacijo-za-leti-2020-in-2021-za-neizbrane-sklope-1-2-8-26-30-in-32-1-ponovitev-jn-200319074002/
+run: addPage url = https://www.gov.si/zbirke/javne-objave
+run: addPage url = https://www.gov.si/zbirke/javne-objave/
+run: addPage url = https://www.gov.si/zbirke/javne-objave/javni-razpis-era-cobiotech-3rd-call-bio-based-replacement-products-technologies-and-processes/
+run: addPage url = https://www.gov.si/zbirke/javne-objave/izvedba-strokovnih-izobrazevanj-na-temo-uvajanje-5g-tehnologije-200319114002/
+run: addPage url = https://www.gov.si/zbirke/javne-objave/nabava-monoblokov-in-diskov-za-emv-serije-310-200318161002/
+run: addPage url = https://www.gov.si/zbirke/javne-objave/prenova-nogometnega-stadiona-brezice-i-in-ii-faza-200319150003/
+run: addPage url = https://www.gov.si/zbirke/javne-objave/rekonstrukcija-parkirisca-in-prenova-vhoda-z-nadstreskom-v-zd-radece-200319113006/
+frontier size = 328
+link found
+run: url = http://www.e-prostor.gov.si/fileadmin/DPKS/Transformacija_v_novi_KS/Aplikacije/3tra.zip
+-------------------------------------
+run: addPage url = https://www.gov.si/zbirke/javne-objave/rezervni-deli-za-elok-363-200318161002/
+run: addPage url = https://www.gov.si/zbirke/javne-objave/nakup-goriva-drobnega-blaga-za-vzdrzevanje-vozil-in-vinjet-na-bencinskih-servisih-200319144003/
+run: addPage url = https://www.gov.si/zbirke/javne-objave/sukcesivna-dobava-blaga-za-tisk-listin-univerze-v-ljubljani-vi-200318161003/
+run: addPage url = https://www.gov.si/zbirke/javne-objave/nakup-lotus-notes-licenc-200319173006/
+run: addPage url = https://www.gov.si/zbirke/javne-objave/dobava-mineralnega-agregata-lomljenca-iz-kamnoloma-200319142003/
+run: addPage url = https://www.gov.si/zbirke/javne-objave/izdelava-elaborata-pasivne-protihrupne-zascite-na-odseku-zelezniske-proge-zidani-most-celje-200319081002/
+org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "unq_url_idx"
+  Detail: Key (url)=(https://www.gov.si/zbirke/javne-objave/) already exists.
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2510)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2245)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:311)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:447)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:368)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:159)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:125)
+	at com.company.DatabaseHandler.addPage(DatabaseHandler.java:103)
+	at com.company.WebCrawler$CrawlerThread.run(WebCrawler.java:216)
+addLink: one of id's is -1.
+message: UserAgent.sendHEAD; Connection error
+requestUrl: https://e-uprava.gov.si/podrocja/vloge
+response: [none]
+	at com.jaunt.UserAgent.a(SourceFile:2793)
+	at com.jaunt.UserAgent.sendHEAD(SourceFile:2719)
+	at com.company.WebCrawler$CrawlerThread.handleHEAD(WebCrawler.java:247)
+	at com.company.WebCrawler$CrawlerThread.run(WebCrawler.java:159)
+frontier size = 349
+java.lang.NullPointerException
+	at com.company.DatabaseHandler.addPageData(DatabaseHandler.java:158)
+	at com.company.WebCrawler$CrawlerThread.handleHEAD(WebCrawler.java:278)
+	at com.company.WebCrawler$CrawlerThread.handleHEAD(WebCrawler.java:267)
+	at com.company.WebCrawler$CrawlerThread.run(WebCrawler.java:159)
+java.lang.Exception: BINARY not supported
+	at com.company.WebCrawler$CrawlerThread.handleHEAD(WebCrawler.java:279)
+	at com.company.WebCrawler$CrawlerThread.handleHEAD(WebCrawler.java:267)
+	at com.company.WebCrawler$CrawlerThread.run(WebCrawler.java:159)
+frontier size = 349
+link found
+run: url = https://evem.gov.si/evem/sicas/uporabnik/prijava.evem
+-------------------------------------
+frontier size = 348
+frontier size = 348
+[1584640892.789][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640893.038][SEVERE]: Timed out receiving message from renderer: 0.100
+setUrl: exception = Expected scheme-specific part at index 11: javascript:
+frontier size = 348
+frontier size = 348
+link found
+run: url = https://www.gov.si/iskanje/
+-------------------------------------
+frontierExpansion size = 11
+run: addPage url = https://www.gov.si/podrocja/kmetijstvo-gozdarstvo-in-prehrana/ribistvo/
+run: addPage url = https://www.gov.si/podrocja/kmetijstvo-gozdarstvo-in-prehrana/uvoz-izvoz-in-trgovanje-z-zivalmi-in-rastlinami/
+run: addPage url = https://www.gov.si/podrocja/kmetijstvo-gozdarstvo-in-prehrana/kmetijstvo-in-razvoj-podezelja/
+run: addPage url = https://www.gov.si/podrocja/kmetijstvo-gozdarstvo-in-prehrana/varstvo-rastlin/
+run: addPage url = https://www.gov.si/podrocja/kmetijstvo-gozdarstvo-in-prehrana/gozdarstvo/
+run: addPage url = https://www.gov.si/podrocja/kmetijstvo-gozdarstvo-in-prehrana/
+run: addPage url = https://www.gov.si/podrocja/kmetijstvo-gozdarstvo-in-prehrana/veterinarstvo/
+run: addPage url = https://www.gov.si/podrocja/kmetijstvo-gozdarstvo-in-prehrana/varnost-in-kakovost-hrane-in-krme/
+run: addPage url = https://www.gov.si/en/policies/agriculture-forestry-and-food/
+run: addPage url = https://www.gov.si/podrocja/kmetijstvo-gozdarstvo-in-prehrana/lovstvo/
+run: addPage url = https://www.gov.si/drzavni-organi/ministrstva/ministrstvo-za-kmetijstvo-gozdarstvo-in-prehrano/
+org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "unq_url_idx"
+  Detail: Key (url)=(https://www.gov.si/podrocja/kmetijstvo-gozdarstvo-in-prehrana/) already exists.
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2510)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2245)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:311)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:447)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:368)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:159)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:125)
+	at com.company.DatabaseHandler.addPage(DatabaseHandler.java:103)
+	at com.company.WebCrawler$CrawlerThread.run(WebCrawler.java:216)
+addLink: one of id's is -1.
+frontier size = 358
+setUrl: exception = Expected scheme-specific part at index 11: javascript:
+setUrl: exception = Expected scheme-specific part at index 11: javascript:
+setUrl: exception = Expected scheme-specific part at index 11: javascript:
+BAD =
+frontierExpansion size = 120
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/14137/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/12457/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/12472/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/13302/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/12937/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/14151/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/12471/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/12458/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/13139/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/13294/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/14482/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/12460/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/14140/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/12935/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/13300/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/14150/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/13296/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/14484/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/14135/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/14483/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/12420/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/14126/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/12430/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/12936/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/14136/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/12470/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/12940/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/12950/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/12456/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/12421/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/12441/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/13769/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/12947/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/12481/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/12455/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/12934/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/12461/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/12475/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/14141/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/12428/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/12932/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/14098/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/14143/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/14133/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/14138/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/12942/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/13298/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/14148/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/14128/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/12423/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/12949/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/12433/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/12939/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/12453/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/12463/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/12473/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/12593/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/13118/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/12424/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/12451/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/12931/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/14097/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/12437/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/12464/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/12477/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/12452/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/14096/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/12478/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/14131/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/14144/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/14117/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/14095/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/14130/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/14115/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/12435/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/12425/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/14145/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/12930/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/13306/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/12466/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/13073/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/12440/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/14146/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/12476/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/12426/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/12946/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/12480/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/12467/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/14134/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/12941/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/14127/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/12454/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/14147/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/12434/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/12487/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/12427/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/12474/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/13304/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/14094/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/14142/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/12462/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/14154/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/14114/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/12948/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/12938/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/12432/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/12442/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/14132/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/12449/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/12459/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/14139/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/14129/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/14119/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/13292/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/12479/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/12439/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/12933/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/14149/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/12429/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/12943/prikaziDejavnost/
+frontier size = 478
+frontier size = 478
+link found
+run: url = https://e-uprava.gov.si/podrocja/izobrazevanje-kultura
+-------------------------------------
+message: UserAgent.sendHEAD; Connection error
+requestUrl: https://e-uprava.gov.si/podrocja/izobrazevanje-kultura
+response: [none]
+	at com.jaunt.UserAgent.a(SourceFile:2793)
+	at com.jaunt.UserAgent.sendHEAD(SourceFile:2719)
+	at com.company.WebCrawler$CrawlerThread.handleHEAD(WebCrawler.java:247)
+	at com.company.WebCrawler$CrawlerThread.run(WebCrawler.java:159)
+frontier size = 477
+link found
+run: url = https://www.e-prostor.gov.si/zbirke-prostorskih-podatkov/drzavni-prostorski-koordinatni-sistem/
+-------------------------------------
+frontier size = 476
+frontier size = 476
+link found
+run: url = http://evem.gov.si/info/pogoji-uporabe/
+-------------------------------------
+[1584640897.627][SEVERE]: Timed out receiving message from renderer: 0.100
+setUrl: exception = Expected scheme-specific part at index 11: javascript:
+frontierExpansion size = 4
+run: addPage url = https://www.gov.si/iskanje/navodila/
+run: addPage url = https://www.gov.si/en/search/
+run: addPage url = https://www.gov.si/iskanje/
+run: addPage url = https://www.gov.si/iskanje
+org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "unq_url_idx"
+  Detail: Key (url)=(https://www.gov.si/iskanje/) already exists.
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2510)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2245)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:311)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:447)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:368)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:159)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:125)
+	at com.company.DatabaseHandler.addPage(DatabaseHandler.java:103)
+	at com.company.WebCrawler$CrawlerThread.run(WebCrawler.java:216)
+addLink: one of id's is -1.
+frontier size = 479
+link found
+run: url = https://www.gov.si/drzavni-organi/
+-------------------------------------
+setUrl: exception = Expected scheme-specific part at index 11: javascript:
+setUrl: exception = Expected scheme-specific part at index 11: javascript:
+setUrl: exception = Expected scheme-specific part at index 11: javascript:
+BAD =
+frontierExpansion size = 109
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/13963/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/13922/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/13989/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/14253/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/13314/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/13936/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/13991/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/13734/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/13949/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/13888/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/13862/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/13910/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/14176/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/13977/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/13316/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/13961/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/13860/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/12864/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/13987/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/13947/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/13951/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/13876/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/13886/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/13890/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/13908/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/12860/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/13892/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/13912/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/13979/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/14323/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/13999/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/13959/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/14223/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/12859/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/13926/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/13906/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/13318/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/13872/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/12877/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/13268/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/13924/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/13914/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/14360/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/13934/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/13904/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/13864/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/13894/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/13884/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/13874/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/14001/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/13882/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/13902/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/13928/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/13098/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/13983/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/14359/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/13726/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/14197/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/13868/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/14321/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/13071/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/13969/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/13308/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/13322/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/13916/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/13943/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/14003/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/13930/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/13866/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/13957/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/13310/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/13967/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/13320/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/13896/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/13997/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/13870/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/13941/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/13981/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/13971/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/14308/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/13880/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/13932/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/14322/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/13229/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/13938/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/13918/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/13993/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/13973/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/13898/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/14005/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/14324/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/14311/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/13312/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/13878/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/13953/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/13940/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/13920/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/13900/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/14007/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/13798/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/13100/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/13975/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/13965/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/13080/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/13738/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/13945/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/13955/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/13985/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/13995/prikaziDejavnost/
+frontier size = 587
+link found
+run: url = https://e-uprava.gov.si/javne-evidence/druge-javne-evidence
+-------------------------------------
+message: UserAgent.sendHEAD; Connection error
+requestUrl: https://e-uprava.gov.si/javne-evidence/druge-javne-evidence
+response: [none]
+	at com.jaunt.UserAgent.a(SourceFile:2793)
+	at com.jaunt.UserAgent.sendHEAD(SourceFile:2719)
+	at com.company.WebCrawler$CrawlerThread.handleHEAD(WebCrawler.java:247)
+	at com.company.WebCrawler$CrawlerThread.run(WebCrawler.java:159)
+frontier size = 586
+link found
+run: url = https://www.e-prostor.gov.si/fileadmin/narocanje/obr_za_narocilo.doc
+-------------------------------------
+java.lang.Exception: BINARY not supported
+	at com.company.WebCrawler$CrawlerThread.handleHEAD(WebCrawler.java:279)
+	at com.company.WebCrawler$CrawlerThread.run(WebCrawler.java:159)
+frontier size = 585
+setUrl: exception = Expected scheme-specific part at index 7: mailto:
+frontierExpansion size = 11
+run: addPage url = https://www.e-prostor.gov.si/zbirke-prostorskih-podatkov/drzavni-prostorski-koordinatni-sistem/navodila/
+run: addPage url = https://www.e-prostor.gov.si/zbirke-prostorskih-podatkov/drzavni-prostorski-koordinatni-sistem/pogosta-vprasanja/
+run: addPage url = https://www.e-prostor.gov.si/zbirke-prostorskih-podatkov/drzavni-prostorski-koordinatni-sistem/transformacija-v-novi-koordinatni-sistem/
+run: addPage url = https://www.e-prostor.gov.si/zbirke-prostorskih-podatkov/drzavni-prostorski-koordinatni-sistem/
+run: addPage url = https://www.e-prostor.gov.si/zbirke-prostorskih-podatkov/drzavni-prostorski-koordinatni-sistem/projekti-drzavnega-prostorskega-koordinatnega-sistema/
+run: addPage url = https://www.e-prostor.gov.si/zbirke-prostorskih-podatkov/drzavni-prostorski-koordinatni-sistem/horizontalna-sestavina/
+run: addPage url = https://www.e-prostor.gov.si/zbirke-prostorskih-podatkov/drzavni-prostorski-koordinatni-sistem/epsg-kode-za-slovenijo/
+run: addPage url = https://www.e-prostor.gov.si/zbirke-prostorskih-podatkov/drzavni-prostorski-koordinatni-sistem/vertikalna-sestavina/
+run: addPage url = https://www.e-prostor.gov.si/zbirke-prostorskih-podatkov/drzavni-prostorski-koordinatni-sistem/zakonodaja/
+run: addPage url = https://www.e-prostor.gov.si/zbirke-prostorskih-podatkov/drzavni-prostorski-koordinatni-sistem/zbirka-podatkov-drzavnih-geodetskih-tock/
+run: addPage url = https://www.e-prostor.gov.si/zbirke-prostorskih-podatkov/drzavni-prostorski-koordinatni-sistem/nacionalna-porocila-euref/
+org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "unq_url_idx"
+  Detail: Key (url)=(https://www.e-prostor.gov.si/zbirke-prostorskih-podatkov/drzavni-prostorski-koordinatni-sistem/) already exists.
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2510)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2245)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:311)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:447)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:368)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:159)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:125)
+	at com.company.DatabaseHandler.addPage(DatabaseHandler.java:103)
+	at com.company.WebCrawler$CrawlerThread.run(WebCrawler.java:216)
+addLink: one of id's is -1.
+frontier size = 596
+link found
+run: url = http://evem.gov.si/info/poslujem/davki/davek-na-dodano-vrednost-ddv/
+-------------------------------------
+frontier size = 595
+setUrl: exception = Expected scheme-specific part at index 11: javascript:
+setUrl: exception = Expected scheme-specific part at index 11: javascript:
+frontier size = 595
+BAD =
+[1584640903.658][SEVERE]: Timed out receiving message from renderer: 0.100
+frontierExpansion size = 0
+frontier size = 595
+[1584640903.901][SEVERE]: Timed out receiving message from renderer: 0.100
+frontier size = 595
+frontier size = 595
+frontier size = 595
+link found
+run: url = https://www.gov.si/zbirke/
+-------------------------------------
+frontier size = 594
+frontierExpansion size = 36
+run: addPage url = https://www.gov.si/drzavni-organi/sodisca/okrajna-sodisca/
+run: addPage url = https://www.gov.si/drzavni-organi/drzavni-svet/
+run: addPage url = https://www.gov.si/drzavni-organi/sodisca/vrhovno-sodisce/
+run: addPage url = https://www.gov.si/drzavni-organi/drugi-drzavni-organi/drzavna-volilna-komisija/
+run: addPage url = https://www.gov.si/drzavni-organi/drugi-drzavni-organi/drzavno-odvetnistvo/
+run: addPage url = https://www.gov.si/drzavni-organi/organi-v-sestavi/
+run: addPage url = https://www.gov.si/en/state-authorities/
+run: addPage url = https://www.gov.si/drzavni-organi/drzavni-zbor/
+run: addPage url = https://www.gov.si/drzavni-organi/drugi-drzavni-organi/fiskalni-svet/
+run: addPage url = https://www.gov.si/drzavni-organi/vladne-sluzbe/urad-vlade-za-komuniciranje/
+run: addPage url = https://www.gov.si/zbirke/imenik-institucij/
+run: addPage url = https://www.gov.si/drzavni-organi/drugi-drzavni-organi/zagovornik-nacela-enakosti/
+run: addPage url = https://www.gov.si/drzavni-organi/drugi-drzavni-organi/racunsko-sodisce/
+run: addPage url = https://www.gov.si/drzavni-organi/agencije-skladi-in-zavodi/izvajalci-socialnega-zavarovanja/
+run: addPage url = https://www.gov.si/it/organi-dello-stato/
+run: addPage url = https://www.gov.si/drzavni-organi/drugi-drzavni-organi/varuh-clovekovih-pravic/
+run: addPage url = https://www.gov.si/drzavni-organi/sodisca/okrozna-sodisca/
+run: addPage url = https://www.gov.si/drzavni-organi/drugi-drzavni-organi/drzavnotozilski-svet/
+run: addPage url = https://www.gov.si/drzavni-organi/
+run: addPage url = https://www.gov.si/drzavni-organi/ministrstva/
+run: addPage url = https://www.gov.si/drzavni-organi/drugi-drzavni-organi/informacijski-pooblascenec/
+run: addPage url = https://www.gov.si/drzavni-organi/drugi-drzavni-organi/banka-slovenije/
+run: addPage url = https://www.gov.si/drzavni-organi/predsednik-republike/
+run: addPage url = https://www.gov.si/drzavni-organi/agencije-skladi-in-zavodi/agencije/
+run: addPage url = https://www.gov.si/drzavni-organi/drugi-drzavni-organi/vrhovno-drzavno-tozilstvo/
+run: addPage url = https://www.gov.si/drzavni-organi/drugi-drzavni-organi/drzavna-revizijska-komisija-za-revizijo-postopkov-oddaje-javnih-narocil/
+run: addPage url = https://www.gov.si/drzavni-organi/agencije-skladi-in-zavodi/javni-skladi/
+run: addPage url = https://www.gov.si/drzavni-organi/drugi-drzavni-organi/komisija-za-preprecevanje-korupcije/
+run: addPage url = https://www.gov.si/drzavni-organi/predsednik-vlade/
+run: addPage url = https://www.gov.si/drzavni-organi/sodisca/visja-sodisca/
+run: addPage url = https://www.gov.si/drzavni-organi/sodisca/delovna-in-socialna-sodisca/
+run: addPage url = https://www.gov.si/drzavni-organi/drugi-drzavni-organi/sodni-svet/
+run: addPage url = https://www.gov.si/drzavni-organi/vladne-sluzbe/
+run: addPage url = https://www.gov.si/drzavni-organi/ustavno-sodisce/
+run: addPage url = https://www.gov.si/drzavni-organi/sodisca/upravno-sodisce/
+run: addPage url = https://www.gov.si/drzavni-organi/upravne-enote/
+org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "unq_url_idx"
+  Detail: Key (url)=(https://www.gov.si/drzavni-organi/) already exists.
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2510)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2245)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:311)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:447)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:368)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:159)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:125)
+	at com.company.DatabaseHandler.addPage(DatabaseHandler.java:103)
+	at com.company.WebCrawler$CrawlerThread.run(WebCrawler.java:216)
+addLink: one of id's is -1.
+frontier size = 630
+link found
+run: url = https://e-uprava.gov.si/podrocja/druzina-otroci-zakonska-zveza
+-------------------------------------
+message: UserAgent.sendHEAD; Connection error
+requestUrl: https://e-uprava.gov.si/podrocja/druzina-otroci-zakonska-zveza
+response: [none]
+	at com.jaunt.UserAgent.a(SourceFile:2793)
+	at com.jaunt.UserAgent.sendHEAD(SourceFile:2719)
+	at com.company.WebCrawler$CrawlerThread.handleHEAD(WebCrawler.java:247)
+	at com.company.WebCrawler$CrawlerThread.run(WebCrawler.java:159)
+frontier size = 629
+link found
+run: url = https://www.e-prostor.gov.si/metapodatki/
+-------------------------------------
+frontier size = 628
+[1584640907.086][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640907.187][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640907.289][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640907.391][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640907.492][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640907.595][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640907.698][SEVERE]: Timed out receiving message from renderer: 0.100
+frontier size = 628
+link found
+run: url = http://evem.gov.si/info/pomoc-in-podpora/
+-------------------------------------
+[1584640907.799][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640907.900][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640908.002][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640908.211][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640908.312][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640908.413][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640908.514][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640908.615][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640908.716][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640908.816][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640908.822][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640908.918][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640908.923][SEVERE]: Timed out receiving message from renderer: 0.100
+setUrl: exception = Expected scheme-specific part at index 11: javascript:
+[1584640909.033][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640909.106][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640909.134][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640909.235][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640909.291][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640909.336][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640909.392][SEVERE]: Timed out receiving message from renderer: 0.100
+setUrl: exception = Expected scheme-specific part at index 11: javascript:
+[1584640909.493][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640909.593][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640909.695][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640909.795][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640909.896][SEVERE]: Timed out receiving message from renderer: 0.100
+BAD =
+frontierExpansion size = 2
+run: addPage url = http://evem.gov.si/info/razmisljam/poslovni-nacrt/hidden/kako-pridobite-slovensko-davcno-stevilko/
+run: addPage url = http://evem.gov.si/info/pomoc-in-podpora/pogosta-vprasanja-in-odgovori/pogosta-vprasanja-in-odgovori-gospodarske-druzbe/
+[1584640909.997][SEVERE]: Timed out receiving message from renderer: 0.100
+frontier size = 629
+[1584640910.098][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640910.200][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640910.302][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640910.404][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640910.506][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640910.608][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640910.711][SEVERE]: Timed out receiving message from renderer: 0.100
+frontier size = 629
+link found
+run: url = https://www.gov.si/o-spletiscu/
+-------------------------------------
+frontierExpansion size = 8
+run: addPage url = https://www.gov.si/zbirke/projekti-in-programi/
+run: addPage url = https://www.gov.si/zbirke/delovna-telesa/
+run: addPage url = https://www.gov.si/zbirke/katalogi-informacij-javnega-znacaja/
+run: addPage url = https://www.gov.si/zbirke/storitve/
+run: addPage url = https://www.gov.si/it/registri/
+run: addPage url = https://www.gov.si/en/registries/
+run: addPage url = https://www.gov.si/zbirke/
+run: addPage url = https://www.gov.si/zbirke/imenik-oseb/
+org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "unq_url_idx"
+  Detail: Key (url)=(https://www.gov.si/zbirke/) already exists.
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2510)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2245)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:311)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:447)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:368)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:159)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:125)
+	at com.company.DatabaseHandler.addPage(DatabaseHandler.java:103)
+	at com.company.WebCrawler$CrawlerThread.run(WebCrawler.java:216)
+addLink: one of id's is -1.
+frontier size = 636
+link found
+run: url = https://e-uprava.gov.si/pomoc-kontakt/izjava-o-dostopnosti
+-------------------------------------
+message: UserAgent.sendHEAD; Connection error
+requestUrl: https://e-uprava.gov.si/pomoc-kontakt/izjava-o-dostopnosti
+response: [none]
+	at com.jaunt.UserAgent.a(SourceFile:2793)
+	at com.jaunt.UserAgent.sendHEAD(SourceFile:2719)
+	at com.company.WebCrawler$CrawlerThread.handleHEAD(WebCrawler.java:247)
+	at com.company.WebCrawler$CrawlerThread.run(WebCrawler.java:159)
+frontier size = 635
+link found
+run: url = https://www.e-prostor.gov.si/zbirke-prostorskih-podatkov/nepremicnine/drzavna-meja/
+-------------------------------------
+[1584640912.377][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640912.652][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640912.753][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640912.854][SEVERE]: Timed out receiving message from renderer: 0.100
+setUrl: exception = Expected scheme-specific part at index 11: javascript:
+setUrl: exception = Expected scheme-specific part at index 11: javascript:
+setUrl: exception = Expected scheme-specific part at index 11: javascript:
+BAD =
+frontierExpansion size = 5
+run: addPage url = http://evem.gov.si/info/pomoc-in-podpora/prvic-na-strani/
+run: addPage url = http://evem.gov.si/info/pomoc-in-podpora/seznam-postopkov-vem/
+run: addPage url = http://evem.gov.si/info/pomoc-in-podpora/tehnicna-podpora/
+run: addPage url = http://evem.gov.si/info/pomoc-in-podpora/zahtevana-oprema-za-elektronsko-oddajanje-dokumentov-prek-e-vem/
+run: addPage url = http://evem.gov.si/info/pomoc-in-podpora/pogosta-vprasanja-in-odgovori/
+frontier size = 639
+link found
+run: url = http://evem.gov.si/info/poslujem/davki/vpis-v-davcni-register/
+-------------------------------------
+setUrl: exception = Expected scheme-specific part at index 7: mailto:
+frontierExpansion size = 1
+run: addPage url = https://www.e-prostor.gov.si/metapodatki/
+org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "unq_url_idx"
+  Detail: Key (url)=(https://www.e-prostor.gov.si/metapodatki/) already exists.
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2510)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2245)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:311)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:447)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:368)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:159)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:125)
+	at com.company.DatabaseHandler.addPage(DatabaseHandler.java:103)
+	at com.company.WebCrawler$CrawlerThread.run(WebCrawler.java:216)
+addLink: one of id's is -1.
+frontier size = 639
+link found
+run: url = https://www.gov.si/zbirke/delovna-mesta/
+-------------------------------------
+frontierExpansion size = 7
+run: addPage url = https://www.gov.si/zbirke/projekti-in-programi/prenova-in-optimizacija-spletnih-mest-drzavne-uprave/
+run: addPage url = https://www.gov.si/it/sul-sito-web/
+run: addPage url = https://www.gov.si/o-spletiscu/
+run: addPage url = https://www.gov.si/o-spletiscu/zasebnost-in-varstvo-osebnih-podatkov/
+run: addPage url = https://www.gov.si/o-spletiscu/piskotki/
+run: addPage url = https://www.gov.si/o-spletiscu/dostopnost/
+run: addPage url = https://www.gov.si/en/about-the-website/
+org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "unq_url_idx"
+  Detail: Key (url)=(https://www.gov.si/o-spletiscu/) already exists.
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2510)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2245)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:311)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:447)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:368)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:159)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:125)
+	at com.company.DatabaseHandler.addPage(DatabaseHandler.java:103)
+	at com.company.WebCrawler$CrawlerThread.run(WebCrawler.java:216)
+addLink: one of id's is -1.
+setUrl: exception = Expected scheme-specific part at index 7: mailto:
+frontier size = 645
+link found
+run: url = https://e-uprava.gov.si/aktualno/novice/oddaja-vlog-za-potrdila-iz-kazenske-evidence1
+-------------------------------------
+frontierExpansion size = 3
+run: addPage url = https://www.gov.si/zbirke/projekti-in-programi/arbitraza/
+run: addPage url = https://www.e-prostor.gov.si/zbirke-prostorskih-podatkov/topografski-in-kartografski-podatki/topografski-podatki-in-karte/obmocja-stika-in-obmocje-notranjih-morskih-voda-v-piranskem-zalivu-v-skladu-z-razsodbo-arbitraznega-sodisca/
+run: addPage url = https://www.e-prostor.gov.si/zbirke-prostorskih-podatkov/nepremicnine/drzavna-meja/
+org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "unq_url_idx"
+  Detail: Key (url)=(https://www.e-prostor.gov.si/zbirke-prostorskih-podatkov/nepremicnine/drzavna-meja/) already exists.
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2510)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2245)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:311)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:447)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:368)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:159)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:125)
+	at com.company.DatabaseHandler.addPage(DatabaseHandler.java:103)
+	at com.company.WebCrawler$CrawlerThread.run(WebCrawler.java:216)
+addLink: one of id's is -1.
+frontier size = 647
+link found
+run: url = https://www.e-prostor.gov.si/fileadmin/Spletni_servisi/Obvestilo_uporabnikom_servisi_storitve_eprostor.pdf
+-------------------------------------
+message: UserAgent.sendHEAD; Connection error
+requestUrl: https://e-uprava.gov.si/aktualno/novice/oddaja-vlog-za-potrdila-iz-kazenske-evidence1
+response: [none]
+	at com.jaunt.UserAgent.a(SourceFile:2793)
+	at com.jaunt.UserAgent.sendHEAD(SourceFile:2719)
+	at com.company.WebCrawler$CrawlerThread.handleHEAD(WebCrawler.java:247)
+	at com.company.WebCrawler$CrawlerThread.run(WebCrawler.java:159)
+frontier size = 646
+java.lang.Exception: BINARY not supported
+	at com.company.WebCrawler$CrawlerThread.handleHEAD(WebCrawler.java:279)
+	at com.company.WebCrawler$CrawlerThread.run(WebCrawler.java:159)
+frontier size = 646
+frontier size = 646
+frontier size = 646
+frontier size = 646
+link found
+run: url = http://evem.gov.si/info/zacenjam/digitalna-potrdila/
+-------------------------------------
+frontier size = 645
+frontier size = 645
+link found
+run: url = https://www.gov.si/podrocja/okolje-in-prostor/
+-------------------------------------
+setUrl: exception = Expected scheme-specific part at index 11: javascript:
+frontierExpansion size = 22
+run: addPage url = https://www.gov.si/zbirke/delovna-mesta/informacija-o-razpisih-ozn-za-stiri-delovna-mesta-svetovalcev-za-varnostno-usposabljanje/
+run: addPage url = https://www.gov.si/zbirke/delovna-mesta/poslovni-sekretar-vi-26639-v-direktoratu-za-policijo-in-druge-varnostne-naloge-sektorju-za-tajne-podatke/
+run: addPage url = https://www.gov.si/zbirke/delovna-mesta/informacija-o-razpisanih-pripravniskih-mestih-v-agenciji-za-evropski-globalni-satelitski-navigacijski-sistem-gsa/
+run: addPage url = https://www.gov.si/zbirke/delovna-mesta/javni-natecaj-za-polozaj-nacelnika-upravne-enote-kocevje/
+run: addPage url = https://www.gov.si/zbirke/delovna-mesta/informacija-o-razpisanih-delovnih-mestih-v-svetovni-zdravstveni-organizaciji-who-22/
+run: addPage url = https://www.gov.si/zbirke/delovna-mesta/informacija-o-razpisanih-delovnih-mestih-v-agenciji-za-evropski-globalni-satelitski-navigacijski-sistem-gsa-6/
+run: addPage url = https://www.gov.si/zbirke/delovna-mesta/informacija-o-razpisu-prostega-delovnega-mesta-izvrsnega-direktorja-mednarodnega-trgovinskega-centra-itc/
+run: addPage url = https://www.gov.si/zbirke/delovna-mesta/cistilka-i-73743-v-policijski-upravi-novo-mesto-policijski-postaji-brezice/
+run: addPage url = https://www.gov.si/zbirke/delovna-mesta
+run: addPage url = https://www.gov.si/zbirke/delovna-mesta/administrator-v-73347-v-policijski-upravi-koper-postaji-prometne-policije-koper/
+run: addPage url = https://www.gov.si/zbirke/delovna-mesta/informacija-o-prostem-delovnem-mestu-vodje-oddelka-za-komuniciranje-v-programu-zn-za-okolje-unep-2/
+run: addPage url = https://www.gov.si/zbirke/delovna-mesta/informacija-o-oblikovanju-rezervne-liste-potencialnih-kandidatov-za-zaposlitev-v-agenciji-eu-za-varnost-omrezij-in-informacij-enisa/
+run: addPage url = https://www.gov.si/zbirke/delovna-mesta/informacija-o-razpisu-ozn-za-delovno-mesto-pomocnika-gs-za-humanitarne-zadeve-in-namestnika-koordinatorja-za-odziv-v-nujnih-primerih-2/
+run: addPage url = https://www.gov.si/zbirke/delovna-mesta/policijski-inspektor-sifra-dm-71616-v-uradu-za-informatiko-in-telekomunikacije-sektorju-za-zascito-itk-sistemov-in-podatkov-delo-na-podrocju-informatike-3/
+run: addPage url = https://www.gov.si/zbirke/delovna-mesta/informacija-o-razpisu-prostega-delovnega-mesta-na-evropski-agenciji-za-pomorsko-varnost-emsa-3/
+run: addPage url = https://www.gov.si/zbirke/delovna-mesta/referent-mz-v-obmocni-geodetski-upravi-kranj-2/
+run: addPage url = https://www.gov.si/zbirke/delovna-mesta/policijski-inspektor-pripravnik-v-uit-sektorju-za-zascito-itk-sistemov-in-podatkov-sifra-dm-74033-za-dolocen-cas-10-mesecev-gre-za-opravljanje-pripravnistva-na-podrocju-zascite-osebnih-podatkov-2/
+run: addPage url = https://www.gov.si/zbirke/delovna-mesta/voznik-funkcionarja-iv-pod-sifro-805-v-kabinetu-ministra/
+run: addPage url = https://www.gov.si/zbirke/delovna-mesta/
+run: addPage url = https://www.gov.si/zbirke/delovna-mesta/podsekretar-mz-v-sektorju-za-protokol-za-cas-trajanja-projekta-predsedovanje-republike-slovenije-svetu-eu-2021-sifra-dm-89/
+run: addPage url = https://www.gov.si/zbirke/delovna-mesta/visji-svetovalec-sifra-dm-25250-v-sekretariatu-uradu-za-organizacijo-in-kadre-sluzbi-za-kadrovske-zadeve-izvaja-se-v-nazivih-visji-svetovalec-iii-ii-in-i/
+run: addPage url = https://www.gov.si/zbirke/delovna-mesta/svetovalec-mz-v-sektorju-za-protokol-za-cas-trajanja-projekta-predsedovanje-republike-slovenije-svetu-eu-2021-sifra-dm-91/
+org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "unq_url_idx"
+  Detail: Key (url)=(https://www.gov.si/zbirke/delovna-mesta/) already exists.
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2510)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2245)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:311)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:447)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:368)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:159)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:125)
+	at com.company.DatabaseHandler.addPage(DatabaseHandler.java:103)
+	at com.company.WebCrawler$CrawlerThread.run(WebCrawler.java:216)
+addLink: one of id's is -1.
+frontier size = 666
+BAD =
+frontierExpansion size = 2
+run: addPage url = http://evem.gov.si/info/vem-tocke/
+run: addPage url = http://evem.gov.si/info/poslujem/davki/vpis-v-davcni-register/ocena-davcne-obveznosti-v-postopku-ustanovitve-sp/
+frontier size = 668
+frontier size = 668
+link found
+run: url = https://e-uprava.gov.si/podrocja/podjetnistvo
+-------------------------------------
+message: UserAgent.sendHEAD; Connection error
+requestUrl: https://e-uprava.gov.si/podrocja/podjetnistvo
+response: [none]
+	at com.jaunt.UserAgent.a(SourceFile:2793)
+	at com.jaunt.UserAgent.sendHEAD(SourceFile:2719)
+	at com.company.WebCrawler$CrawlerThread.handleHEAD(WebCrawler.java:247)
+	at com.company.WebCrawler$CrawlerThread.run(WebCrawler.java:159)
+frontier size = 667
+link found
+run: url = https://www.e-prostor.gov.si/dostopnost/
+-------------------------------------
+frontier size = 666
+[1584640924.984][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640925.178][SEVERE]: Timed out receiving message from renderer: 0.100
+frontier size = 666
+[1584640925.281][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640925.383][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640925.485][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640925.587][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640925.689][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640925.790][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640925.891][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640925.993][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640926.095][SEVERE]: Timed out receiving message from renderer: 0.100
+frontier size = 666
+link found
+run: url = https://evem.gov.si/evem/cert/uporabnik/prijava.evem
+-------------------------------------
+[1584640926.198][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640926.300][SEVERE]: Timed out receiving message from renderer: 0.100
+setUrl: exception = Expected scheme-specific part at index 11: javascript:
+[1584640926.402][SEVERE]: Timed out receiving message from renderer: 0.100
+java.lang.NullPointerException
+	at com.company.DatabaseHandler.addPageData(DatabaseHandler.java:158)
+	at com.company.WebCrawler$CrawlerThread.handleHEAD(WebCrawler.java:278)
+	at com.company.WebCrawler$CrawlerThread.run(WebCrawler.java:159)
+java.lang.Exception: BINARY not supported
+	at com.company.WebCrawler$CrawlerThread.handleHEAD(WebCrawler.java:279)
+	at com.company.WebCrawler$CrawlerThread.run(WebCrawler.java:159)
+frontier size = 665
+BAD =
+frontierExpansion size = 0
+frontier size = 665
+link found
+run: url = https://www.gov.si/podrocja/kultura/
+-------------------------------------
+frontier size = 664
+frontierExpansion size = 7
+run: addPage url = https://www.gov.si/podrocja/okolje-in-prostor/nepremicnine/
+run: addPage url = https://www.gov.si/podrocja/okolje-in-prostor/ohranjanje-narave/
+run: addPage url = https://www.gov.si/drzavni-organi/ministrstva/ministrstvo-za-okolje-in-prostor/
+run: addPage url = https://www.gov.si/en/policies/environment-and-spatial-planning/
+run: addPage url = https://www.gov.si/podrocja/okolje-in-prostor/okolje/
+run: addPage url = https://www.gov.si/podrocja/okolje-in-prostor/
+run: addPage url = https://www.gov.si/podrocja/okolje-in-prostor/prostor/
+org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "unq_url_idx"
+  Detail: Key (url)=(https://www.gov.si/podrocja/okolje-in-prostor/) already exists.
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2510)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2245)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:311)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:447)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:368)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:159)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:125)
+	at com.company.DatabaseHandler.addPage(DatabaseHandler.java:103)
+	at com.company.WebCrawler$CrawlerThread.run(WebCrawler.java:216)
+addLink: one of id's is -1.
+frontier size = 671
+frontier size = 671
+frontier size = 671
+link found
+run: url = https://e-uprava.gov.si/o-e-upravi/piskotki
+-------------------------------------
+message: UserAgent.sendHEAD; Connection error
+requestUrl: https://e-uprava.gov.si/o-e-upravi/piskotki
+response: [none]
+	at com.jaunt.UserAgent.a(SourceFile:2793)
+	at com.jaunt.UserAgent.sendHEAD(SourceFile:2719)
+	at com.company.WebCrawler$CrawlerThread.handleHEAD(WebCrawler.java:247)
+	at com.company.WebCrawler$CrawlerThread.run(WebCrawler.java:159)
+frontier size = 670
+frontier size = 670
+link found
+run: url = https://www.e-prostor.gov.si/zbirke-prostorskih-podatkov/nepremicnine/register-nepremicnin/
+-------------------------------------
+frontier size = 669
+[1584640930.205][SEVERE]: Timed out receiving message from renderer: 0.100
+frontier size = 669
+frontier size = 669
+link found
+run: url = http://evem.gov.si/info/razmisljam/drzavne-spodbude-za-zagon/
+-------------------------------------
+setUrl: exception = Expected scheme-specific part at index 7: mailto:
+frontierExpansion size = 1
+run: addPage url = https://www.e-prostor.gov.si/dostopnost/
+org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "unq_url_idx"
+  Detail: Key (url)=(https://www.e-prostor.gov.si/dostopnost/) already exists.
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2510)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2245)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:311)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:447)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:368)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:159)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:125)
+	at com.company.DatabaseHandler.addPage(DatabaseHandler.java:103)
+	at com.company.WebCrawler$CrawlerThread.run(WebCrawler.java:216)
+addLink: one of id's is -1.
+frontier size = 669
+link found
+run: url = https://www.gov.si/drzavni-organi/vlada/seje-vlade/gradiva-v-obravnavi/
+-------------------------------------
+frontierExpansion size = 11
+run: addPage url = https://www.gov.si/podrocja/kultura/
+run: addPage url = https://www.gov.si/podrocja/kultura/ustvarjalnost-2/
+run: addPage url = https://www.gov.si/podrocja/kultura/arhivi/
+run: addPage url = https://www.gov.si/podrocja/kultura/kulturna-raznolikost/
+run: addPage url = https://www.gov.si/podrocja/kultura/presernove-nagrade/
+run: addPage url = https://www.gov.si/en/policies/culture/
+run: addPage url = https://www.gov.si/podrocja/kultura/knjiznice/
+run: addPage url = https://www.gov.si/podrocja/kultura/slovenski-jezik/
+run: addPage url = https://www.gov.si/podrocja/kultura/mediji/
+run: addPage url = https://www.gov.si/podrocja/kultura/kulturna-dediscina/
+run: addPage url = https://www.gov.si/drzavni-organi/ministrstva/ministrstvo-za-kulturo/
+org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "unq_url_idx"
+  Detail: Key (url)=(https://www.gov.si/podrocja/kultura/) already exists.
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2510)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2245)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:311)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:447)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:368)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:159)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:125)
+	at com.company.DatabaseHandler.addPage(DatabaseHandler.java:103)
+	at com.company.WebCrawler$CrawlerThread.run(WebCrawler.java:216)
+addLink: one of id's is -1.
+frontier size = 679
+frontier size = 679
+link found
+run: url = https://e-uprava.gov.si/it
+-------------------------------------
+message: UserAgent.sendHEAD; Connection error
+requestUrl: https://e-uprava.gov.si/it
+response: [none]
+	at com.jaunt.UserAgent.a(SourceFile:2793)
+	at com.jaunt.UserAgent.sendHEAD(SourceFile:2719)
+	at com.company.WebCrawler$CrawlerThread.handleHEAD(WebCrawler.java:247)
+	at com.company.WebCrawler$CrawlerThread.run(WebCrawler.java:159)
+frontier size = 678
+frontier size = 678
+link found
+run: url = https://www.e-prostor.gov.si/dostop-do-podatkov/dostop-do-podatkov/mapa/vzorci-podatkov/
+-------------------------------------
+BAD = http://ren.gu(at)gov.si/
+setUrl: exception = Expected scheme-specific part at index 7: mailto:
+frontierExpansion size = 67
+run: addPage url = https://www.e-prostor.gov.si/fileadmin/REN/gradivo_za_medije060608_1.pdf
+run: addPage url = https://www.e-prostor.gov.si/fileadmin/REN/nepremicnine_za_dejavnost/VPR_2013_PNP.doc
+run: addPage url = https://www.e-prostor.gov.si/fileadmin/REN/Aplikacije/dopis_izm_form__30.11.2015.pdf
+run: addPage url = https://www.e-prostor.gov.si/fileadmin/REN/spreminjanje_podatkov/REN_Del_stavbe_4_4_mad.pdf
+run: addPage url = https://www.gov.si/assets/organi-v-sestavi/GURS/Dokumenti/Zlozenke/Register-nepremicnin.pdf
+run: addPage url = https://www.e-prostor.gov.si/fileadmin/REN/spreminjanje_podatkov/REN_Stavba.pdf
+run: addPage url = https://www.e-prostor.gov.si/fileadmin/REN/Statistike/Statistike_REN_22.10.2018.pdf
+run: addPage url = https://www.e-prostor.gov.si/fileadmin/REN/Statistike/Statistike_REN_05.10.2017.pdf
+run: addPage url = https://www.e-prostor.gov.si/fileadmin/REN/Statistike/Statistike_REN_7.4.2015.pdf
+run: addPage url = https://www.e-prostor.gov.si/fileadmin/REN/Statistike/Statistike_REN_5.8.2016.pdf
+run: addPage url = https://www.e-prostor.gov.si/fileadmin/REN/Statistike/Statistike_REN_25.04.2017.pdf
+run: addPage url = https://www.e-prostor.gov.si/fileadmin/REN/Statistike_REN_01082008_popravljeno.pdf
+run: addPage url = https://www.e-prostor.gov.si/fileadmin/REN/spreminjanje_podatkov/REN_Del_stavbe_4_2_mad.pdf
+run: addPage url = https://www.e-prostor.gov.si/fileadmin/REN/spreminjanje_podatkov/REN_Del_stavbe_4_3_ita.pdf
+run: addPage url = https://www.e-prostor.gov.si/fileadmin/REN/Gradiva/P4_-_izmenjevalni_format_za_podatke_o_namenski_rabi_in_zemljiscih_za_gradnjo_01.pdf
+run: addPage url = https://www.e-prostor.gov.si/fileadmin/REN/spreminjanje_podatkov/REN_Stavba_IND_mad.pdf
+run: addPage url = https://www.e-prostor.gov.si/fileadmin/REN/spreminjanje_podatkov/REN_Del_stavbe_4_1_ita.pdf
+run: addPage url = https://www.e-prostor.gov.si/fileadmin/KS/navodila/dejanske_rabe_s_primeri_01042020.xlsx
+run: addPage url = https://www.e-prostor.gov.si/fileadmin/REN/spreminjanje_podatkov/Novi_obrazci_REN_navodila12.pdf
+run: addPage url = https://www.e-prostor.gov.si/fileadmin/REN/nepremicnine_za_dejavnost/Navodila_PN.pdf
+run: addPage url = https://www.e-prostor.gov.si/fileadmin/REN/Statistike/Statistike_REN_2.2.2016.pdf
+run: addPage url = https://www.e-prostor.gov.si/fileadmin/KS/navodila/Sifrant_dejanske_rabe_16042019.pdf
+run: addPage url = https://www.e-prostor.gov.si/fileadmin/REN/Gradiva/Metodolgija_REN_feb13_za_objavo.pdf
+run: addPage url = https://www.e-prostor.gov.si/fileadmin/KS/navodila/preklic_objavljenih_dokumentov.pdf
+run: addPage url = https://www.e-prostor.gov.si/fileadmin/REN/spreminjanje_podatkov/REN_Del_stavbe_4_1.pdf
+run: addPage url = https://www.e-prostor.gov.si/fileadmin/REN/Statistike/Statistike_REN_19.01.2017.pdf
+run: addPage url = https://www.e-prostor.gov.si/fileadmin/REN/spreminjanje_podatkov/REN_Del_stavbe_4_3_mad.pdf
+run: addPage url = https://www.e-prostor.gov.si/fileadmin/REN/Statistike/Statistike_REN_4.5.2016.pdf
+run: addPage url = https://www.e-prostor.gov.si/fileadmin/KS/navodila/nacin_izracuna_uporabne_povrsine_dela_stavbe.pdf
+run: addPage url = https://www.e-prostor.gov.si/fileadmin/REN/spreminjanje_podatkov/REN_Stavba_mad.pdf
+run: addPage url = https://www.e-prostor.gov.si/fileadmin/REN/spreminjanje_podatkov/REN_Stavba_IND_ita.pdf
+run: addPage url = https://www.e-prostor.gov.si/fileadmin/REN/spreminjanje_podatkov/REN_Stavba_IND.pdf
+run: addPage url = https://www.e-prostor.gov.si/fileadmin/REN/Statistike/Statistike_REN_17.07.2017.pdf
+run: addPage url = https://www.e-prostor.gov.si/fileadmin/REN/spreminjanje_podatkov/REN_Del_stavbe_4_5_mad.pdf
+run: addPage url = https://www.e-prostor.gov.si/fileadmin/REN/spreminjanje_podatkov/REN_Del_stavbe_4_2.pdf
+run: addPage url = https://www.e-prostor.gov.si/fileadmin/REN/Statistike/Statistike_REN_8.1.2015.pdf
+run: addPage url = https://www.gov.si/assets/organi-v-sestavi/GURS/Dokumenti/Zlozenke/Identifikacijske-oznake-nepremicnin.pdf
+run: addPage url = https://www.e-prostor.gov.si/fileadmin/REN/Statistike/Statistike_REN_28.7.2015.pdf
+run: addPage url = https://www.e-prostor.gov.si/fileadmin/REN/spreminjanje_podatkov/REN_Stavba_ita.pdf
+run: addPage url = https://www.e-prostor.gov.si/fileadmin/KS/navodila/sifrant_registra_nepremicnin_in_katastra_stavb.pdf
+run: addPage url = https://www.e-prostor.gov.si/fileadmin/REN/spreminjanje_podatkov/REN_Del_stavbe_4_5_ita.pdf
+run: addPage url = https://www.e-prostor.gov.si/fileadmin/REN/spreminjanje_podatkov/REN_Del_stavbe_4_1_mad.pdf
+run: addPage url = https://www.e-prostor.gov.si/fileadmin/REN/Statistike/Statistike_REN_30.01.2018.pdf
+run: addPage url = https://www.e-prostor.gov.si/fileadmin/REN/nepremicnine_za_dejavnost/VPR_2013_PNB.doc
+run: addPage url = https://www.e-prostor.gov.si/fileadmin/KS/navodila/sifrant_REN_17_junij2019.pdf
+run: addPage url = https://www.e-prostor.gov.si/fileadmin/REN/Gradiva/P2_-_osnovni_pojmi_UML.pdf
+run: addPage url = https://www.e-prostor.gov.si/fileadmin/KS/navodila/Vrste_prostorov_16042019.pdf
+run: addPage url = https://www.e-prostor.gov.si/fileadmin/REN/Statistike/Statistike_REN_31.07.2018.pdf
+run: addPage url = https://www.e-prostor.gov.si/fileadmin/KS/navodila/Prostori_s_primeri_1.xlsx
+run: addPage url = https://www.e-prostor.gov.si/fileadmin/KS/navodila/CC_SI_primeri.xls
+run: addPage url = https://www.e-prostor.gov.si/fileadmin/REN/spreminjanje_podatkov/REN_Del_stavbe_4_3.pdf
+run: addPage url = https://www.e-prostor.gov.si/zbirke-prostorskih-podatkov/nepremicnine/register-nepremicnin/
+run: addPage url = https://www.e-prostor.gov.si/fileadmin/REN/spreminjanje_podatkov/REN_Del_stavbe_4_2_ita.pdf
+run: addPage url = https://www.e-prostor.gov.si/fileadmin/REN/spreminjanje_podatkov/REN_Del_stavbe_4_4_ita.pdf
+run: addPage url = https://www.e-prostor.gov.si/fileadmin/REN/Gradiva/P1_-_kako_sestavljamo_nepremicnine.pdf
+run: addPage url = https://www.e-prostor.gov.si/fileadmin/REN/spreminjanje_podatkov/REN_Del_stavbe_4_4.pdf
+run: addPage url = https://www.e-prostor.gov.si/fileadmin/KS/navodila/sifrant_REN_popravek_04072019.pdf
+run: addPage url = https://www.e-prostor.gov.si/fileadmin/REN/nepremicnine_za_dejavnost/VPR_2013_PNE.doc
+run: addPage url = https://www.e-prostor.gov.si/fileadmin/REN/Aplikacije/Mozilla_SSL.pdf
+run: addPage url = https://www.e-prostor.gov.si/fileadmin/REN/Gradiva/P3_-_izmenjevalni_format_za_podatke_o_gozdovih.pdf
+run: addPage url = https://www.e-prostor.gov.si/fileadmin/REN/Statistike/Statistike_REN_2.11.2016.pdf
+run: addPage url = https://www.e-prostor.gov.si/fileadmin/REN/nepremicnine_za_dejavnost/Izjava_lastnika_PN.doc
+run: addPage url = https://www.e-prostor.gov.si/fileadmin/REN/spreminjanje_podatkov/REN_Del_stavbe_4_5.pdf
+run: addPage url = https://www.e-prostor.gov.si/fileadmin/REN/Statistike/Statistike_REN_16.11.2015.pdf
+run: addPage url = https://www.e-prostor.gov.si/fileadmin/KS/navodila/Nacin_izracuna_16042019.pdf
+run: addPage url = https://www.e-prostor.gov.si/fileadmin/REN/REN_tiskovna6jun08_internet.PPT
+run: addPage url = https://www.e-prostor.gov.si/fileadmin/REN/nepremicnine_za_dejavnost/VPR_2013_PNM.doc
+org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "unq_url_idx"
+  Detail: Key (url)=(https://www.e-prostor.gov.si/zbirke-prostorskih-podatkov/nepremicnine/register-nepremicnin/) already exists.
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2510)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2245)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:311)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:447)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:368)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:159)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:125)
+	at com.company.DatabaseHandler.addPage(DatabaseHandler.java:103)
+	at com.company.WebCrawler$CrawlerThread.run(WebCrawler.java:216)
+addLink: one of id's is -1.
+frontier size = 744
+link found
+run: url = http://evem.gov.si/info/podrocja/sektor/12024/prikaziSektor/
+-------------------------------------
+setUrl: exception = Expected scheme-specific part at index 11: javascript:
+setUrl: exception = No such host is known (ess.gov.si)
+setUrl: exception = No such host is known (sklad-kadri.si)
+frontierExpansion size = 11
+run: addPage url = https://www.gov.si/drzavni-organi/vlada/seje-vlade/gradiva-v-obravnavi/
+run: addPage url = https://www.gov.si/drzavni-organi/vlada/seje-vlade/gradiva-v-obravnavi/show/5183
+run: addPage url = https://www.gov.si/drzavni-organi/vlada/seje-vlade/gradiva-v-obravnavi/show/5184
+run: addPage url = https://www.gov.si/drzavni-organi/vlada/seje-vlade/gradiva-v-obravnavi/show/5185
+run: addPage url = https://www.gov.si/drzavni-organi/vlada/seje-vlade/gradiva-v-obravnavi/show/5180
+run: addPage url = https://www.gov.si/drzavni-organi/vlada/seje-vlade/
+run: addPage url = https://www.gov.si/drzavni-organi/vlada/seje-vlade/gradiva-v-obravnavi/show/5181
+run: addPage url = https://www.gov.si/drzavni-organi/vlada/seje-vlade/gradiva-v-obravnavi/show/5182
+run: addPage url = https://www.gov.si/drzavni-organi/vlada/seje-vlade/gradiva-v-obravnavi/show/5177
+run: addPage url = https://www.gov.si/drzavni-organi/vlada/seje-vlade/gradiva-v-obravnavi/show/5178
+run: addPage url = https://www.gov.si/drzavni-organi/vlada/seje-vlade/gradiva-v-obravnavi/show/5179
+org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "unq_url_idx"
+  Detail: Key (url)=(https://www.gov.si/drzavni-organi/vlada/seje-vlade/gradiva-v-obravnavi/) already exists.
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2510)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2245)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:311)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:447)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:368)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:159)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:125)
+	at com.company.DatabaseHandler.addPage(DatabaseHandler.java:103)
+	at com.company.WebCrawler$CrawlerThread.run(WebCrawler.java:216)
+addLink: one of id's is -1.
+frontier size = 754
+link found
+run: url = https://www.gov.si/podrocja/zunanje-zadeve/
+-------------------------------------
+setUrl: exception = No such host is known (ozs.si)
+BAD =
+frontierExpansion size = 0
+frontier size = 753
+link found
+run: url = https://e-uprava.gov.si/drzava-in-druzba/anonimne-prijave
+-------------------------------------
+[1584640940.895][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640940.997][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640941.099][SEVERE]: Timed out receiving message from renderer: 0.100
+message: UserAgent.sendHEAD; Connection error
+requestUrl: https://e-uprava.gov.si/drzava-in-druzba/anonimne-prijave
+response: [none]
+	at com.jaunt.UserAgent.a(SourceFile:2793)
+	at com.jaunt.UserAgent.sendHEAD(SourceFile:2719)
+	at com.company.WebCrawler$CrawlerThread.handleHEAD(WebCrawler.java:247)
+	at com.company.WebCrawler$CrawlerThread.run(WebCrawler.java:159)
+frontier size = 752
+link found
+run: url = https://www.e-prostor.gov.si/aktualno/preklic-uporabe-objavljenih-dokumentov-za-ks-in-ren/
+-------------------------------------
+[1584640941.200][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640941.302][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640941.402][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640941.503][SEVERE]: Timed out receiving message from renderer: 0.100
+setUrl: exception = Expected scheme-specific part at index 7: mailto:
+frontierExpansion size = 20
+run: addPage url = https://www.e-prostor.gov.si/dostop-do-podatkov/dostop-do-podatkov/mapa/vzorci-podatkov/
+run: addPage url = https://www.e-prostor.gov.si/fileadmin/vzorci/ETN_Kupoprodajni_posli.zip
+run: addPage url = https://www.e-prostor.gov.si/dostop-do-podatkov/dostop-do-podatkov/mapa/vzorci-podatkov/raster-tiff/
+run: addPage url = https://www.e-prostor.gov.si/dostop-do-podatkov/dostop-do-podatkov/mapa/vzorci-podatkov/vk-ascii/
+run: addPage url = https://www.e-prostor.gov.si/fileadmin/vzorci/ZK_vzorci/Graficni_podatki_IS_ZPS.zip
+run: addPage url = https://www.e-prostor.gov.si/fileadmin/vzorci/ZK_vzorci/Opisni_podatki.zip
+run: addPage url = https://www.e-prostor.gov.si/dostop-do-podatkov/dostop-do-podatkov/mapa/vzorci-podatkov/ascii/
+run: addPage url = https://www.e-prostor.gov.si/dostop-do-podatkov/dostop-do-podatkov/mapa/vzorci-podatkov/vektor-shp/
+run: addPage url = https://www.e-prostor.gov.si/fileadmin/vzorci/Graficni_podatki_o_stavbah.zip
+run: addPage url = https://www.e-prostor.gov.si/fileadmin/vzorci/ZK_vzorci/Graficni_podatki_urejene_meje.zip
+run: addPage url = https://www.e-prostor.gov.si/fileadmin/vzorci/ETN_Najemni_posli.zip
+run: addPage url = https://www.e-prostor.gov.si/fileadmin/vzorci/Opisni_podatki_o_stavbah.zip
+run: addPage url = https://www.e-prostor.gov.si/fileadmin/vzorci/REN_opisni_podatki.zip
+run: addPage url = https://www.e-prostor.gov.si/fileadmin/vzorci/REN_opisni_podatki_z_upravljavci.zip
+run: addPage url = https://www.e-prostor.gov.si/fileadmin/vzorci/ZK_vzorci/Opisni_podatki_ZK_tock.zip
+run: addPage url = https://www.e-prostor.gov.si/fileadmin/vzorci/ZK_vzorci/Graficni_podatki_IS_ZKN.zip
+run: addPage url = https://www.e-prostor.gov.si/dostop-do-podatkov/spletne-storitve/
+run: addPage url = https://www.e-prostor.gov.si/fileadmin/vzorci/ZK_vzorci/Graficni_podatki_ZKP.zip
+org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "unq_url_idx"
+  Detail: Key (url)=(https://www.e-prostor.gov.si/dostop-do-podatkov/dostop-do-podatkov/mapa/vzorci-podatkov/) already exists.
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2510)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2245)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:311)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:447)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:368)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:159)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:125)
+	at com.company.DatabaseHandler.addPage(DatabaseHandler.java:103)
+	at com.company.WebCrawler$CrawlerThread.run(WebCrawler.java:216)
+addLink: one of id's is -1.
+run: addPage url = https://www.e-prostor.gov.si/fileadmin/vzorci/Opisni_podatki_o_stavbah_upr.zip
+run: addPage url = https://www.e-prostor.gov.si/fileadmin/vzorci/DOF050_izsek.zip
+frontier size = 771
+link found
+run: url = http://evem.gov.si/info/pomoc-in-podpora/vsebinska-podpora/
+-------------------------------------
+setUrl: exception = Expected scheme-specific part at index 11: javascript:
+setUrl: exception = Expected scheme-specific part at index 11: javascript:
+setUrl: exception = Expected scheme-specific part at index 11: javascript:
+setUrl: exception = Expected scheme-specific part at index 11: javascript:
+BAD =
+frontierExpansion size = 35
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/13102/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/12886/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/13284/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/12893/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/13779/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/12889/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/12879/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/14152/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/12908/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/12927/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/12911/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/12918/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/12921/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/12924/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/12890/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/14099/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/13254/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/13021/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/12922/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/12415/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/14153/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/12496/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/13063/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/12925/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/12928/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/12907/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/13282/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/12888/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/12920/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/12882/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/12923/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/12910/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/12909/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/12892/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/12885/prikaziDejavnost/
+frontier size = 805
+link found
+run: url = https://www.gov.si/
+-------------------------------------
+[1584640946.262][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640946.362][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640946.466][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640946.568][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640946.669][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640946.770][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640946.871][SEVERE]: Timed out receiving message from renderer: 0.100
+frontierExpansion size = 12
+run: addPage url = https://www.gov.si/podrocja/zunanje-zadeve/
+run: addPage url = https://www.gov.si/zbirke/projekti-in-programi/prihodnost-evropske-unije-kaksno-je-vase-mnenje/
+run: addPage url = https://www.gov.si/podrocja/zunanje-zadeve/mednarodne-organizacije-in-mednarodno-pravo/
+run: addPage url = https://www.gov.si/teme/vstop-in-prebivanje/
+run: addPage url = https://www.gov.si/en/policies/foreign-affairs/
+run: addPage url = https://www.gov.si/podrocja/zunanje-zadeve/slovenci-zunaj-slovenije/
+run: addPage url = https://www.gov.si/zbirke/projekti-in-programi/predsedovanje-slovenije-svetu-eu-2021/
+run: addPage url = https://www.gov.si/podrocja/zunanje-zadeve/mednarodno-razvojno-sodelovanje-in-humanitarna-pomoc/
+run: addPage url = https://www.gov.si/zbirke/projekti-in-programi/izstop-zdruzenega-kraljestva-iz-evropske-unije-brexit/
+run: addPage url = https://www.gov.si/podrocja/zunanje-zadeve/slovenija-in-svet/
+run: addPage url = https://www.gov.si/podrocja/zunanje-zadeve/informacije-za-popotnike/
+run: addPage url = https://www.gov.si/zbirke/projekti-in-programi/nasledstvo-sfrj/
+org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "unq_url_idx"
+  Detail: Key (url)=(https://www.gov.si/podrocja/zunanje-zadeve/) already exists.
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2510)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2245)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:311)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:447)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:368)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:159)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:125)
+	at com.company.DatabaseHandler.addPage(DatabaseHandler.java:103)
+	at com.company.WebCrawler$CrawlerThread.run(WebCrawler.java:216)
+addLink: one of id's is -1.
+frontier size = 816
+link found
+run: url = http://evem.gov.si/info/podrocja/sektor/12023/prikaziSektor/
+-------------------------------------
+setUrl: exception = Expected scheme-specific part at index 11: javascript:
+setUrl: exception = Expected scheme-specific part at index 7: mailto:
+setUrl: exception = Expected scheme-specific part at index 11: javascript:
+frontierExpansion size = 2
+run: addPage url = https://www.e-prostor.gov.si/aktualno/preklic-uporabe-objavljenih-dokumentov-za-ks-in-ren/
+run: addPage url = https://www.e-prostor.gov.si/aktualno-arhiv
+org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "unq_url_idx"
+  Detail: Key (url)=(https://www.e-prostor.gov.si/aktualno/preklic-uporabe-objavljenih-dokumentov-za-ks-in-ren/) already exists.
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2510)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2245)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:311)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:447)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:368)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:159)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:125)
+	at com.company.DatabaseHandler.addPage(DatabaseHandler.java:103)
+	at com.company.WebCrawler$CrawlerThread.run(WebCrawler.java:216)
+addLink: one of id's is -1.
+frontier size = 817
+link found
+run: url = https://e-uprava.gov.si/javne-evidence/odtujeni-osebni-dokumenti
+-------------------------------------
+setUrl: exception = Expected scheme-specific part at index 11: javascript:
+setUrl: exception = Expected scheme-specific part at index 11: javascript:
+setUrl: exception = ess.gov.si
+setUrl: exception = Expected scheme-specific part at index 11: javascript:
+setUrl: exception = Expected scheme-specific part at index 11: javascript:
+message: UserAgent.sendHEAD; Connection error
+requestUrl: https://e-uprava.gov.si/javne-evidence/odtujeni-osebni-dokumenti
+response: [none]
+	at com.jaunt.UserAgent.a(SourceFile:2793)
+	at com.jaunt.UserAgent.sendHEAD(SourceFile:2719)
+	at com.company.WebCrawler$CrawlerThread.handleHEAD(WebCrawler.java:247)
+	at com.company.WebCrawler$CrawlerThread.run(WebCrawler.java:159)
+frontier size = 816
+link found
+run: url = https://www.e-prostor.gov.si/izobrazevanja/izobrazevanje-geodetov-po-zgeod-1/
+-------------------------------------
+BAD =
+frontierExpansion size = 10
+run: addPage url = http://evem.gov.si/info/pomoc-in-podpora/vsebinska-podpora/vsebinska-podpora-zzzs/
+run: addPage url = http://evem.gov.si/info/pomoc-in-podpora/vsebinska-podpora/vsebinska-podpora-furs/
+run: addPage url = http://evem.gov.si/info/pomoc-in-podpora/vsebinska-podpora/vsebinska-podpora-zpiz/
+run: addPage url = http://evem.gov.si/info/pomoc-in-podpora/vsebinska-podpora/vsebinska-podpora-mgrt/
+run: addPage url = http://evem.gov.si/info/pomoc-in-podpora/vsebinska-podpora/vsebinska-podpora-upravne-enote/
+run: addPage url = http://evem.gov.si/info/pomoc-in-podpora/vsebinska-podpora/vsebinska-podpora-ajpes/
+run: addPage url = http://evem.gov.si/info/spot-tocke-in-notarji/seznam-tock-spot-ozs/
+run: addPage url = http://evem.gov.si/info/pomoc-in-podpora/vsebinska-podpora/vsebinska-podpora-ministrstvo-za-zdravje/
+run: addPage url = http://evem.gov.si/info/pomoc-in-podpora/vsebinska-podpora/vsebinska-podpora-ozs/
+run: addPage url = http://evem.gov.si/info/pomoc-in-podpora/vsebinska-podpora/vsebinska-podpora-sodisca/
+frontier size = 825
+[1584640948.706][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640948.837][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640948.939][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640949.040][SEVERE]: Timed out receiving message from renderer: 0.100
+frontier size = 825
+frontier size = 825
+link found
+run: url = https://www.gov.si/podrocja/drzava-in-druzba/
+-------------------------------------
+[1584640951.263][SEVERE]: Timed out receiving message from renderer: 0.100
+java.lang.Exception: DUPLICATE skip.
+	at com.company.WebCrawler$CrawlerThread.run(WebCrawler.java:181)
+frontier size = 824
+[1584640952.518][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640952.619][SEVERE]: Timed out receiving message from renderer: 0.100
+frontier size = 824
+link found
+run: url = http://evem.gov.si/info/poslujem/podpora-drzave-pri-razvoju/
+-------------------------------------
+setUrl: exception = Expected scheme-specific part at index 7: mailto:
+frontierExpansion size = 13
+run: addPage url = https://www.e-prostor.gov.si/fileadmin/Izobrazevanja/Izobr_geodetov_po_ZgeoD1/Dopolnitev_letni_program_2014.pdf
+run: addPage url = https://www.e-prostor.gov.si/izobrazevanja/izobrazevanje-geodetov-po-zgeod-1/mapa/izobrazevanje-za-geodete-2008/
+run: addPage url = https://www.e-prostor.gov.si/fileadmin/Izobrazevanja/Izobr_geodetov_po_ZgeoD1/Letni_program_2013.pdf
+run: addPage url = https://www.e-prostor.gov.si/izobrazevanja/izobrazevanje-geodetov-po-zgeod-1/mapa/izobrazevanje-za-geodete-2009/
+run: addPage url = https://www.e-prostor.gov.si/izobrazevanja/izobrazevanje-geodetov-po-zgeod-1/mapa/izobrazevanje-za-geodete-2007/
+run: addPage url = https://www.e-prostor.gov.si/izobrazevanja/izobrazevanje-geodetov-po-zgeod-1/
+run: addPage url = https://www.e-prostor.gov.si/fileadmin/Izobrazevanja/Izobr_geodetov_po_ZgeoD1/Letni_program_2015.pdf
+run: addPage url = https://www.e-prostor.gov.si/fileadmin/Izobrazevanja/Izobr_geodetov_po_ZgeoD1/Letni_program_2017.pdf
+run: addPage url = https://www.e-prostor.gov.si/fileadmin/Izobrazevanja/Izobr_geodetov_po_ZgeoD1/Letni_program_2014.pdf
+run: addPage url = https://www.e-prostor.gov.si/fileadmin/Izobrazevanja/Izobr_geodetov_po_ZgeoD1/Dopolnitev_letni_program_2013.pdf
+run: addPage url = https://www.e-prostor.gov.si/fileadmin/Izobrazevanja/Izobr_geodetov_po_ZgeoD1/Letni_program_2016.pdf
+run: addPage url = https://www.e-prostor.gov.si/fileadmin/Izobrazevanja/Izobr_geodetov_po_ZgeoD1/Navodilo_-_dolocitev_numericnih_koordinat_ZK_tock.pdf
+run: addPage url = https://www.e-prostor.gov.si/fileadmin/Izobrazevanja/Izobr_geodetov_po_ZgeoD1/Letni_program_2018.pdf
+org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "unq_url_idx"
+  Detail: Key (url)=(https://www.e-prostor.gov.si/izobrazevanja/izobrazevanje-geodetov-po-zgeod-1/) already exists.
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2510)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2245)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:311)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:447)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:368)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:159)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:125)
+	at com.company.DatabaseHandler.addPage(DatabaseHandler.java:103)
+	at com.company.WebCrawler$CrawlerThread.run(WebCrawler.java:216)
+addLink: one of id's is -1.
+frontier size = 836
+link found
+run: url = https://e-uprava.gov.si/o-e-upravi/pogoji-uporabe
+-------------------------------------
+message: UserAgent.sendHEAD; Connection error
+requestUrl: https://e-uprava.gov.si/o-e-upravi/pogoji-uporabe
+response: [none]
+	at com.jaunt.UserAgent.a(SourceFile:2793)
+	at com.jaunt.UserAgent.sendHEAD(SourceFile:2719)
+	at com.company.WebCrawler$CrawlerThread.handleHEAD(WebCrawler.java:247)
+	at com.company.WebCrawler$CrawlerThread.run(WebCrawler.java:159)
+frontier size = 835
+link found
+run: url = https://www.e-prostor.gov.si/zbirke-prostorskih-podatkov/zbirka-vrednotenja-nepremicnin/
+-------------------------------------
+frontierExpansion size = 12
+run: addPage url = https://www.gov.si/podrocja/drzava-in-druzba/informacijska-druzba/
+run: addPage url = https://www.gov.si/en/policies/state-and-society/
+run: addPage url = https://www.gov.si/podrocja/drzava-in-druzba/priseljevanje-v-slovenijo/
+run: addPage url = https://www.gov.si/podrocja/drzava-in-druzba/
+run: addPage url = https://www.gov.si/podrocja/drzava-in-druzba/volitve-in-referendumi/
+run: addPage url = https://www.gov.si/podrocja/drzava-in-druzba/javni-sektor/
+run: addPage url = https://www.gov.si/podrocja/drzava-in-druzba/drzavljanstvo-dokumenti-registri/
+run: addPage url = https://www.gov.si/podrocja/drzava-in-druzba/o-sloveniji/
+run: addPage url = https://www.gov.si/podrocja/drzava-in-druzba/civilna-druzba/
+run: addPage url = https://www.gov.si/podrocja/drzava-in-druzba/clovekove-pravice-in-enake-moznosti/
+run: addPage url = https://www.gov.si/drzavni-organi/ministrstva/ministrstvo-za-javno-upravo/
+org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "unq_url_idx"
+  Detail: Key (url)=(https://www.gov.si/podrocja/drzava-in-druzba/) already exists.
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2510)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2245)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:311)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:447)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:368)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:159)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:125)
+	at com.company.DatabaseHandler.addPage(DatabaseHandler.java:103)
+	at com.company.WebCrawler$CrawlerThread.run(WebCrawler.java:216)
+addLink: one of id's is -1.
+run: addPage url = https://www.gov.si/podrocja/drzava-in-druzba/lokalna-samouprava-in-regionalni-razvoj/
+frontier size = 846
+link found
+run: url = https://www.gov.si/novice/
+-------------------------------------
+[1584640957.241][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640957.409][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640957.511][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640957.633][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584640957.736][SEVERE]: Timed out receiving message from renderer: 0.100
+setUrl: exception = Expected scheme-specific part at index 11: javascript:
+[1584640957.838][SEVERE]: Timed out receiving message from renderer: 0.100
+setUrl: exception = Expected scheme-specific part at index 11: javascript:
+setUrl: exception = Expected scheme-specific part at index 11: javascript:
+setUrl: exception = Expected scheme-specific part at index 11: javascript:
+setUrl: exception = Expected scheme-specific part at index 11: javascript:
+BAD =
+frontierExpansion size = 51
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/12444/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/12929/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/12411/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/12944/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/12620/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/12613/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/13666/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/13640/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/12404/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/13646/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/12485/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/13815/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/14962/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/13436/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/12945/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/12445/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/12405/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/13522/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/12436/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/13422/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/13458/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/13412/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/12410/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/12618/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/13428/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/12446/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/12610/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/12447/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/13730/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/12616/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/13682/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/13162/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/13858/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/12468/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/12401/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/14101/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/14027/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/12438/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/12408/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/14451/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/12412/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/14113/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/13272/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/14450/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/13096/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/12443/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/12469/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/13252/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/13732/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/12409/prikaziDejavnost/
+run: addPage url = http://evem.gov.si/info/dejavnosti/dejavnost/13526/prikaziDejavnost/
+frontier size = 896
+link found
+run: url = http://evem.gov.si/info/piskotki
+-------------------------------------
+BAD =
+frontierExpansion size = 11
+run: addPage url = http://evem.gov.si/info/poslujem/financiranje/horizon/
+run: addPage url = http://evem.gov.si/info/poslujem/financiranje/dolznisko-financiranje/
+run: addPage url = http://evem.gov.si/info/poslujem/financiranje/lastnisko-financiranje/
+run: addPage url = http://evem.gov.si/info/poslujem/financiranje/rizicni-kapital/
+run: addPage url = http://evem.gov.si/info/poslujem/financiranje/moznosti-ugodnega-financiranja-msp/
+run: addPage url = http://evem.gov.si/info/poslujem/financiranje/zivljenjski-cikel-podjetja/
+run: addPage url = http://evem.gov.si/info/poslujem/financiranje/bancni-viri/
+run: addPage url = http://evem.gov.si/info/poslujem/financiranje/zavarovanje-terjatev-kot-ukrep-proti-financni-nedisciplini/
+run: addPage url = http://evem.gov.si/info/poslujem/financiranje/javni-viri/
+run: addPage url = http://evem.gov.si/info/poslujem/financiranje/leasing/
+run: addPage url = http://evem.gov.si/info/poslujem/financiranje/faktoring/
+frontier size = 906
+
+Process finished with exit code -1
