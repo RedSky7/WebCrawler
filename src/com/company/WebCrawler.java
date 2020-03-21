@@ -27,7 +27,7 @@ public class WebCrawler {
     private static final String URL_E_UPRAVA_GOV = "e-uprava.gov.si";
     private static final String URL_E_PROSTOR_GOV = "e-prostor.gov.si";
 
-    private static final int THREAD_COUNT = 3;  // Number of workers
+    private static final int THREAD_COUNT = 4;  // Number of workers
     private static final int DELAY = 5000;        // In ms. Min value should be 5000
     private static final int MAX_LINKS = 100;
 
@@ -316,7 +316,7 @@ public class WebCrawler {
                     processedLinks.put(crawlerUrl, false);
 
                     // Some delay before sending another HEAD.
-                    Thread.sleep(500);
+                    Thread.sleep(400);
                     handleHEAD(pageId, crawlerUrl);
                 }
                 return;
