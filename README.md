@@ -1,6 +1,6 @@
 # WebCrawler
  
-A web crawler that can be used in order to obtain the information from web sites on specific domains. 
+A web crawler implemented in Java that can be used in order to obtain the information from web sites on specific domains. 
  
 You can use this crawler by replacing static Strings which start with URL_* with your own.
 
