@@ -40,7 +40,7 @@ public class WebCrawler {
 
     private static final int THREAD_COUNT = 3;  // Number of workers
     private static final int DELAY = 5000;        // In ms. Min value should be 5000
-    private static final int MAX_LINKS = 50000;
+    private static final int MAX_LINKS = 1000;
 
     public static Lock frontierLock = new ReentrantLock();
     public static LinkedList<CrawlerUrl> frontier = new LinkedList<>();
@@ -61,17 +61,16 @@ public class WebCrawler {
         // TODO: Uncomment bellow. TK
         //chromeOptions.addArguments("--headless");
 
-        String a = "a";
-        String b = "a";
-        System.out.println("HASH = " + Objects.hash(a) + ", " + Objects.hash(b));
 
         for(String crawlDomain : crawlDomains) {
             CrawlerUrl crawlerUrl = new CrawlerUrl("http://" + crawlDomain);
+            fetchDomainRobots(crawlerUrl.getDomainName(), "https://" + (!crawlDomain.equals(URL_E_UPRAVA_GOV) ? "www." : "") + crawlDomain);
             int siteId = DatabaseHandler.addSite(crawlerUrl.getDomainName(), null, null);
             System.out.println("main: siteId = " + siteId);
             DatabaseHandler.addPage(siteId, DatabaseHandler.PAGE_TYPE_CODE.HTML, crawlerUrl.getUrl(), null, 200, Timestamp.from(Instant.now()));
             frontier.add(crawlerUrl);
         }
+
 
         for(int i = 0; i < THREAD_COUNT; i++) {
             new CrawlerThread(new ChromeDriver(chromeOptions)).start();
@@ -79,7 +78,26 @@ public class WebCrawler {
     }
 
 
+    private static void fetchDomainRobots(String domainName, String url) {
+        if(domainRobots.containsKey(domainName))
+            return;
 
+        RobotsTxt robotsTxt = null;
+        int siteId = DatabaseHandler.getSiteId(domainName);
+        try (InputStream robotsTxtStream = new URL(url + "/robots.txt").openStream()) {
+            byte[] bytes = robotsTxtStream.readAllBytes();
+            System.out.println("fetchDomainRobots: url = " + url + "/robots.txt" + "\nrobots = " + new String(bytes));
+            robotsTxt = RobotsTxt.read(new ByteArrayInputStream(bytes));
+            DatabaseHandler.editSite(siteId, domainName, new String(bytes), Arrays.toString(robotsTxt.getSitemaps().toArray()));
+        }
+        catch (Exception e) {
+            //e.printStackTrace();
+            System.err.println("File robots.txt not found for domainName = " + domainName);
+        }
+        finally {
+            domainRobots.put(domainName, robotsTxt);
+        }
+    }
 
     private static class CrawlerThread extends Thread {
         private UserAgent userAgent;
@@ -88,6 +106,10 @@ public class WebCrawler {
         public CrawlerThread(ChromeDriver chromeDriver) {
             browser = new Browser(chromeDriver);
             browser.driver.manage().window().setPosition(new Point(1920,0));
+
+            browser.driver.manage().timeouts().pageLoadTimeout(5, TimeUnit.SECONDS);
+            browser.driver.manage().timeouts().setScriptTimeout(5, TimeUnit.SECONDS);
+
             userAgent = new UserAgent();
             userAgent.settings.defaultRequestHeaders.put("user-agent", USER_AGENT);
         }
@@ -161,14 +183,11 @@ public class WebCrawler {
                     // Check content-type in HEAD
                     handleHEAD(pageId, urlToVisit);
 
-                    fetchDomainRobots(urlToVisit);
-
                     browser.visit(urlToVisit.getUrl());
 
                     // Wait for the page to load
-                    Thread.sleep(5000);
+                    Thread.sleep(3000);
 
-                    System.out.println("proceed for link... " + urlToVisit.getUrl());
                     // Handle dialogs
                     try {
                         // Add a wait timeout before this statement to make
@@ -216,11 +235,11 @@ public class WebCrawler {
                             System.out.println("run: onclick = " + onClick);
 
                             if(onClick.contains("location.href")) {
-                                String[] components = onClick.split("location.href");
+                                String[] components = onClick.split("location\\.href");
                                 url = components[components.length - 1].replaceAll("'", "").replaceAll("\"", "");
                             }
                             else if(onClick.contains("document.location")) {
-                                String[] components = onClick.split("document.location");
+                                String[] components = onClick.split("document\\.location");
                                 url = components[components.length - 1].replaceAll("'", "").replaceAll("\"", "");
                             }
 
@@ -246,13 +265,13 @@ public class WebCrawler {
                             // This is not a link so continue...
                             continue;
                         }
-                        DatabaseHandler.addImage(pageId, src, "image", null, Timestamp.from(Instant.now()));
+                        DatabaseHandler.addImage(pageId, src, DatabaseHandler.getImageType(src).name(), null, Timestamp.from(Instant.now()));
                     }
 
-                    if(frontierLock.tryLock(1000, TimeUnit.MILLISECONDS)) {
+                    /*if(frontierLock.tryLock(1000, TimeUnit.MILLISECONDS)) {
                         frontier.addAll(frontierExpansion);
                         frontierLock.unlock();
-                    }
+                    }*/
                 }
                 catch (ResponseException e) {
                     System.err.println("run: exception = " + e.getMessage());
@@ -287,8 +306,6 @@ public class WebCrawler {
 
                     processedLinks.put(crawlerUrl, false);
 
-                    // Because redirect after redirect and HEAD is too difficult for gov.si to handle so this is here...
-                    // If you will use this on a site that has more competent authors this can probably be commented out.
                     Thread.sleep(500);
                     handleHEAD(pageId, crawlerUrl);
                 }
@@ -306,26 +323,7 @@ public class WebCrawler {
             }
         }
 
-        private static void fetchDomainRobots(CrawlerUrl crawlerUrl) {
-            if(domainRobots.containsKey(crawlerUrl.getDomainName()))
-                return;
 
-            RobotsTxt robotsTxt = null;
-            int siteId = DatabaseHandler.getSiteId(crawlerUrl.getDomainName());
-            try (InputStream robotsTxtStream = new URL(crawlerUrl.getUrl() + "/robots.txt").openStream()) {
-                byte[] bytes = robotsTxtStream.readAllBytes();
-                System.out.println("robots = " + new String(bytes));
-                robotsTxt = RobotsTxt.read(new ByteArrayInputStream(bytes));
-                DatabaseHandler.editSite(siteId, crawlerUrl.getDomainName(), new String(bytes), Arrays.toString(robotsTxt.getSitemaps().toArray()));
-            }
-            catch (Exception e) {
-                //e.printStackTrace();
-                System.err.println("File robots.txt not found for domainName = " + crawlerUrl.getDomainName());
-            }
-            finally {
-                domainRobots.put(crawlerUrl.getDomainName(), robotsTxt);
-            }
-        }
 
         private boolean isCrawlContained(String domainName) {
             for(String domainUrl : crawlDomains) {

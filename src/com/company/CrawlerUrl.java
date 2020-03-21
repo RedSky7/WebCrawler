@@ -14,12 +14,16 @@ public class CrawlerUrl {
     }
 
     public void setUrl(String url) {
-        if(url == null || url.startsWith("javascript:") || url.length() == 0)
+        if(url == null
+                || url.startsWith("javascript:")
+                || url.startsWith("tel:")
+                || url.startsWith("mailto:")
+                || url.length() == 0)
             return;
 
         try {
             this.url = getUrlWithoutParameters(url).split("#")[0]
-                    .replaceAll(".html", "");
+                    .replaceAll("\\.html", "");
 
             this.domainName = Utils.getDomainName(getUrl());
             this.serverIp = InetAddress.getByName(getDomainName()).getHostAddress();
@@ -62,10 +66,12 @@ public class CrawlerUrl {
         if (o == null || getClass() != o.getClass()) return false;
         CrawlerUrl that = (CrawlerUrl) o;
         return this.url.replaceAll("https", "http").equals(that.getUrl().replace("https", "http"));
+        //return this.url.equals(that.getUrl());
     }
 
     @Override
     public int hashCode() {
         return Objects.hash(url.replaceAll("https", "http"));
+        //return Objects.hash(url);
     }
 }

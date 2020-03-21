@@ -40,8 +40,11 @@ public class DatabaseHandler {
     }
 
     public static void editSite(int siteId, String domain, String robotsContent, String sitemapContent) {
+        if(siteId == -1) {
+            System.err.println("editSite: id is -1.");
+            return;
+        }
         try {
-
             String sql = "UPDATE crawldb.site "
                     + "SET domain = ?, robots_content = ?, sitemap_content = ? WHERE id = ?;";
             PreparedStatement statement = getConnection().prepareStatement(sql);
@@ -58,6 +61,7 @@ public class DatabaseHandler {
 
     public static int getSiteId(String domain) {
         try {
+            System.out.println("getSiteId: domain = " + domain);
             String sql = "SELECT id FROM crawldb.site WHERE domain LIKE ?;";
             PreparedStatement statement = getConnection().prepareStatement(sql);
             statement.setString(1, domain);
@@ -141,7 +145,7 @@ public class DatabaseHandler {
             statement.setString(1, pageContent);
             ResultSet resultSet = statement.executeQuery();
             if(resultSet.next()) {
-                return resultSet.getInt(0);
+                return resultSet.getInt("id");
             }
             return -1;
         }
@@ -238,8 +242,8 @@ public class DatabaseHandler {
     }
 
     public static PAGE_TYPE_CODE getPageTypeCode(String url) {
-        String[] urlComponents = url.split(".");
-        switch (urlComponents[urlComponents.length - 1]) {
+        String[] urlComponents = url.split("\\.");
+        switch (urlComponents[urlComponents.length - 1].toLowerCase()) {
             case "pdf":
             case "doc":
             case "docx":
@@ -249,6 +253,31 @@ public class DatabaseHandler {
                 return PAGE_TYPE_CODE.HTML;
         }
     }
+
+    public static IMAGE_TYPE getImageType(String url) {
+        String[] urlComponents = url.split("\\.");
+        switch (urlComponents[urlComponents.length - 1].toLowerCase()) {
+            case "jpeg":
+                return IMAGE_TYPE.JPEG;
+            case "jpg":
+                return IMAGE_TYPE.JPG;
+            case "png":
+                return IMAGE_TYPE.PNG;
+            case "gif":
+                return IMAGE_TYPE.GIF;
+            default:
+                return IMAGE_TYPE.OTHER;
+        }
+    }
+
+    public enum IMAGE_TYPE {
+        JPEG,
+        JPG,
+        PNG,
+        GIF,
+        OTHER
+    }
+
 
     public enum PAGE_TYPE_CODE {
         HTML,
