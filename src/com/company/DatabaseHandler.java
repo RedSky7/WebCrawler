@@ -248,6 +248,15 @@ public class DatabaseHandler {
             case "doc":
             case "docx":
             case "xlsx":
+            case "zip":
+            case "rar":
+            case "csv":
+            case "ods":
+
+            case "jpg":
+            case "png":
+            case "gif":
+            case "jpeg":
                 return PAGE_TYPE_CODE.BINARY;
             default:
                 return PAGE_TYPE_CODE.HTML;

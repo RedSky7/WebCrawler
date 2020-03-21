@@ -6,8 +6,6 @@ import com.jauntium.Browser;
 import com.jauntium.Element;
 import com.jauntium.Elements;
 import com.panforge.robotstxt.RobotsTxt;
-import org.openqa.selenium.Alert;
-import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.Point;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -31,7 +29,7 @@ public class WebCrawler {
 
     private static final int THREAD_COUNT = 3;  // Number of workers
     private static final int DELAY = 5000;        // In ms. Min value should be 5000
-    private static final int MAX_LINKS = 1000;
+    private static final int MAX_LINKS = 100;
 
     private static final String[] crawlDomains = new String[] {
             URL_GOV,
@@ -120,6 +118,7 @@ public class WebCrawler {
 
         @Override
         public void run() {
+            long startTime = System.currentTimeMillis();
             while (processedLinks.size() < MAX_LINKS) {
                 CrawlerUrl urlToVisit = null;
 
@@ -190,7 +189,10 @@ public class WebCrawler {
                     // Wait for the page to load
                     Thread.sleep(3000);
 
-                    int duplicateId = DatabaseHandler.containsPageContent(browser.doc.getTextContent());
+                    String pageContent = browser.doc.getTextContent("", false, false)
+                            .replaceAll("\\s{2,}", " ");
+
+                    int duplicateId = DatabaseHandler.containsPageContent(pageContent);
                     boolean duplicate = duplicateId != -1;
 
                     int siteId = DatabaseHandler.getSiteId(urlToVisit.getDomainName());
@@ -199,7 +201,7 @@ public class WebCrawler {
                     // Here content-type didn't tell us anything so we will try to extract the info for PAGE_TYPE from url.
                     DatabaseHandler.editPage(pageId,
                             duplicate ? DatabaseHandler.PAGE_TYPE_CODE.DUPLICATE : DatabaseHandler.getPageTypeCode(urlToVisit.getUrl()),
-                            duplicate ? null : browser.doc.getTextContent(),
+                            duplicate ? null : pageContent,
                             userAgent.response.getStatus(),
                             Timestamp.from(Instant.now()));
 
@@ -280,6 +282,9 @@ public class WebCrawler {
                     processedLinks.replace(urlToVisit, true);
                 }
             }
+            System.out.println("---------------------------------------------------\n"
+                    + "---------------------------------------------------\n"
+                    + "Time taken = " + (System.currentTimeMillis() - startTime) + " for " + MAX_LINKS);
             browser.close();
         }
 
