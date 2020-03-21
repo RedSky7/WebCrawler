@@ -64,10 +64,10 @@ public class WebCrawler {
 
         for(String crawlDomain : crawlDomains) {
             CrawlerUrl crawlerUrl = new CrawlerUrl("http://" + crawlDomain);
-            fetchDomainRobots(crawlerUrl.getDomainName(), "https://" + (!crawlDomain.equals(URL_E_UPRAVA_GOV) ? "www." : "") + crawlDomain);
             int siteId = DatabaseHandler.addSite(crawlerUrl.getDomainName(), null, null);
             System.out.println("main: siteId = " + siteId);
             DatabaseHandler.addPage(siteId, DatabaseHandler.PAGE_TYPE_CODE.HTML, crawlerUrl.getUrl(), null, 200, Timestamp.from(Instant.now()));
+            fetchDomainRobots(crawlerUrl.getDomainName(), "https://" + (!crawlDomain.equals(URL_E_UPRAVA_GOV) ? "www." : "") + crawlDomain);
             frontier.add(crawlerUrl);
         }
 
@@ -224,28 +224,31 @@ public class WebCrawler {
                     HashSet<CrawlerUrl> frontierExpansion = new HashSet<>();
                     Elements links = browser.doc.findEvery("<a>");    //find search result links
                     for (Element link : links) {
-                        String href = link.getAttribute("href");
-                        if(href != null) {
-                            handleFrontierExpansion(frontierExpansion, href);
+                        List<String> attributeNames = link.getAttributeNames();
+                        if(attributeNames.contains("href")) {
+                            String href = link.getAttribute("href");
+                            if (href != null) {
+                                handleFrontierExpansion(frontierExpansion, href);
+                            }
                         }
+                        if(attributeNames.contains("onclick")) {
+                            String onClick = link.getAttribute("onclick");
+                            String url = null;
+                            if (onClick != null) {
+                                System.out.println("run: onclick = " + onClick);
 
-                        String onClick = link.getAttribute("onclick");
-                        String url = null;
-                        if(onClick != null) {
-                            System.out.println("run: onclick = " + onClick);
+                                if (onClick.contains("location.href")) {
+                                    String[] components = onClick.split("location\\.href");
+                                    url = components[components.length - 1].replaceAll("'", "").replaceAll("\"", "");
+                                } else if (onClick.contains("document.location")) {
+                                    String[] components = onClick.split("document\\.location");
+                                    url = components[components.length - 1].replaceAll("'", "").replaceAll("\"", "");
+                                }
 
-                            if(onClick.contains("location.href")) {
-                                String[] components = onClick.split("location\\.href");
-                                url = components[components.length - 1].replaceAll("'", "").replaceAll("\"", "");
+                                System.out.println("run: onclick URL = " + url);
+                                if (url != null)
+                                    handleFrontierExpansion(frontierExpansion, url);
                             }
-                            else if(onClick.contains("document.location")) {
-                                String[] components = onClick.split("document\\.location");
-                                url = components[components.length - 1].replaceAll("'", "").replaceAll("\"", "");
-                            }
-
-                            System.out.println("run: onclick URL = " + url);
-                            if(url != null)
-                                handleFrontierExpansion(frontierExpansion, url);
                         }
                     }
 
@@ -268,10 +271,10 @@ public class WebCrawler {
                         DatabaseHandler.addImage(pageId, src, DatabaseHandler.getImageType(src).name(), null, Timestamp.from(Instant.now()));
                     }
 
-                    /*if(frontierLock.tryLock(1000, TimeUnit.MILLISECONDS)) {
+                    if(frontierLock.tryLock(1000, TimeUnit.MILLISECONDS)) {
                         frontier.addAll(frontierExpansion);
                         frontierLock.unlock();
-                    }*/
+                    }
                 }
                 catch (ResponseException e) {
                     System.err.println("run: exception = " + e.getMessage());
@@ -288,7 +291,13 @@ public class WebCrawler {
         }
 
         private void handleHEAD(int pageId, CrawlerUrl crawlerUrl) throws Exception {
-            userAgent.sendHEAD(crawlerUrl.getUrl());
+            try {
+                userAgent.sendHEAD(crawlerUrl.getUrl());
+            }
+            catch (ResponseException e) {
+                System.err.println("handleHEAD: exception = " + e.getMessage());
+                return;
+            }
             //System.out.println("handleHEAD: status =" + userAgent.response.getStatus());
 
             //System.out.println("handleHEAD: location =" + userAgent.response.getHeader("location"));
