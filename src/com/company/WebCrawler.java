@@ -29,6 +29,10 @@ public class WebCrawler {
     private static final String URL_E_UPRAVA_GOV = "e-uprava.gov.si";
     private static final String URL_E_PROSTOR_GOV = "e-prostor.gov.si";
 
+    private static final int THREAD_COUNT = 3;  // Number of workers
+    private static final int DELAY = 5000;        // In ms. Min value should be 5000
+    private static final int MAX_LINKS = 1000;
+
     private static final String[] crawlDomains = new String[] {
             URL_GOV,
             URL_EVEM_GOV,
@@ -38,9 +42,6 @@ public class WebCrawler {
 
     private static final String USER_AGENT = "fri-ieps-20";
 
-    private static final int THREAD_COUNT = 3;  // Number of workers
-    private static final int DELAY = 5000;        // In ms. Min value should be 5000
-    private static final int MAX_LINKS = 1000;
 
     public static Lock frontierLock = new ReentrantLock();
     public static LinkedList<CrawlerUrl> frontier = new LinkedList<>();
@@ -224,6 +225,9 @@ public class WebCrawler {
                     HashSet<CrawlerUrl> frontierExpansion = new HashSet<>();
                     Elements links = browser.doc.findEvery("<a>");    //find search result links
                     for (Element link : links) {
+                        if(link == null)
+                            continue;
+
                         List<String> attributeNames = link.getAttributeNames();
                         if(attributeNames.contains("href")) {
                             String href = link.getAttribute("href");
@@ -271,7 +275,7 @@ public class WebCrawler {
                         DatabaseHandler.addImage(pageId, src, DatabaseHandler.getImageType(src).name(), null, Timestamp.from(Instant.now()));
                     }
 
-                    if(frontierLock.tryLock(1000, TimeUnit.MILLISECONDS)) {
+                    if(frontierLock.tryLock(5000, TimeUnit.MILLISECONDS)) {
                         frontier.addAll(frontierExpansion);
                         frontierLock.unlock();
                     }
@@ -291,13 +295,13 @@ public class WebCrawler {
         }
 
         private void handleHEAD(int pageId, CrawlerUrl crawlerUrl) throws Exception {
-            try {
+            //try {
                 userAgent.sendHEAD(crawlerUrl.getUrl());
-            }
+            /*}
             catch (ResponseException e) {
                 System.err.println("handleHEAD: exception = " + e.getMessage());
                 return;
-            }
+            }*/
             //System.out.println("handleHEAD: status =" + userAgent.response.getStatus());
 
             //System.out.println("handleHEAD: location =" + userAgent.response.getHeader("location"));
