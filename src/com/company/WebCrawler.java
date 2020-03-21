@@ -108,6 +108,7 @@ public class WebCrawler {
             browser = new Browser(chromeDriver);
             browser.driver.manage().window().setPosition(new Point(1920,0));
 
+            // Without this the crawler will get stuck when it is asked for a certificate.
             browser.driver.manage().timeouts().pageLoadTimeout(5, TimeUnit.SECONDS);
             browser.driver.manage().timeouts().setScriptTimeout(5, TimeUnit.SECONDS);
 
@@ -189,35 +190,22 @@ public class WebCrawler {
                     // Wait for the page to load
                     Thread.sleep(3000);
 
-                    // Handle dialogs
-                    try {
-                        // Add a wait timeout before this statement to make
-                        // sure you are not checking for the alert too soon.
-                        Alert alt = browser.driver.switchTo().alert();
-                        alt.dismiss();
-
-                        System.out.println("dialog found and dismissed");
-
-                    } catch(NoAlertPresentException noe) {
-                        // No alert found on page, proceed with test.
-                    }
-
                     int duplicateId = DatabaseHandler.containsPageContent(browser.doc.getTextContent());
                     boolean duplicate = duplicateId != -1;
 
                     int siteId = DatabaseHandler.getSiteId(urlToVisit.getDomainName());
 
                     // Edit page as HTML
+                    // Here content-type didn't tell us anything so we will try to extract the info for PAGE_TYPE from url.
                     DatabaseHandler.editPage(pageId,
                             duplicate ? DatabaseHandler.PAGE_TYPE_CODE.DUPLICATE : DatabaseHandler.getPageTypeCode(urlToVisit.getUrl()),
                             duplicate ? null : browser.doc.getTextContent(),
                             userAgent.response.getStatus(),
                             Timestamp.from(Instant.now()));
 
-                    // If duplicate don't process it
+                    // If duplicate don't process it just add a link
                     if(duplicate) {
                         DatabaseHandler.addLink(pageId, duplicateId);
-                        System.out.println("run: duplicateId = " + duplicateId);
                         throw new Exception("DUPLICATE skip.");
                     }
 
@@ -275,7 +263,8 @@ public class WebCrawler {
                         DatabaseHandler.addImage(pageId, src, DatabaseHandler.getImageType(src).name(), null, Timestamp.from(Instant.now()));
                     }
 
-                    if(frontierLock.tryLock(5000, TimeUnit.MILLISECONDS)) {
+                    // This shouldn't ever take so long.
+                    if(frontierLock.tryLock(10000, TimeUnit.MILLISECONDS)) {
                         frontier.addAll(frontierExpansion);
                         frontierLock.unlock();
                     }
@@ -295,17 +284,19 @@ public class WebCrawler {
         }
 
         private void handleHEAD(int pageId, CrawlerUrl crawlerUrl) throws Exception {
-            //try {
+            try {
                 userAgent.sendHEAD(crawlerUrl.getUrl());
-            /*}
+            }
             catch (ResponseException e) {
-                System.err.println("handleHEAD: exception = " + e.getMessage());
-                return;
-            }*/
-            //System.out.println("handleHEAD: status =" + userAgent.response.getStatus());
-
-            //System.out.println("handleHEAD: location =" + userAgent.response.getHeader("location"));
-            //System.out.println("handleHEAD: content-type =" + userAgent.response.getHeader("content-type"));
+                System.err.println("handleHEAD: HEAD exception = " + e.getMessage());
+                try {
+                    userAgent.sendGET(crawlerUrl.getUrl());
+                }
+                catch (ResponseException re) {
+                    System.err.println("handleHEAD: GET exception = " + re.getMessage());
+                    return;
+                }
+            }
 
             String location = userAgent.response.getHeader("location");
             String contentType = userAgent.response.getHeader("content-type");
@@ -319,20 +310,23 @@ public class WebCrawler {
 
                     processedLinks.put(crawlerUrl, false);
 
+                    // Some delay before sending another HEAD.
                     Thread.sleep(500);
                     handleHEAD(pageId, crawlerUrl);
                 }
                 return;
             }
 
-            if (contentType.contains("text/html")) {
-                DatabaseHandler.editPage(pageId, DatabaseHandler.PAGE_TYPE_CODE.HTML, null, userAgent.response.getStatus(), Timestamp.from(Instant.now()));
-            }
-            else {
-                DatabaseHandler.DATA_TYPE dataType = DatabaseHandler.getDataType(contentType);
+            DatabaseHandler.DATA_TYPE dataType = DatabaseHandler.getDataType(contentType);
+
+            if(dataType != null || DatabaseHandler.getPageTypeCode(crawlerUrl.getUrl()) == DatabaseHandler.PAGE_TYPE_CODE.BINARY) {
                 DatabaseHandler.editPage(pageId, DatabaseHandler.PAGE_TYPE_CODE.BINARY, null, userAgent.response.getStatus(), Timestamp.from(Instant.now()));
                 DatabaseHandler.addPageData(pageId, dataType, null);
                 throw new Exception("BINARY not supported");
+            }
+            else {
+                // Probably HTML but can't be sure
+                DatabaseHandler.editPage(pageId, DatabaseHandler.PAGE_TYPE_CODE.HTML, null, userAgent.response.getStatus(), Timestamp.from(Instant.now()));
             }
         }
 
