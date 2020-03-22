@@ -257,34 +257,43 @@ public class DatabaseHandler {
             case "png":
             case "gif":
             case "jpeg":
+            case "tif":
                 return PAGE_TYPE_CODE.BINARY;
             default:
                 return PAGE_TYPE_CODE.HTML;
         }
     }
 
-    public static IMAGE_TYPE getImageType(String url) {
+    public static String getImageType(String url) {
         String[] urlComponents = url.split("\\.");
         switch (urlComponents[urlComponents.length - 1].toLowerCase()) {
-            case "jpeg":
-                return IMAGE_TYPE.JPEG;
-            case "jpg":
-                return IMAGE_TYPE.JPG;
-            case "png":
-                return IMAGE_TYPE.PNG;
+            case "apng":
+                return "image/apgn";
+            case "bmp":
+                return "image/bmp";
             case "gif":
-                return IMAGE_TYPE.GIF;
+                return "image/gif";
+            case "ico":
+            case "cur":
+                return "image/x-icon";
+            case "jpeg":
+            case "jpg":
+            case "jfif":
+            case "pjpeg":
+            case "pjp":
+                return "image/jpeg";
+            case "png":
+                return "image/png";
+            case "svn":
+                return "image/svg+xml";
+            case "tif":
+            case "tiff":
+                return "image/tiff";
+            case "webp":
+                return "image/webp";
             default:
-                return IMAGE_TYPE.OTHER;
+                return "other";
         }
-    }
-
-    public enum IMAGE_TYPE {
-        JPEG,
-        JPG,
-        PNG,
-        GIF,
-        OTHER
     }
 
 

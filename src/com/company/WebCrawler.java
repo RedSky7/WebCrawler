@@ -27,9 +27,9 @@ public class WebCrawler {
     private static final String URL_E_UPRAVA_GOV = "e-uprava.gov.si";
     private static final String URL_E_PROSTOR_GOV = "e-prostor.gov.si";
 
-    private static final int THREAD_COUNT = 4;  // Number of workers
+    private static final int THREAD_COUNT = 6;  // Number of workers
     private static final int DELAY = 5000;        // In ms. Min value should be 5000
-    private static final int MAX_LINKS = 100;
+    private static final int MAX_LINKS = 50000;
 
     private static final String[] crawlDomains = new String[] {
             URL_GOV,
@@ -262,7 +262,7 @@ public class WebCrawler {
                             // This is not a link so continue...
                             continue;
                         }
-                        DatabaseHandler.addImage(pageId, src, DatabaseHandler.getImageType(src).name(), null, Timestamp.from(Instant.now()));
+                        DatabaseHandler.addImage(pageId, src, DatabaseHandler.getImageType(src), null, Timestamp.from(Instant.now()));
                     }
 
                     // This shouldn't ever take so long.
@@ -294,13 +294,7 @@ public class WebCrawler {
             }
             catch (ResponseException e) {
                 System.err.println("handleHEAD: HEAD exception = " + e.getMessage());
-                try {
-                    userAgent.sendGET(crawlerUrl.getUrl());
-                }
-                catch (ResponseException re) {
-                    System.err.println("handleHEAD: GET exception = " + re.getMessage());
-                    return;
-                }
+                return;
             }
 
             String location = userAgent.response.getHeader("location");

@@ -65,13 +65,13 @@ public class CrawlerUrl {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         CrawlerUrl that = (CrawlerUrl) o;
-        return this.url.replaceAll("https", "http").equals(that.getUrl().replace("https", "http"));
-        //return this.url.equals(that.getUrl());
+        //return this.url.replaceAll("https", "http").equals(that.getUrl().replace("https", "http"));
+        return this.url.equals(that.getUrl());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(url.replaceAll("https", "http"));
-        //return Objects.hash(url);
+        //return Objects.hash(url.replaceAll("https", "http"));
+        return Objects.hash(url);
     }
 }
