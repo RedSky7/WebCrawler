@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a4438365-3ff1-4878-89ed-ef4942aaffb0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/IEPS/com/company/WebCrawler$CrawlerThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/IEPS/com/company/WebCrawler$CrawlerThread.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/WebCrawler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/WebCrawler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/DatabaseHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/DatabaseHandler.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
