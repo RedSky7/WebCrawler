@@ -202,7 +202,7 @@ public class WebCrawler {
                     DatabaseHandler.editPage(pageId,
                             duplicate ? DatabaseHandler.PAGE_TYPE_CODE.DUPLICATE : DatabaseHandler.getPageTypeCode(urlToVisit.getUrl()),
                             duplicate ? null : pageContent,
-                            userAgent.response.getStatus(),
+                            userAgent.response != null ? userAgent.response.getStatus() : 0,
                             Timestamp.from(Instant.now()));
 
                     // If duplicate don't process it just add a link
@@ -211,21 +211,24 @@ public class WebCrawler {
                         throw new Exception("DUPLICATE skip.");
                     }
 
-                    // Handle links <a>
                     HashSet<CrawlerUrl> frontierExpansion = new HashSet<>();
+
+                    // Handle links <a>
+
                     Elements links = browser.doc.findEvery("<a>");    //find search result links
                     for (Element link : links) {
-                        if(link == null)
-                            continue;
 
-                        List<String> attributeNames = link.getAttributeNames();
-                        if(attributeNames.contains("href")) {
+                        try {
                             String href = link.getAttribute("href");
                             if (href != null) {
                                 handleFrontierExpansion(frontierExpansion, href);
                             }
                         }
-                        if(attributeNames.contains("onclick")) {
+                        catch (Exception e) {
+                            System.err.println("run: <a> exception = " + e.getMessage());
+                        }
+
+                        try {
                             String onClick = link.getAttribute("onclick");
                             String url = null;
                             if (onClick != null) {
@@ -244,6 +247,10 @@ public class WebCrawler {
                                     handleFrontierExpansion(frontierExpansion, url);
                             }
                         }
+                        catch (Exception e) {
+                            System.err.println("run: <a> exception = " + e.getMessage());
+                        }
+
                     }
 
                     System.out.println("frontierExpansion size = " + frontierExpansion.size());
@@ -256,14 +263,20 @@ public class WebCrawler {
 
                     // Handle images <img>
                     Elements images = browser.doc.findEvery("<img>");    //find search result links
-                    for(Element img : images) {
-                        String src = img.getAttribute("src");
-                        if(src == null || src.startsWith("data")) {
-                            // This is not a link so continue...
-                            continue;
+                    for (Element img : images) {
+                        try {
+                            String src = img.getAttribute("src");
+                            if (src == null || src.startsWith("data")) {
+                                // This is not a link so continue...
+                                continue;
+                            }
+                            DatabaseHandler.addImage(pageId, src, DatabaseHandler.getImageType(src), null, Timestamp.from(Instant.now()));
                         }
-                        DatabaseHandler.addImage(pageId, src, DatabaseHandler.getImageType(src), null, Timestamp.from(Instant.now()));
+                        catch (Exception e) {
+                            System.err.println("run: <img> exception = " + e.getMessage());
+                        }
                     }
+
 
                     // This shouldn't ever take so long.
                     if(frontierLock.tryLock(10000, TimeUnit.MILLISECONDS)) {
