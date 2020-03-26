@@ -10,12 +10,16 @@ import org.openqa.selenium.Point;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
+import javax.xml.crypto.Data;
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
 import java.net.URL;
 import java.sql.Timestamp;
 import java.time.Instant;
-import java.util.*;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.LinkedList;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
@@ -44,7 +48,7 @@ public class WebCrawler {
     public static Lock frontierLock = new ReentrantLock();
     public static LinkedList<CrawlerUrl> frontier = new LinkedList<>();
 
-    public static HashMap<CrawlerUrl, Boolean> processedLinks  = new HashMap<>();
+    public static HashSet<String> processedLinks  = new HashSet<>();
 
     public static HashMap<String, Long> permittedTimes = new HashMap<>();
 
@@ -75,26 +79,40 @@ public class WebCrawler {
         if(domainRobots.containsKey(crawlerUrl.getDomainName()))
             return false;
 
-        RobotsTxt robotsTxt = null;
 
         int siteId = DatabaseHandler.addSite(crawlerUrl.getDomainName(), null, null);
-        System.out.println("main: siteId = " + siteId);
-        DatabaseHandler.addPage(siteId, DatabaseHandler.PAGE_TYPE_CODE.HTML, crawlerUrl.getUrl(), null, 200, Timestamp.from(Instant.now()));
 
-        try (InputStream robotsTxtStream = new URL(crawlerUrl.getUrl() + "/robots.txt").openStream()) {
+        if(DatabaseHandler.getPageId(crawlerUrl.getUrl()) == -1)
+            DatabaseHandler.addPage(siteId, DatabaseHandler.PAGE_TYPE_CODE.HTML, crawlerUrl.getUrl(), null, 200, Timestamp.from(Instant.now()));
+
+        if(addRobots(crawlerUrl, "https://www." + crawlerUrl.getDomainName(), siteId)
+                || addRobots(crawlerUrl, "https://" + crawlerUrl.getDomainName(), siteId)
+                || addRobots(crawlerUrl, "http://www." + crawlerUrl.getDomainName(), siteId)
+                || addRobots(crawlerUrl, "http://" + crawlerUrl.getDomainName(), siteId)
+                || addRobots(crawlerUrl, crawlerUrl.getUrl(), siteId))
+            return true;
+
+        // Well this is one bad site.
+        System.err.println("File robots.txt not found for domainName = " + crawlerUrl.getDomainName());
+
+        domainRobots.put(crawlerUrl.getDomainName(), null);
+        return true;
+    }
+
+    private static boolean addRobots(CrawlerUrl crawlerUrl, String robotsUrl, int siteId) {
+        try (InputStream robotsTxtStream = new URL(robotsUrl + "/robots.txt").openStream()) {
+            RobotsTxt robotsTxt;
             byte[] bytes = robotsTxtStream.readAllBytes();
             System.out.println("fetchDomainRobots: url = " + crawlerUrl.getUrl() + "/robots.txt" + "\nrobots = " + new String(bytes));
             robotsTxt = RobotsTxt.read(new ByteArrayInputStream(bytes));
             DatabaseHandler.editSite(siteId, crawlerUrl.getDomainName(), new String(bytes), Arrays.toString(robotsTxt.getSitemaps().toArray()));
+            domainRobots.put(crawlerUrl.getDomainName(), null);
+            return true;
         }
         catch (Exception e) {
             //e.printStackTrace();
-            System.err.println("File robots.txt not found for domainName = " + crawlerUrl.getDomainName());
         }
-        finally {
-            domainRobots.put(crawlerUrl.getDomainName(), robotsTxt);
-        }
-        return true;
+        return false;
     }
 
     private static class CrawlerThread extends Thread {
@@ -118,8 +136,10 @@ public class WebCrawler {
         @Override
         public void run() {
             long startTime = System.currentTimeMillis();
-            while (processedLinks.size() < MAX_LINKS) {
+            while (DatabaseHandler.getPageCount() < MAX_LINKS) {
                 CrawlerUrl urlToVisit = null;
+
+                System.out.println("PAGE COUNT = " + DatabaseHandler.getPageCount());
 
                 do {
                     if (frontierLock.tryLock()) {
@@ -174,7 +194,8 @@ public class WebCrawler {
                 } while (urlToVisit == null);
 
                 System.out.println("run: url = " + urlToVisit.getUrl());
-                processedLinks.put(urlToVisit, false);
+
+                processedLinks.add(urlToVisit.getUrl());
 
                 System.out.println("-------------------------------------");
                 try {
@@ -186,7 +207,8 @@ public class WebCrawler {
 
                     browser.visit(urlToVisit.getUrl());
 
-                    if(fetchDomainRobots(new CrawlerUrl(browser.getLocation()))) {
+                    urlToVisit = new CrawlerUrl(browser.getLocation());
+                    if(fetchDomainRobots(urlToVisit)) {
                         pageId = DatabaseHandler.getPageId(urlToVisit.getUrl());
                     }
 
@@ -296,7 +318,7 @@ public class WebCrawler {
                     e.printStackTrace();
                 }
                 finally {
-                    processedLinks.replace(urlToVisit, true);
+                    processedLinks.add(urlToVisit.getUrl());
                 }
             }
             System.out.println("---------------------------------------------------\n"
@@ -319,12 +341,12 @@ public class WebCrawler {
 
             if(contentType == null) {
                 if(location != null) {
-                    processedLinks.replace(crawlerUrl, true);
+                    processedLinks.add(crawlerUrl.getUrl());
                     crawlerUrl = new CrawlerUrl(location);
-                    if(processedLinks.containsKey(crawlerUrl))
+                    if(processedLinks.contains(crawlerUrl.getUrl()))
                         throw new Exception("Already visited.");
 
-                    processedLinks.put(crawlerUrl, false);
+                    processedLinks.add(crawlerUrl.getUrl());
 
                     // Some delay before sending another HEAD.
                     Thread.sleep(400);
@@ -355,11 +377,11 @@ public class WebCrawler {
 
         private boolean isCrawlContained(String domainName) {
             //System.out.println("domainName = " + domainName + ". Ends with gov ? " + domainName.endsWith("gov.si"));
-            return domainName.endsWith("gov.si");
+            return domainName.endsWith(".gov.si");
         }
 
         private boolean hasBeenVisited(CrawlerUrl url) {
-            return processedLinks.containsKey(url);
+            return processedLinks.contains(url.getUrl());
         }
 
         private void handleFrontierExpansion(HashSet<CrawlerUrl> frontierExpansion, String url) {
@@ -369,7 +391,8 @@ public class WebCrawler {
                     || !crawlerUrl.isValid()
                     || hasBeenVisited(crawlerUrl)
                     || frontierExpansion.contains(crawlerUrl)
-                    || frontier.contains(crawlerUrl))
+                    || frontier.contains(crawlerUrl)
+                    || DatabaseHandler.getPageId(crawlerUrl.getUrl()) != -1)
                 return;
 
             String domainName = crawlerUrl.getDomainName();

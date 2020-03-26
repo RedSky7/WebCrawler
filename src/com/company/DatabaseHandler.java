@@ -89,6 +89,21 @@ public class DatabaseHandler {
         return -1;
     }
 
+    public static int getPageCount() {
+        try {
+            String sql = "SELECT COUNT(page.id) FROM crawldb.page page WHERE page.page_type_code != 'FRONTIER';";
+            Statement statement = getConnection().createStatement();
+            ResultSet resultSet = statement.executeQuery(sql);
+            if(resultSet.next()) {
+                return resultSet.getInt(1);
+            }
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+        return -1;
+    }
+
     public static int addPage(int siteId, PAGE_TYPE_CODE pageType, String url, String htmlContent, int httpStatusCode, Timestamp timestamp) {
         if(siteId == -1) {
             System.err.println("addPage: id is -1.");
