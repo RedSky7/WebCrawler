@@ -20,6 +20,7 @@ public class DatabaseHandler {
 
     public static int addSite(String domain, String robotsContent, String sitemapContent) {
         try {
+            System.out.println("addSite: domain = " + domain);
             String sql = "INSERT INTO crawldb.site (domain,robots_content,sitemap_content) "
                     + "VALUES (?,?,?);";
             PreparedStatement statement = getConnection().prepareStatement(sql);
@@ -58,7 +59,7 @@ public class DatabaseHandler {
 
     public static int getSiteId(String domain) {
         try {
-            System.out.println("getSiteId: domain = " + domain);
+            //System.out.println("getSiteId: domain = " + domain);
             String sql = "SELECT id FROM crawldb.site WHERE domain LIKE ?;";
             PreparedStatement statement = getConnection().prepareStatement(sql);
             statement.setString(1, domain);

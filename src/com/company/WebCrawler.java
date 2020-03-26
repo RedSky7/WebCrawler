@@ -10,7 +10,6 @@ import org.openqa.selenium.Point;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
-import javax.xml.crypto.Data;
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
 import java.net.URL;
@@ -33,7 +32,7 @@ public class WebCrawler {
 
     private static final int THREAD_COUNT = 6;  // Number of workers
     private static final int DELAY = 5000;        // In ms. Min value should be 5000
-    private static final int MAX_LINKS = 50000;
+    private static final int MAX_LINKS = 1000;
 
     private static final String[] startDomains = new String[] {
             URL_GOV,
@@ -62,7 +61,7 @@ public class WebCrawler {
         chromeOptions.addArguments("--ignore-certificate-errors");
 
         // TODO: Uncomment bellow. TK
-        //chromeOptions.addArguments("--headless");
+        chromeOptions.addArguments("--headless");
 
         for(String crawlDomain : startDomains) {
             CrawlerUrl crawlerUrl = new CrawlerUrl("http://" + crawlDomain);
@@ -76,7 +75,8 @@ public class WebCrawler {
 
 
     private static boolean fetchDomainRobots(CrawlerUrl crawlerUrl) {
-        if(domainRobots.containsKey(crawlerUrl.getDomainName()))
+        if(domainRobots.containsKey(crawlerUrl.getDomainName())
+                || DatabaseHandler.getSiteId(crawlerUrl.getDomainName()) != -1)
             return false;
 
 
@@ -89,6 +89,7 @@ public class WebCrawler {
                 || addRobots(crawlerUrl, "https://" + crawlerUrl.getDomainName(), siteId)
                 || addRobots(crawlerUrl, "http://www." + crawlerUrl.getDomainName(), siteId)
                 || addRobots(crawlerUrl, "http://" + crawlerUrl.getDomainName(), siteId)
+                || addRobots(crawlerUrl, crawlerUrl.getDomainName(), siteId)
                 || addRobots(crawlerUrl, crawlerUrl.getUrl(), siteId))
             return true;
 
@@ -103,7 +104,14 @@ public class WebCrawler {
         try (InputStream robotsTxtStream = new URL(robotsUrl + "/robots.txt").openStream()) {
             RobotsTxt robotsTxt;
             byte[] bytes = robotsTxtStream.readAllBytes();
-            System.out.println("fetchDomainRobots: url = " + crawlerUrl.getUrl() + "/robots.txt" + "\nrobots = " + new String(bytes));
+            String robotsContent = new String(bytes);
+            if(robotsContent.contains("<html") || robotsContent.contains("<body")) {
+                // There is a special place in hell for you 'arsq.gov.si'.
+                System.err.println("addRobots: Robots.txt that is actually a web page.");
+                return false;
+            }
+
+            System.out.println("fetchDomainRobots: url = " + robotsUrl + "/robots.txt" + "\nrobots = " + robotsContent);
             robotsTxt = RobotsTxt.read(new ByteArrayInputStream(bytes));
             DatabaseHandler.editSite(siteId, crawlerUrl.getDomainName(), new String(bytes), Arrays.toString(robotsTxt.getSitemaps().toArray()));
             domainRobots.put(crawlerUrl.getDomainName(), null);
@@ -150,7 +158,7 @@ public class WebCrawler {
                             return;
                         }
 
-                        System.out.println("frontier size = " + frontier.size());
+                        //System.out.println("frontier size = " + frontier.size());
 
                         for (int i = 0; i < frontier.size(); i++) {
                             CrawlerUrl crawlerUrl = frontier.get(i);
@@ -178,7 +186,7 @@ public class WebCrawler {
 
                             urlToVisit = crawlerUrl;
                             frontier.remove(i);
-                            System.out.println("link found");
+                            //System.out.println("link found");
                             break;
                         }
                         frontierLock.unlock();
@@ -208,6 +216,10 @@ public class WebCrawler {
                     browser.visit(urlToVisit.getUrl());
 
                     urlToVisit = new CrawlerUrl(browser.getLocation());
+                    if(!isCrawlContained(urlToVisit.getDomainName())) {
+                        throw new Exception("NOT CRAWL CONTAINTED. Domain = " + urlToVisit.getDomainName());
+                    }
+
                     if(fetchDomainRobots(urlToVisit)) {
                         pageId = DatabaseHandler.getPageId(urlToVisit.getUrl());
                     }
@@ -247,7 +259,7 @@ public class WebCrawler {
                         try {
                             String href = link.getAttribute("href");
                             if (href != null) {
-                                handleFrontierExpansion(frontierExpansion, href);
+                                handleFrontierExpansion(frontierExpansion, href, siteId, pageId);
                             }
                         }
                         catch (Exception e) {
@@ -270,7 +282,7 @@ public class WebCrawler {
 
                                 System.out.println("run: onclick URL = " + url);
                                 if (url != null)
-                                    handleFrontierExpansion(frontierExpansion, url);
+                                    handleFrontierExpansion(frontierExpansion, url, siteId, pageId);
                             }
                         }
                         catch (Exception e) {
@@ -279,13 +291,6 @@ public class WebCrawler {
 
                     }
 
-                    System.out.println("frontierExpansion size = " + frontierExpansion.size());
-
-                    for(CrawlerUrl crawlerUrl : frontierExpansion) {
-                        System.out.println("run: addPage url = " + crawlerUrl.getUrl());
-                        int newPageId = DatabaseHandler.addPage(siteId, DatabaseHandler.PAGE_TYPE_CODE.FRONTIER, crawlerUrl.getUrl(), null, 0, Timestamp.from(Instant.now()));
-                        DatabaseHandler.addLink(pageId, newPageId);
-                    }
 
                     // Handle images <img>
                     Elements images = browser.doc.findEvery("<img>");    //find search result links
@@ -303,12 +308,11 @@ public class WebCrawler {
                         }
                     }
 
-
                     // This shouldn't ever take so long.
-                    /*if(frontierLock.tryLock(10000, TimeUnit.MILLISECONDS)) {
+                    if(frontierLock.tryLock(10000, TimeUnit.MILLISECONDS)) {
                         frontier.addAll(frontierExpansion);
                         frontierLock.unlock();
-                    }*/
+                    }
                 }
                 catch (ResponseException e) {
                     System.err.println("run: exception = " + e.getMessage());
@@ -377,14 +381,14 @@ public class WebCrawler {
 
         private boolean isCrawlContained(String domainName) {
             //System.out.println("domainName = " + domainName + ". Ends with gov ? " + domainName.endsWith("gov.si"));
-            return domainName.endsWith(".gov.si");
+            return domainName.endsWith(".gov.si") || domainName.equals("gov.si");
         }
 
         private boolean hasBeenVisited(CrawlerUrl url) {
             return processedLinks.contains(url.getUrl());
         }
 
-        private void handleFrontierExpansion(HashSet<CrawlerUrl> frontierExpansion, String url) {
+        private void handleFrontierExpansion(HashSet<CrawlerUrl> frontierExpansion, String url, int siteId, int pageId) {
             CrawlerUrl crawlerUrl = new CrawlerUrl(url);
             if(url == null
                     || url.length() == 0
@@ -404,6 +408,8 @@ public class WebCrawler {
             if(domainRobots.get(domainName) == null
                     || domainRobots.get(domainName).ask(USER_AGENT, url).hasAccess()) {
                 frontierExpansion.add(crawlerUrl);
+                int newPageId = DatabaseHandler.addPage(siteId, DatabaseHandler.PAGE_TYPE_CODE.FRONTIER, crawlerUrl.getUrl(), null, 0, Timestamp.from(Instant.now()));
+                DatabaseHandler.addLink(pageId, newPageId);
             }
         }
     }

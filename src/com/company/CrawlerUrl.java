@@ -1,5 +1,7 @@
 package com.company;
 
+import okhttp3.Dns;
+
 import java.net.InetAddress;
 import java.net.URI;
 import java.net.URISyntaxException;
@@ -24,14 +26,15 @@ public class CrawlerUrl {
         try {
             this.url = getUrlWithoutParameters(url).split("#")[0]
                     .replaceAll("\\.html", "");
-
             this.domainName = Utils.getDomainName(getUrl());
             this.serverIp = InetAddress.getByName(getDomainName()).getHostAddress();
+
         }
         catch (Exception e) {
             //e.printStackTrace();
             System.err.println("setUrl: exception = " + e.getMessage());
         }
+
     }
 
     public boolean isValid() {
