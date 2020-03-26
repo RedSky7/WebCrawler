@@ -249,7 +249,7 @@ public class DatabaseHandler {
             case "rar":
             case "csv":
             case "ods":
-
+            case "mp3":
             case "jpg":
             case "png":
             case "gif":

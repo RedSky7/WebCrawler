@@ -51,7 +51,7 @@ Web crawler}
 \section{Introduction}
 
 In this paper we present the structure, challenges and results of a web crawler implementation in Java.
-
+It was used to crawl the *.gov.si websites and produced some interesting results.
 
 \section{Web crawler}
 
@@ -95,7 +95,7 @@ Images are extracted as well and only their source address is added to the datab
 
 After that all of the links that have been extracted are added to the database as well and the crawler thread starts the process again for the next link that is available in the frontier.
 
-\subsection{Constants and issues}
+\subsection{Parameters and issues}
 
 The crawler implementation does not require any parameters to be set to be able to perform web crawling on the gov.si domains.
 There are constants though that can be changed if the user want's to alter the programs result.
@@ -125,16 +125,39 @@ Regardless the whole implementation has kept a great design even though multiple
 
 \subsection{Data analysis}
 
-As the result of this crawler working for %D hours it has crawled though D websites and gathered the following amount of content and information:
-%TODO
+As the result of this crawler working for 44 hours and 44 minutes. 
+The amount of time needed for this would be far less if all of the threads could keep extracting web pages and we would hit the threshold of 50.000 pages.
+But because the websites of the domains evem.gov.si, e-uprava.gov.si and e-prostor.gov.si were too few, the crawler eventually only had the domain gov.si to crawl.
+It has crawled though 40.718 websites and gathered the following amount of content and information:
 
+\begin{table}[ht]{}
+\begin{tabu} to 1.0\columnwidth { | X[l] | X[l] | X[l] | X[l] | }
+\hline
+domain & \# of pages & \# of duplicates & \# of binary pages  \\
+\hline
+gov.si & 31.595 & 946 & 21.158\\
+\hline
+evem.gov.si & 6.571 & 550 & 266 \\
+\hline
+e-uprava.gov.si& 1946 & 18 &  5 \\
+\hline
+e-prostor.gov.si& 606 & 13 & 360 \\
+\hline
+\end{tabu}
+\caption{Measures comparing unfiltered and filtered detections}
+\label{tab2}
+\end{table}
 \subsection{Visualization}
 
 The figure ~\ref{fig1} shows the connections between specific websites and their domains.
 Each domain has it's own colour and there are four of them.
  
-%TODO
-%INSERT IMAGE
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1\columnwidth]{data.png}
+    \caption{Graph of links between the pages, where the color represents the domain. Purple is gov.si, green is evem.gov.si, orange is e-uprava.gov.si and blue is e-prostor.gov.si.}
+    \label{fig:office}
+\end{figure}
 
 \section{Conclusion}
 
