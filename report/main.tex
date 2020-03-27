@@ -59,9 +59,9 @@ It was used to crawl the *.gov.si websites and produced some interesting results
 
 For the implementation of the web crawler we used Java and the following support libraries:
 \begin{itemize}
-\item{Jauntium (which uses Jaunt and Selenium libraries) in order to retrieve web pages and process them using a browser driver and so can also process JavaScript code,}
-\item{Robots which is used in order to process the robots.txt files for the domains that will be crawled, }
-\item{PostgreSQL which is used to connect and modify the postgres database.}
+\item{Jauntium (which uses Jaunt and Selenium libraries) in order to retrieve web pages and process them using a browser driver and so can also process JavaScript code~\cite{jauntium},}
+\item{Robots which is used in order to process the robots.txt files for the domains that will be crawled~\cite{robots_txt}, }
+\item{PostgreSQL which is used to connect and modify the postgres database~\cite{postgres}.}
 \end{itemize}
 
 Some other libraries have also been included mostly because the above mentioned ones depend on them.
@@ -71,9 +71,8 @@ The initial frontier consists of the starting URLs (see section Constants and is
 It mainly behaves as a FIFO queue.
 But because of the delay limitations that the crawler must obey the process of removing an URL starts as FIFO but skips every record that is not permitted to be visited at this time.
 
-The crawling process begins with the fetch of the robots.txt file for the starting domains. 
-Then it initializes multiple workers on seperate threads which then start the process of crawling.
-First they gain access to a locked frontier from where they take an available url that has not yet been processed.
+The crawling process begins with the initialization of multiple workers on separate threads which then start the process of crawling.
+First they gain access to a locked frontier from where they take an available URL that has not yet been processed.
 Then they update the next permitted window when the domain can be accessed again and proceed with the link processing.
 
 First the program tries to send a HEAD request to get the content type of the target URL.
@@ -82,7 +81,7 @@ Every URL is here also checked if it has been already crawled and if so the algo
 If not the data type is extracted from the head of HEAD request or the extension of the URL itself.
 
 The next step is left to the Jauntium to visit the website and it to finish rendering the web page.
-The permitted time for this to happen is set to 3000 ms. 
+The permitted time for fetching is set to 5000 ms and the time to finish the loading of the web site is another 3000 ms. 
 
 After that the text content of the website is processed so that all of the white space characters are removed. 
 If this content matches any other web site in the database the algorithm ends.
@@ -97,7 +96,7 @@ After that all of the links that have been extracted are added to the database a
 
 \subsection{Parameters and issues}
 
-The crawler implementation does not require any parameters to be set to be able to perform web crawling on the gov.si domains.
+The crawler implementation does not require any parameters to be set to be able to perform web crawling on the *.gov.si domains.
 There are constants though that can be changed if the user want's to alter the programs result.
 These are:
 \begin{itemize}
@@ -109,19 +108,20 @@ These are:
 \end{itemize}
 
 During the implementation of this solution many problems appeared.
-It took us a lot of time to make this solution robust to various problems that the crawler might encounter while visiting web sites.
+It took us a lot of time to make this solution robust to various problems that the crawler encountered while visiting web sites.
 
 One of the major ones was the retrieval of robots.txt file with robots library. 
 Though simple library the URL argument that it requires must be exact.
 It does not support any redirects and gov.si websites sometimes start with 'www' and sometimes they don't. 
-Also it is necessary to use the whole URL with 'https' at the start as otherwise you won't even get an error but simply an empty file.
+So we had to check 5 different variants of the domain URL (with added 'https', 'http', 'www', etc.).
+And even if we got some content back this content was often a genuine website (for instance 'arsq.gov.si') .
 
-The next major thing was the inconsistency of web pages responses to HEAD requests, GET requests, filled out content type (and other) fields, masking of binary data in URLs that don't end with any extension, requests for certificates and redirects to completely different pages which started in URLs with their domain.
+The next major thing was the inconsistency of web pages responses to HEAD requests, GET requests, filled out content type (and other) fields, masking of binary data in URLs that didn't end with any extension, requests for certificates and redirects to completely different pages which started in URLs with their domain.
 This caused most of the effort being spent on implementing a robust way of handling all of the exceptions which appeared. 
-Sometimes the website would be fetched but the response would be null.
-Other times just getting the list of the available attributes of an HTML element would cause an exception which shouldn't happen.
+Sometimes the website would be fetched but the response part of the browser object would be null.
+Other times just getting the list of the available attributes of an HTML element would cause an exception which shouldn't have happened.
 
-Regardless the whole implementation has kept a great design even though multiple exceptions had to be made in order not to crash the crawler.
+Regardless the whole implementation has kept a great design even though multiple exceptions had to be made in order to make the crawler robust.
 
 \subsection{Data analysis}
 
@@ -131,44 +131,63 @@ It has crawled though 150 unique gov.si domains and gathered the following amoun
 \begin{table}[ht]{}
 \begin{tabu} to 1.0\columnwidth { | X[l] | X[l] | }
 \hline
-metric & number of webpages  \\
+METRIC & \# OF WEB PAGES \\
 \hline
-sites & 150 \\
+site & 150 \\
 \hline
-pages & 50.002 \\
+page & 50.002 \\
 \hline
-binary pages & 284 \\
+binary page & 284 \\
 \hline
-...PPTX & 29 \\
+...pptx & 29 \\
 \hline
-...DOCX & 5 \\
+...docx & 5 \\
 \hline
-...PDF & 204 \\
+...pdf & 204 \\
 \hline
-...DOC & 10 \\
+...doc & 10 \\
 \hline
-...PPT & 36 \\
+...ppt & 36 \\
 \hline
-duplicate pages & 10.110 \\
+duplicate page & 10.110 \\
+\hline
+image & 339.688 \\
 \hline
 \end{tabu}
-\caption{Measures comparing unfiltered and filtered detections}
+\caption{Statistics of the web pages crawled}
 \label{tab2}
 \end{table}
 
-As it can be seen from table ~\ref{tab2} 
+As it can be seen from table~\ref{tab2} there were many unique sites visited. 
+There were quite a lot of duplicate pages detected.
+
+Also the number of binary pages was quite low.
+This was mainly because our previous version of the crawler tended to follow many binary pages that weren't desired.
+That mainly included images and sounds.
+And because of this the actual retrieval of web pages contents was very low as majority of them were just images and so no data was saved.
+An improvement was made to reject these pages from the frontier but the condition wasn't correctly defined and so all of the binary pages that ended in some kind of a binary extension were kept out of the frontier.
+That was why that number was so low as only the URLs that didn't contain the binary extension in it were passed though. 
+
+There were also quite a lot of images fetched.
+This number would be far smaller if the database structure would be different.
+But because of that these images are mostly just duplicates like logos of websites.
+Just the top 5 duplicated images consist of a third of the entries or 117.671 entries.
 
 \subsection{Visualization}
 
 The figure ~\ref{fig1} shows the connections between specific websites and their domains.
 Each domain has it's own color and there are four of them.
- 
-\begin{figure}[h]
+From it we can see that the green podatki.gov.si has the most compact structure where the majority of the web pages don't point anywhere else.
+The opposite is true for the purple gov.si site which is spread out over the majority of the inner circle.
+This site points to many others that is why it is in the center and why there are no groups of pages that are packed close together.
+
+\begin{figure}[ht]
     \centering
     \includegraphics[width=1\columnwidth]{data.png}
     \caption{Graph of links between the pages, where the color represents the domain. Purple is gov.si, green is podatki.gov.si, light blue is gisportal.gov.si, black is evem.gov.si and orange is eugo.gov.si.}
-    \label{fig:office}
+    \label{fig1}
 \end{figure}
+
 
 \section{Conclusion}
 
@@ -177,6 +196,6 @@ It showed the robustness of it's implementation as the targeted websites had pro
 It can be used as a general crawler although it is possible that it would require some more work to handle the possible exceptions that it hasn't encounter yet.
 
 \bibliographystyle{IEEEtran}
-%\bibliography{bibliography}
+\bibliography{main}
 
 \end{document}
