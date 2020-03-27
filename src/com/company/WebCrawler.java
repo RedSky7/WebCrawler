@@ -32,7 +32,7 @@ public class WebCrawler {
 
     private static final int THREAD_COUNT = 6;  // Number of workers
     private static final int DELAY = 5000;        // In ms. Min value should be 5000
-    private static final int MAX_LINKS = 1000;
+    private static final int MAX_LINKS = 50000;
 
     private static final String[] startDomains = new String[] {
             URL_GOV,
@@ -269,7 +269,7 @@ public class WebCrawler {
                         try {
                             String onClick = link.getAttribute("onclick");
                             String url = null;
-                            if (onClick != null) {
+                            if (onClick != null && onClick.trim().length() > 0) {
                                 System.out.println("run: onclick = " + onClick);
 
                                 if (onClick.contains("location.href")) {
