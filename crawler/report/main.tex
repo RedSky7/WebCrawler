@@ -51,25 +51,28 @@ Web crawler}
 \section{Introduction}
 
 In this paper we present the structure, challenges and results of a web crawler implementation in Java.
-It was used to crawl the *.gov.si websites and produced some interesting results.
+It was used to crawl the *.gov.si websites and has fetched 50.000 web pages in total.
+It uses some support libraries mostly for handling the robots.txt files, and is able to simulate a web browser and so running JavaScript.
+
 
 \section{Web crawler}
 
-\subsection{Implementation}
+\subsection{Dependencies}
 
 For the implementation of the web crawler we used Java and the following support libraries:
 \begin{itemize}
-\item{Jauntium (which uses Jaunt and Selenium libraries) in order to retrieve web pages and process them using a browser driver and so can also process JavaScript code~\cite{jauntium},}
-\item{Robots which is used in order to process the robots.txt files for the domains that will be crawled~\cite{robots_txt}, }
-\item{PostgreSQL which is used to connect and modify the postgres database~\cite{postgres}.}
+\item{Jauntium (which uses Jaunt and Selenium libraries) in order to retrieve web pages and process them using a browser driver and so we could also process JavaScript code~\cite{jauntium},}
+\item{RobotsTxt which was used in order to process the robots.txt files for the domains that were crawled~\cite{robots_txt}, }
+\item{PostgreSQL which was used to connect and modify the postgres database~\cite{postgres}.}
 \end{itemize}
+Some other libraries have also been included mainly because the above mentioned ones depended on them.
 
-Some other libraries have also been included mostly because the above mentioned ones depend on them.
+\subsection{Implementation}
+Our implementation consisted of:
 
-The frontier is a list that consists of URLs that have yet to be visited.
-The initial frontier consists of the starting URLs (see section Constants and issues).
-It mainly behaves as a FIFO queue.
-But because of the delay limitations that the crawler must obey the process of removing an URL starts as FIFO but skips every record that is not permitted to be visited at this time.
+The frontier which is a list that consists of URLs that have yet to be visited.
+The initial frontier consists of the four starting URLs which are gov.si, evem.gov.si, e-prostor.gov.si and e-uprava.gov.si.
+It mainly behaves as a FIFO queue, but because of the delay limitations that the crawler must obey the process of removing an URL starts as FIFO but skips every record that is not permitted to be visited at this time.
 
 The crawling process begins with the initialization of multiple workers on separate threads which then start the process of crawling.
 First they gain access to a locked frontier from where they take an available URL that has not yet been processed.
@@ -77,6 +80,7 @@ Then they update the next permitted window when the domain can be accessed again
 
 First the program tries to send a HEAD request to get the content type of the target URL.
 Because this part of the code offers a much more low level response then when using Jauntium the following redirects must be followed which happens in recursion.
+After that the robots.txt file is fetched if the web page is on a never before visited domain.
 Every URL is here also checked if it has been already crawled and if so the algorithm ends.
 If not the data type is extracted from the head of HEAD request or the extension of the URL itself.
 
@@ -94,7 +98,7 @@ Images are extracted as well and only their source address is added to the datab
 
 After that all of the links that have been extracted are added to the database as well and the crawler thread starts the process again for the next link that is available in the frontier.
 
-\subsection{Parameters and issues}
+\subsection{Parameters}
 
 The crawler implementation does not require any parameters to be set to be able to perform web crawling on the *.gov.si domains.
 There are constants though that can be changed if the user want's to alter the programs result.
@@ -107,7 +111,8 @@ These are:
 \item{USER\_AGENT specifies the name of the crawler that will be seen to website servers.}
 \end{itemize}
 
-During the implementation of this solution many problems appeared.
+\subsection{Issues}
+During the implementation of this solution we had many problems.
 It took us a lot of time to make this solution robust to various problems that the crawler encountered while visiting web sites.
 
 One of the major ones was the retrieval of robots.txt file with robots library. 
@@ -116,7 +121,7 @@ It does not support any redirects and gov.si websites sometimes start with 'www'
 So we had to check 5 different variants of the domain URL (with added 'https', 'http', 'www', etc.).
 And even if we got some content back this content was often a genuine website (for instance 'arsq.gov.si') .
 
-The next major thing was the inconsistency of web pages responses to HEAD requests, GET requests, filled out content type (and other) fields, masking of binary data in URLs that didn't end with any extension, requests for certificates and redirects to completely different pages which started in URLs with their domain.
+The next major thing was the inconsistency of web pages responses to HEAD requests, GET requests, filled out content-type (and other) fields, masking of binary data in URLs that didn't end with any extension, requests for certificates and redirects to completely different pages which started in URLs with their domain.
 This caused most of the effort being spent on implementing a robust way of handling all of the exceptions which appeared. 
 Sometimes the website would be fetched but the response part of the browser object would be null.
 Other times just getting the list of the available attributes of an HTML element would cause an exception which shouldn't have happened.
@@ -191,9 +196,10 @@ This site points to many others that is why it is in the center and why there ar
 
 \section{Conclusion}
 
-The web crawler implementation was successful in obtaining the content of many of the gov.si websites.
-It showed the robustness of it's implementation as the targeted websites had problems and inconsistencies.
-It can be used as a general crawler although it is possible that it would require some more work to handle the possible exceptions that it hasn't encounter yet.
+The web crawler was successful in obtaining the content of a large portion of the gov.si websites.
+It showed the robustness of it's implementation as the targeted websites had a lot of problems and inconsistencies, diverging from standards and mishandling the requests.
+It proved as a robust crawler although there are some exceptions that it hasn't encounter yet.
+So more work would had to be done regarding these cases.
 
 \bibliographystyle{IEEEtran}
 \bibliography{main}
