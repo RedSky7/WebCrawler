@@ -125,44 +125,55 @@ Regardless the whole implementation has kept a great design even though multiple
 
 \subsection{Data analysis}
 
-As the result of this crawler working for 44 hours and 44 minutes. 
-The amount of time needed for this would be far less if all of the threads could keep extracting web pages and we would hit the threshold of 50.000 pages.
-But because the websites of the domains evem.gov.si, e-uprava.gov.si and e-prostor.gov.si were too few, the crawler eventually only had the domain gov.si to crawl.
-It has crawled though 40.718 websites and gathered the following amount of content and information:
+As the result of this crawler working on 6 threads it has taken him 13 hours and 13 minutes to crawl thought 50.000 websites and retrieve their content.
+It has crawled though 150 unique gov.si domains and gathered the following amount of content and information:
 
 \begin{table}[ht]{}
-\begin{tabu} to 1.0\columnwidth { | X[l] | X[l] | X[l] | X[l] | }
+\begin{tabu} to 1.0\columnwidth { | X[l] | X[l] | }
 \hline
-domain & \# of pages & \# of duplicates & \# of binary pages  \\
+metric & number of webpages  \\
 \hline
-gov.si & 31.595 & 946 & 21.158\\
+sites & 150 \\
 \hline
-evem.gov.si & 6.571 & 550 & 266 \\
+pages & 50.002 \\
 \hline
-e-uprava.gov.si& 1946 & 18 &  5 \\
+binary pages & 284 \\
 \hline
-e-prostor.gov.si& 606 & 13 & 360 \\
+...PPTX & 29 \\
+\hline
+...DOCX & 5 \\
+\hline
+...PDF & 204 \\
+\hline
+...DOC & 10 \\
+\hline
+...PPT & 36 \\
+\hline
+duplicate pages & 10.110 \\
 \hline
 \end{tabu}
 \caption{Measures comparing unfiltered and filtered detections}
 \label{tab2}
 \end{table}
+
+As it can be seen from table ~\ref{tab2} 
+
 \subsection{Visualization}
 
 The figure ~\ref{fig1} shows the connections between specific websites and their domains.
-Each domain has it's own colour and there are four of them.
+Each domain has it's own color and there are four of them.
  
 \begin{figure}[h]
     \centering
     \includegraphics[width=1\columnwidth]{data.png}
-    \caption{Graph of links between the pages, where the color represents the domain. Purple is gov.si, green is evem.gov.si, orange is e-uprava.gov.si and blue is e-prostor.gov.si.}
+    \caption{Graph of links between the pages, where the color represents the domain. Purple is gov.si, green is podatki.gov.si, light blue is gisportal.gov.si, black is evem.gov.si and orange is eugo.gov.si.}
     \label{fig:office}
 \end{figure}
 
 \section{Conclusion}
 
-The web crawler implementation was successful in obtaining the content of the starting gov.si websites.
-It showed the robustness of crawling the targeted websites handling many exceptions and overcoming many problems that we designed it to do.
+The web crawler implementation was successful in obtaining the content of many of the gov.si websites.
+It showed the robustness of it's implementation as the targeted websites had problems and inconsistencies.
 It can be used as a general crawler although it is possible that it would require some more work to handle the possible exceptions that it hasn't encounter yet.
 
 \bibliographystyle{IEEEtran}
