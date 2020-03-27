@@ -15,3 +15,7 @@ __DELAY__ specifies the default delay the crawler will use to crawl pages on the
 __MAX_LINKS__ specifies the number of links that the crawler will visit (or attempt to do so) before the crawler stops.
 
 __USER_AGENT__ specifies the name of the crawler, which you should change.
+
+
+Running:
+You can simply run the program preferably in IntelliJ.
