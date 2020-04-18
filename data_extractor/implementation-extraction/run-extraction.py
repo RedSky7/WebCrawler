@@ -25,7 +25,7 @@ def regular_expressions(site_name, html_content):
         extracted.append(published_time)
 
         return extracted
-    if site_name == "overstock.com":
+    elif site_name == "overstock.com":
         items = re.findall("<tr bgcolor=\".{7}\">[ ]*<td valign=\"top\"(.*?)<tr><td colspan=\"2\" height=\"4\"", html_content)
 
         for item in items:
@@ -51,17 +51,46 @@ def regular_expressions(site_name, html_content):
             sub_extracted.append(saving_percent)
 
             extracted.append(sub_extracted)
-    if site_name == "mimovrste.si":
-        # TODO: Extract what you need. TK
+    elif site_name == "mimovrste.si":
+        title = re.search("<h3.*?>(.*?)</h3>", html_content).group(1)
+        extracted.append(title.lstrip().rstrip())
+
+        description = re.search("<p.*?itemprop=\"description\".*?>(.*?)</p>", html_content).group(1)
+        extracted.append(description.lstrip().rstrip())
+
+        old_price = re.search("<del.*?class=\"rrp-price\".*?>(.*?)</del>", html_content)
+        if old_price is not None:
+            extracted.append(old_price.group(1))
+        else:
+            extracted.append('')
+
+        price = re.search("<b class=\"pro-price.*?>(.*?)</b>", html_content).group(1)
+        extracted.append(price.lstrip().rstrip())
+
+        availability = re.search("<a data-sel=\"availability-detail\".*?>(.*?)</a>", html_content).group(1)
+        extracted.append(availability)
+
+        tags = []
+        for tag in re.finditer("<em class=\"label.*?>(.*?)::after", html_content):
+            tags.append(tag.group(1))
+        extracted.append(tags)
+
+        savings = ''
+        extracted.append(savings)
 
         return extracted
-    if site_name == "ceneje.si":
+    elif site_name == "ceneje.si":
         items = re.findall("<tr bgcolor=\".{7}\">[ ]*<td valign=\"top\"(.*?)<tr><td colspan=\"2\" height=\"4\"",
                            html_content)
         for item in items:
             sub_extracted = []
 
             # TODO: Extract what you need. TK
+            image = ''
+            title = ''
+            min_price = ''
+            number_of_stores = ''
+            action = ''
 
             extracted.append(sub_extracted)
 
@@ -82,13 +111,8 @@ for site in sites:
             continue
 
         if args.type == 'A':
-            print("Handle A: REGULAR_EXPRESSIONS... site = " + site)
-            print("path = " + str(root + file))
             print(regular_expressions(site, open(root + file, mode='r', encoding='unicode_escape').read()))
-        elif args.type == 'B':
-            print("Handle B: XPATH...")
-        elif args.type == 'C':
-            print("Handle C: AUTOMATIC_WEB_EXTRACTION...")
+            print("\n")
 
 
 
