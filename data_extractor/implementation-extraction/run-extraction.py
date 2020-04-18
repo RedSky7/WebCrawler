@@ -26,11 +26,8 @@ def regular_expressions(site_name, html_content):
 
         return extracted
     if site_name == "overstock.com":
-
-        f = open("test.txt", "w")
-        f.write(html_content)
-
         items = re.findall("<tr bgcolor=\".{7}\">[ ]*<td valign=\"top\"(.*?)<tr><td colspan=\"2\" height=\"4\"", html_content)
+
         for item in items:
             sub_extracted = []
             title = re.search("<b>(.*?)</b>", item).group(1)
@@ -54,6 +51,19 @@ def regular_expressions(site_name, html_content):
             sub_extracted.append(saving_percent)
 
             extracted.append(sub_extracted)
+    if site_name == "mimovrste.si":
+        # TODO: Extract what you need. TK
+
+        return extracted
+    if site_name == "ceneje.si":
+        items = re.findall("<tr bgcolor=\".{7}\">[ ]*<td valign=\"top\"(.*?)<tr><td colspan=\"2\" height=\"4\"",
+                           html_content)
+        for item in items:
+            sub_extracted = []
+
+            # TODO: Extract what you need. TK
+
+            extracted.append(sub_extracted)
 
     return extracted
 
@@ -62,7 +72,7 @@ parser.add_argument('type', metavar='T', type=str, help='type of data extraction
 
 args = parser.parse_args()
 
-sites = ['rtvslo.si', 'overstock.com']
+sites = ['rtvslo.si', 'overstock.com', 'mimovrste.si', 'ceneje.si']
 
 for site in sites:
     root = '../input-extraction/' + site + "/"
