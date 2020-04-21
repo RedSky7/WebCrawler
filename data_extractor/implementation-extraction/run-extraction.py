@@ -130,33 +130,45 @@ def x_path(site_name, html_content):
         extracted['PublishedTime'] = extract_x_path(tree.xpath("//*[@id=\"main-container\"]/div[3]/div/div[1]/div[2]/text()[1]"))
 
     elif site_name == "overstock.com":
-        extract_list = []
+        i = 1
+        fail_count = 0
+        while True:
 
-        items = "/html/body/table[2]/tbody/tr[1]/td[5]/table/tbody/tr[2]/td/table/tbody/tr/td/table/tbody/tr[1]/"
-        titles = tree.xpath(items + "td[2]/a/b/text()")
-        contents = tree.xpath(items + "td[2]/table/tbody/tr/td[2]/span/text()")
-        listPrices = tree.xpath(items + "td[2]/table/tbody/tr/td[1]/table/tbody/tr[1]/td[2]/s/text()")
-        prices = tree.xpath(items + "td[2]/table/tbody/tr/td[1]/table/tbody/tr[2]/td[2]/span/b/text()")
-        wholeSavings = tree.xpath(items + "td[2]/table/tbody/tr/td[1]/table/tbody/tr[3]/td[2]/span/text()")
+            #item = "/html/body/table[2]/tbody/tr[1]/td[5]/table/tbody/tr[2]/td/table/tbody/tr/td/table/tbody/tr[1]/"
+            item = "/html/body/table[2]/tbody/tr[1]/td[5]/table/tbody/tr[2]/td/table/tbody/tr/td/table/tbody/tr[" + str(i) + "]/"
 
-        for item in wholeSavings:
-            subitems = item.split(" ")
-            savings = subitems[0]
-            savingsPercent = subitems[1]
+            title = extract_x_path(tree.xpath(item + "td[2]/a/b/text()"))
 
-        for i, _ in enumerate(titles):
+            if fail_count > 3:
+                break
+
+            if len(title) == 0:
+                fail_count = fail_count + 1
+                i = i + 1
+                continue
+
+            fail_count = 0
+
+            content = extract_x_path(tree.xpath(item + "td[2]/table/tbody/tr/td[2]/span/text()"))
+            listPrice = extract_x_path(tree.xpath(item + "td[2]/table/tbody/tr/td[1]/table/tbody/tr[1]/td[2]/s/text()"))
+            price = extract_x_path(tree.xpath(item + "td[2]/table/tbody/tr/td[1]/table/tbody/tr[2]/td[2]/span/b/text()"))
+            wholeSavings = extract_x_path(tree.xpath(item + "td[2]/table/tbody/tr/td[1]/table/tbody/tr[3]/td[2]/span/text()"))
+            components = wholeSavings.split(" ")
+            saving = components[0]
+            savingPercent = components[1]
 
             sub_extracted = {}
 
-            sub_extracted['Title'] = titles[i]
-            sub_extracted['Content'] = contents[i]
-            sub_extracted['ListPrice'] = listPrices[i]
-            sub_extracted['Price'] = prices[i]
-            sub_extracted['Saving'] = savings[i]
-            sub_extracted['SavingPercent'] = savingsPercent[i]
+            sub_extracted['Title'] = title
+            sub_extracted['Content'] = content
+            sub_extracted['ListPrice'] = listPrice
+            sub_extracted['Price'] = price
+            sub_extracted['Saving'] = saving
+            sub_extracted['SavingPercent'] = savingPercent
 
-            extract_list.append(sub_extracted)
-        return extract_list
+            extracted[title] = sub_extracted
+
+            i = i + 1
 
     elif site_name == "mimovrste.si":
         extracted['Title'] = extract_x_path(tree.xpath("//*[@id=\"content\"]/div/article/div[1]/section[2]/h3/text()"))
@@ -173,29 +185,33 @@ def x_path(site_name, html_content):
         extracted['Savings'] = extract_x_path(tree.xpath("//*[@id=\"content\"]/div/article/div[1]/section[2]/div[3]/div[1]/div[2]/text()"))
 
     elif site_name == "ceneje.si":
-        extract_list = []
+        i = 1
+        while True:
+            item = "//*[@id=\"productGrid\"]/div[" + str(i) + "]/"
+            # sub_extracted['Image'] = item.xpath("div/div[1]/a/img/@src") and was sub="span"
 
-        items = "//*[@class=\"productBoxGrid\"]/"
-        sub = "a"
-        # sub_extracted['Image'] = item.xpath("div/div[1]/a/img/@src") and was sub="span"
 
-        images = x_path(items + "div/div[1]/img/@src", html_content)
-        titles = x_path(items + "div/div[2]/h3/" + sub + "/text()", html_content)
-        minPrices = x_path(items + "div/div[2]/p/" + sub + "[1]/b/text()", html_content)
-        stores = x_path(items + "div/div[2]/p/" + sub + "[2]/b/text()", html_content)
-        actions = x_path(items + "div/div[3]/" + sub + "/text()", html_content)
+            title = extract_x_path(tree.xpath(item + "div/div[2]/h3/a/text()"))
+            if len(title) == 0:
+                break
 
-        for i, _ in enumerate(images):
+
+            image = extract_x_path(tree.xpath(item + "div/div[1]/a/img/@src"))
+            minPrice = extract_x_path(tree.xpath(item + "div/div[2]/p/a[1]/b/text()"))
+            store = extract_x_path(tree.xpath(item + "div/div[2]/p/a[2]/b/text()"))
+            action = extract_x_path(tree.xpath(item + "div/div[3]/a/text()"))
+
             sub_extracted = {}
 
-            sub_extracted['Image'] = images[i]
-            sub_extracted['Title'] = titles[i]
-            sub_extracted['MinPrice'] = minPrices[i]
-            sub_extracted['Stores'] = stores[i]
-            sub_extracted['Action'] = actions[i]
+            sub_extracted['Image'] = image
+            sub_extracted['Title'] = title
+            sub_extracted['MinPrice'] = minPrice
+            sub_extracted['Stores'] = store
+            sub_extracted['Action'] = action
 
-            extract_list.append(sub_extracted)
-        return extract_list
+            extracted[title] = sub_extracted
+
+            i = i + 1
 
     return extracted
 

@@ -1,18 +1,4 @@
 {
-    "KLARFIT steza za tek Pacemaker X3, črna": {
-        "Image": "https://img.cdn-cnj.si/img/175/175/eN/eNdKx1qRAvpj",
-        "Title": "KLARFIT steza za tek Pacemaker X3, črna",
-        "MinPrice": "354,00 €",
-        "Stores": "v Electronic star",
-        "Action": "V trgovino"
-    },
-    "KLARFIT steza za tek Pacemaker X1, črna": {
-        "Image": "https://img.cdn-cnj.si/img/175/175/zB/zBxwEIuny0vJ",
-        "Title": "KLARFIT steza za tek Pacemaker X1, črna",
-        "MinPrice": "271,00 €",
-        "Stores": "v Electronic star",
-        "Action": "V trgovino"
-    },
     "KOOLOOK zložljiva magnetna tekalna steza (primerna za hujšanje)": {
         "Image": "./Tekalne steze - Ceneje.si_files/HDp2uysPoJ5",
         "Title": "KOOLOOK zložljiva magnetna tekalna steza (primerna za hujšanje)",
@@ -56,119 +42,133 @@
         "Action": "V trgovino"
     },
     "INSPORTLINE tekalna steza EXCEL RUN": {
-        "Image": "https://img.cdn-cnj.si/img/175/175/wQ/wQ6PgnOMMLKO",
+        "Image": "./Tekalne steze - Ceneje.si_files/wQ6PgnOMMLKO",
         "Title": "INSPORTLINE tekalna steza EXCEL RUN",
         "MinPrice": "269,90 €",
         "Stores": "v Insportline.si",
         "Action": "V trgovino"
     },
+    "KLARFIT steza za tek Pacemaker X3, črna": {
+        "Image": "./Tekalne steze - Ceneje.si_files/eNdKx1qRAvpj",
+        "Title": "KLARFIT steza za tek Pacemaker X3, črna",
+        "MinPrice": "354,00 €",
+        "Stores": "v Electronic star",
+        "Action": "V trgovino"
+    },
     "CAPITAL SPORTS tekalna steza Infinity Track 2.0": {
-        "Image": "https://img.cdn-cnj.si/img/175/175/3o/3oQ4IQuS48NX",
+        "Image": "./Tekalne steze - Ceneje.si_files/3oQ4IQuS48NX",
         "Title": "CAPITAL SPORTS tekalna steza Infinity Track 2.0",
         "MinPrice": "729,00 €",
         "Stores": "v Electronic star",
         "Action": "V trgovino"
     },
     "KLARFIT Treado Active, tekalna steza, 1 HP, 10 km/u, 36 x 100 cm, bluetooth, zaslon na dotik (FITN15-TreadoActive)": {
-        "Image": "https://img.cdn-cnj.si/img/175/175/oQ/oQC8WdsDxhHx",
+        "Image": "./Tekalne steze - Ceneje.si_files/oQC8WdsDxhHx",
         "Title": "KLARFIT Treado Active, tekalna steza, 1 HP, 10 km/u, 36 x 100 cm, bluetooth, zaslon na dotik (FITN15-TreadoActive)",
         "MinPrice": "354,00 €",
         "Stores": "v Electronic star",
         "Action": "V trgovino"
     },
     "KLARFIT Treado Sport 2.0, tekalna steza, 2,0 HP, samomazalni sistem 3-Level InclineSystem (FIT18-TreadoSport2.0)": {
-        "Image": "https://img.cdn-cnj.si/img/175/175/Pg/PgLoShYvbvk",
+        "Image": "./Tekalne steze - Ceneje.si_files/PgLoShYvbvk",
         "Title": "KLARFIT Treado Sport 2.0, tekalna steza, 2,0 HP, samomazalni sistem 3-Level InclineSystem (FIT18-TreadoSport2.0)",
         "MinPrice": "521,00 €",
         "Stores": "v Electronic star",
         "Action": "V trgovino"
     },
     "KETTLER tekalna steza TRACK S4": {
-        "Image": "https://img.cdn-cnj.si/img/175/175/qY/qYoRVDztuseo",
+        "Image": "./Tekalne steze - Ceneje.si_files/qYoRVDztuseo",
         "Title": "KETTLER tekalna steza TRACK S4",
         "MinPrice": "989,90 €",
         "Stores": "v sportnaoprema.si",
         "Action": "V trgovino"
     },
+    "KLARFIT steza za tek Pacemaker X1, črna": {
+        "Image": "./Tekalne steze - Ceneje.si_files/zBxwEIuny0vJ",
+        "Title": "KLARFIT steza za tek Pacemaker X1, črna",
+        "MinPrice": "271,00 €",
+        "Stores": "v Electronic star",
+        "Action": "V trgovino"
+    },
     "Klarfit (Workspace_go_tablet)": {
-        "Image": "https://img.cdn-cnj.si/img/175/175/uw/uwCX0yTOFzO",
+        "Image": "./Tekalne steze - Ceneje.si_files/uwCX0yTOFzO",
         "Title": "Klarfit (Workspace_go_tablet)",
         "MinPrice": "385,00 €",
         "Stores": "v Electronic star",
         "Action": "V trgovino"
     },
     "CAPITAL tekalna steza SPORTS": {
-        "Image": "https://img.cdn-cnj.si/img/175/175/4e/4e3uERW6LFdk",
+        "Image": "./Tekalne steze - Ceneje.si_files/4e3uERW6LFdk",
         "Title": "CAPITAL tekalna steza SPORTS",
         "MinPrice": "969,00 €",
         "Stores": "v Electronic star",
         "Action": "V trgovino"
     },
     "Tekalna steza Diadora z avtomatičnim naklonom Edge 2.0 dark": {
-        "Image": "https://img.cdn-cnj.si/img/175/175/pP/pP2WqZ04FNY1",
+        "Image": "./Tekalne steze - Ceneje.si_files/pP2WqZ04FNY1",
         "Title": "Tekalna steza Diadora z avtomatičnim naklonom Edge 2.0 dark",
         "MinPrice": "529,00 €",
         "Stores": "v Timebreak.eu",
         "Action": "V trgovino"
     },
     "X Fact tekalna stezat HAMBURG S 12": {
-        "Image": "https://img.cdn-cnj.si/img/175/175/mS/mSJTkpN1nlH8",
+        "Image": "./Tekalne steze - Ceneje.si_files/mSJTkpN1nlH8",
         "Title": "X Fact tekalna stezat HAMBURG S 12",
         "MinPrice": "599,99 €",
         "Stores": "v Hervis",
         "Action": "V trgovino"
     },
     "DIADORA tekalna steza STAR 1000 z naklonom": {
-        "Image": "https://img.cdn-cnj.si/img/175/175/pb/pbNSW7mc7C7q",
+        "Image": "./Tekalne steze - Ceneje.si_files/pbNSW7mc7C7q",
         "Title": "DIADORA tekalna steza STAR 1000 z naklonom",
         "MinPrice": "369,00 €",
         "Stores": "v Timebreak.eu",
         "Action": "V trgovino"
     },
     "Body Sculpture BT 5408S3BPC tekalna steza": {
-        "Image": "https://img.cdn-cnj.si/img/175/175/XZ/XZjoBUsuOu7R",
+        "Image": "./Tekalne steze - Ceneje.si_files/XZjoBUsuOu7R",
         "Title": "Body Sculpture BT 5408S3BPC tekalna steza",
         "MinPrice": "579,90 €",
         "Stores": "v mimovrste=)",
         "Action": "V trgovino"
     },
     "Klarfit   (VPT2-WKSPACE GO)": {
-        "Image": "https://img.cdn-cnj.si/img/175/175/va/va8sKQQKL2qM",
+        "Image": "./Tekalne steze - Ceneje.si_files/va8sKQQKL2qM",
         "Title": "Klarfit   (VPT2-WKSPACE GO)",
         "MinPrice": "364,00 €",
         "Stores": "v Electronic star",
         "Action": "V trgovino"
     },
     "Capital Sports Pacemaker F80, tekalna steza, 3 HP, 14 km/h, 4P-AntiShock Suspension, USB (FIT7-PaceMKR-F80)": {
-        "Image": "https://img.cdn-cnj.si/img/175/175/dy/dyppXwMKP2J",
+        "Image": "./Tekalne steze - Ceneje.si_files/dyppXwMKP2J",
         "Title": "Capital Sports Pacemaker F80, tekalna steza, 3 HP, 14 km/h, 4P-AntiShock Suspension, USB (FIT7-PaceMKR-F80)",
         "MinPrice": "677,00 €",
         "Stores": "v Electronic star",
         "Action": "V trgovino"
     },
     "Tekalna steza Track S6 Kettler": {
-        "Image": "https://img.cdn-cnj.si/img/175/175/af/afgtYhWYwSJq",
+        "Image": "./Tekalne steze - Ceneje.si_files/afgtYhWYwSJq",
         "Title": "Tekalna steza Track S6 Kettler",
         "MinPrice": "1.399,00 €",
         "Stores": "v sportnaoprema.si",
         "Action": "V trgovino"
     },
     "Tekalna steza NordicTrack X32i – incline trainer": {
-        "Image": "https://img.cdn-cnj.si/img/175/175/bu/buVPn1xSEaAu",
+        "Image": "./Tekalne steze - Ceneje.si_files/buVPn1xSEaAu",
         "Title": "Tekalna steza NordicTrack X32i – incline trainer",
         "MinPrice": "3.999,00 €",
         "Stores": "v sportnaoprema.si",
         "Action": "V trgovino"
     },
     "Profesionalna tekaška steza TRX-3000 Toorx HIGH FLEX DECK": {
-        "Image": "https://img.cdn-cnj.si/img/175/175/pg/pgMQQ8UDnZ5r",
+        "Image": "./Tekalne steze - Ceneje.si_files/pgMQQ8UDnZ5r",
         "Title": "Profesionalna tekaška steza TRX-3000 Toorx HIGH FLEX DECK",
         "MinPrice": "2.298,96 €",
         "Stores": "v 2 trgovinah",
         "Action": "Več o ponudbi"
     },
     "INSPORTLINE tekalna steza inCondi T40i": {
-        "Image": "https://img.cdn-cnj.si/img/175/175/Z7/Z7cy6QEzWeoH",
+        "Image": "./Tekalne steze - Ceneje.si_files/Z7cy6QEzWeoH",
         "Title": "INSPORTLINE tekalna steza inCondi T40i",
         "MinPrice": "806,60 €",
         "Stores": "v Insportline.si",
