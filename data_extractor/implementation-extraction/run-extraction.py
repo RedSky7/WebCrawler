@@ -136,9 +136,9 @@ def x_path(site_name, html_content):
         fail_count = 0
         while True:
 
-            #item = "/html/body/table[2]/tbody/tr[1]/td[5]/table/tbody/tr[2]/td/table/tbody/tr/td/table/tbody/tr[1]/"
-            item = "/html/body/table[2]/tbody/tr[1]/td[5]/table/tbody/tr[2]/td/table/tbody/tr/td/table/tbody/tr[" + str(i) + "]/"
-
+            #item = "/html/body/table[2]/tbody/tr[1]/td[5]/table/tbody/tr[2]/td/table/tbody/tr/td/table/tbody/tr[" + str(i) + "]/"
+            #item = "/html/body/table[2]/tbody/tr[1]/td[5]/table/tbody/tr[2]/td/table/tbody/tr/td/table/tbody/tr[1]"
+            item = "//table[@cellpadding='2']/tbody/tr[" + str(i) + "]/"
             title = extract_x_path(tree.xpath(item + "td[2]/a/b/text()"))
 
             if fail_count > 3:
@@ -180,8 +180,14 @@ def x_path(site_name, html_content):
         extracted['Availability'] = extract_x_path(tree.xpath("//*[@class=\"delivery-wrapper\"]/a/text()"))
 
         tags = []
-        for tag in tree.xpath("//*[@id=\"content\"]/div/article/div[1]/section[2]/p[1]/em"):
-            tags.append(extract_x_path(tag.xpath("text()")))
+        i = 1
+        while True:
+            tag = extract_x_path(tree.xpath("//*[@id=\"content\"]/div/article/div[1]/section[2]/p[1]/em[" + str(i) + "]/text()"))
+            if len(tag) == 0:
+                break
+            tags.append(tag)
+            i += 1
+
         extracted['Tags'] = tags
 
         extracted['Savings'] = extract_x_path(tree.xpath("//*[@id=\"content\"]/div/article/div[1]/section[2]/div[3]/div[1]/div[2]/text()"))
@@ -368,11 +374,18 @@ for site in sites:
             '''
             html1 = open('../input-extraction/example1.html', mode='r', encoding=encoding).read()
             html2 = open('../input-extraction/example2.html', mode='r', encoding=encoding).read()
+            '''
+
+            '''
             html1 = open('../input-extraction/rtvslo.si/Audi A6 50 TDI quattro_ nemir v premijskem razredu - RTVSLO.si.html', mode='r', encoding=encoding).read()
             html2 = open('../input-extraction/rtvslo.si/Volvo XC 40 D4 AWD momentum_ suvereno med najboljše v razredu - RTVSLO.si.html', mode='r', encoding=encoding).read()
-            '''
+            html1 = open('../input-extraction/overstock.com/jewelry01.html', mode='r', encoding=encoding).read()
+            html2 = open('../input-extraction/overstock.com/jewelry02.html', mode='r', encoding=encoding).read()
             html1 = open('../input-extraction/mimovrste.si/Continental guma PremiumContact 6 205_55R16 91V _ mimovrste=).html', mode='r', encoding=encoding).read()
             html2 = open('../input-extraction/mimovrste.si/Rokib dezinfekcijsko sredstvo za roke, 70% alkohola, 500 ml _ mimovrste=).html', mode='r', encoding=encoding).read()
+            '''
+            html1 = open('../input-extraction/ceneje.si/Rezultati iskanja_ ssd samsung 560 evo - Ceneje.si.html', mode='r', encoding=encoding).read()
+            html2 = open('../input-extraction/ceneje.si/Tekalne steze - Ceneje.si.html', mode='r', encoding=encoding).read()
             data = auto_extraction(html1, html2)
 
         print(data)
