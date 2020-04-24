@@ -6,6 +6,8 @@ from lxml import html
 #
 # Regular expressions
 #
+from lxml.html.clean import Cleaner
+
 
 def extract(match, group_number=1):
     if match is not None:
@@ -215,6 +217,95 @@ def x_path(site_name, html_content):
 
     return extracted
 
+def contains(node, start_index, target):
+    for i in range(start_index, start_index + 1):
+        if node[i].tag == target.tag:
+            return True
+    return False
+
+def add_attributes(node):
+    result = " "
+    for key, value in node.attrib.items():
+        result += key + "=\"" + value + "\" "
+    return result
+
+def id_mismatch(node_1, node_2):
+    return node_1.attrib.get('id', None) != node_2.attrib.get('id', None)
+
+def auto_ex(node_1, node_2):
+    #TODO: FIX mismatches. which look for more than just one back one forward
+
+    wrapper = ""
+    prev_tag = ""
+    count = 0
+    for i, child in enumerate(node_1.getchildren()):
+        # Check if there is no nodes left to check in node_2
+        if count >= len(node_2.getchildren()):
+            wrapper += "(<" + str(child.tag).upper() + "... >)?"
+            continue
+
+        target = node_2.getchildren()[count]
+
+        print("one = " + str(child.tag) + add_attributes(child) + ", second = " + str(target.tag) + add_attributes(target))
+
+        if child.tag != target.tag or id_mismatch(child, target):
+            if contains(node_2, count, child):
+                wrapper += "(<" + target.tag.upper() + "... >)?"
+                count += 1
+                # CHECK AGAIN
+            else:
+                wrapper += "(<" + str(child.tag).upper() + "... >)?"
+            continue
+
+        new_tag = "<" + str(child.tag).upper() + add_attributes(child) + ">"
+
+        if child.text is not None:
+            if child.text == target.text:
+                new_tag += child.text
+            elif child.text != target.text:
+                new_tag += "#text"
+
+        new_tag += auto_ex(child, target)
+
+        new_tag += "</" + str(child.tag).upper() + ">"
+
+        if new_tag == prev_tag:
+            wrapper = re.sub(new_tag + "$", "(" + new_tag + ")+", wrapper)
+            continue
+
+        wrapper += new_tag
+
+        prev_tag = new_tag
+        count += 1
+
+        if i == len(node_1.getchildren()) - 1 \
+            and count < len(node_2.getchildren()) \
+            and node_2.getchildren()[count].tag != child.tag:
+            wrapper += "(<" + node_2.getchildren()[count].tag.upper() + "... >)?"
+    return wrapper
+
+
+
+def auto_extraction(html1, html2):
+    tree1 = html.fromstring(html1)
+    tree2 = html.fromstring(html2)
+
+    cleaner = Cleaner(style=True, remove_unknown_tags=False)
+    tree1 = cleaner.clean_html(tree1)
+    tree2 = cleaner.clean_html(tree2)
+
+    result = auto_ex(tree1.body, tree2.body)
+    result = re.sub("\n{2,}?", "\n", result)
+
+    return result
+
+
+
+
+
+
+
+
 
 parser = argparse.ArgumentParser(description='Extracts data from a webpage.')
 parser.add_argument('type', metavar='T', type=str, help='type of data extraction. Can be A, B or C.')
@@ -222,6 +313,7 @@ parser.add_argument('type', metavar='T', type=str, help='type of data extraction
 args = parser.parse_args()
 
 sites = ['rtvslo.si', 'overstock.com', 'mimovrste.si', 'ceneje.si']
+
 
 for site in sites:
     root = '../input-extraction/' + site + "/"
@@ -241,8 +333,17 @@ for site in sites:
             data = regular_expressions(site, html_content)
         if args.type == 'B':
             data = x_path(site, html_content)
+        if args.type == 'C':
+            '''html1 = open('../input-extraction/example1.html', mode='r', encoding=encoding).read()
+            html2 = open('../input-extraction/example2.html', mode='r', encoding=encoding).read()'''
+            html1 = open('../input-extraction/rtvslo.si/Audi A6 50 TDI quattro_ nemir v premijskem razredu - RTVSLO.si.html', mode='r', encoding=encoding).read()
+            html2 = open('../input-extraction/rtvslo.si/Volvo XC 40 D4 AWD momentum_ suvereno med najboljše v razredu - RTVSLO.si.html', mode='r', encoding=encoding).read()
+            data = auto_extraction(html1, html2)
 
         print(data)
         print("\n")
         with open("data_" + file.replace(".html", "") + ".json", "w", encoding='utf-8') as f:
             json.dump(data, f, ensure_ascii=False, indent=4)
+
+        if args.type == 'C':
+            exit(0)
