@@ -50,7 +50,9 @@ Data Extractor}
 
 \section{Introduction}
 
-TODO
+In this paper we provide and discuss results gathered when trying to implement data extraction algorhitms using regular expressions, XPath and automatic web extraction.
+The later was implemented using RoadRunner approach for automatic web extraction~\ref{road_runner}, though the algorithm does not stricktly follow their implementation approach but rather usees their general observations.
+
 
 \section{Selection of optional web pages}
 
@@ -189,66 +191,94 @@ Bellow are the lists of XPath expressions for every of the targeted pages.
 
 \subsection{Pseuocode}
 
+In our approach we first generated DOM structures from both input HTML pages.
+Then we cleaned them by removing any <head>, <style> and <script> tags.
+After that the auto_ex function was called to produce a union--free regular expression.
+When checking for node mismatches we mainly relied on the type of tag the node represented, the id of the node, if it didn't contain more than 3 numbers which generally described an ad node, and sequential attributes of the tag to determine if the two nodes in seperate trees are the same.
+The pseudocode of the function is described bellow. 
+
 \verb{
-	for child in tree1:
+	def auto_ex(tree1, tree2):
+		for child in tree1:
 
-        # Check if there is any node on count position in tree2
-        if count >= len(node_2.getchildren()):
-            wrapper += "(<" + str(child.tag).upper() + "... >)?"
-            continue
+	        # Check if there is any node on count position in tree2
+	        if count >= len(node_2.getchildren()):
+	            wrapper += "(<" + str(child.tag).upper() + "... >)?"
+	            continue
 
-        target = node_2.getchildren()[count]
+	        target = node_2.getchildren()[count]
 
-        # Handle tag mismatches
-        if mismatch(child, target):
-            if contains(node_2, count, child):
-                wrapper += "(<" + target.tag.upper() + "... >)?"
-                count += 1
-                target = node_2.getchildren()[count]
-            else:
-                wrapper += "(<" + str(child.tag).upper() + "... >)?"
-                continue
-        # Add starting tag
-        new_tag = "<" + str(child.tag).upper() + ">"
+	        # Handle tag mismatches
+	        if mismatch(child, target):
+	            if contains(node_2, count, child):
+	                wrapper += "(<" + target.tag.upper() + "... >)?"
+	                count += 1
+	                target = node_2.getchildren()[count]
+	            else:
+	                wrapper += "(<" + str(child.tag).upper() + "... >)?"
+	                continue
+	        # Add starting tag
+	        new_tag = "<" + str(child.tag).upper() + ">"
 
-        # Add text inside of the tag
-        if child.text is not None:
-            new_tag += get_smt(child.text, target.text)
+	        # Add text inside of the tag
+	        if child.text is not None:
+	            new_tag += get_smt(child.text, target.text)
 
-        # Handle children of this node
-        new_tag += auto_ex(child, target)
+	        # Handle children of this node
+	        new_tag += auto_ex(child, target)
 
-        # Add a closing tag
-        new_tag += "</" + str(child.tag).upper() + ">"
+	        # Add a closing tag
+	        new_tag += "</" + str(child.tag).upper() + ">"
 
-        # Handle text after the current node
-        if child.tail is not None:
-            tail = child.tail
-            if len(tail) > 0:
-                new_tag += get_smt(tail, target.tail)
+	        # Handle text after the current node
+	        if child.tail is not None:
+	            tail = child.tail
+	            if len(tail) > 0:
+	                new_tag += get_smt(tail, target.tail)
 
-        # Replace multiple occurrences with a special tag
-        if new_tag == prev_tag:
-            wrapper = re.sub(new_tag + "$", "(" + new_tag + ")+", wrapper)
-            continue
+	        # Replace multiple occurrences with a special tag
+	        if new_tag == prev_tag:
+	            wrapper = re.sub(new_tag + "$", "(" + new_tag + ")+", wrapper)
+	            continue
 
-        wrapper += new_tag
+	        wrapper += new_tag
 
-        prev_tag = new_tag
-        count += 1
+	        prev_tag = new_tag
+	        count += 1
 
-        # If this is the last node in tree1 but there are still nodes in tree2 this one must be optional
-        if node_exists(tree2, level, count):
-            wrapper += "(<" + node_that_exists_in_tree2 + "... >)?"
+	        # If this is the last node in tree1 but there are still nodes in tree2 this one must be optional
+	        if node_exists(tree2, level, count):
+	            wrapper += "(<" + node_that_exists_in_tree2 + "... >)?"
 
     return wrapper
 }
+
 \subsection{Results}
+
+rtvslo.si
+\verb{
+	
+}
+
+overstock.com
+\verb{
+	
+}
+
+mimovrste.si
+\verb{
+	
+}
+
+ceneje.si
+\verb{
+	
+}
 
 \section{Conclusion}
 
-~\cite{jauntium, robots_txt, postgres}
-TODO
+We were successful in implementing all of the above listed approaches and have gathered good results.
+Our automatic web extraction approach could of course be improved with additional information gathered from other articles that tackle with the same problems or with testing the algorithm on more websites.
 
 \bibliographystyle{IEEEtran}
 \bibliography{main}
