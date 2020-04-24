@@ -32,8 +32,8 @@
       <file leaf-file-name="run-extraction.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/run-extraction.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="183">
-              <caret line="301" column="20" lean-forward="true" selection-start-line="301" selection-start-column="20" selection-end-line="301" selection-end-column="20" />
+            <state relative-caret-position="301">
+              <caret line="300" column="17" selection-start-line="300" selection-start-column="17" selection-end-line="300" selection-end-column="17" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -108,8 +108,8 @@
       <file leaf-file-name="re.py" pinned="false" current-in-tab="false">
         <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/re.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3077">
-              <caret line="184" column="4" selection-start-line="184" selection-start-column="4" selection-end-line="184" selection-end-column="4" />
+            <state relative-caret-position="197">
+              <caret line="222" selection-start-line="222" selection-end-line="222" />
             </state>
           </provider>
         </entry>
@@ -221,14 +221,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.259375" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="7" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.39107332" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.4293305" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -590,13 +589,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/re.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3077">
-          <caret line="184" column="4" selection-start-line="184" selection-start-column="4" selection-end-line="184" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../../../../Project/Lib/site-packages/lxml/html/clean.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="147">
@@ -604,10 +596,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/re.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="222" selection-start-line="222" selection-end-line="222" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/run-extraction.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="301" column="20" lean-forward="true" selection-start-line="301" selection-start-column="20" selection-end-line="301" selection-end-column="20" />
+        <state relative-caret-position="301">
+          <caret line="300" column="17" selection-start-line="300" selection-start-column="17" selection-end-line="300" selection-end-column="17" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>

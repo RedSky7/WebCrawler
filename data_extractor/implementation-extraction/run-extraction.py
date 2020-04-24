@@ -235,7 +235,7 @@ def id_mismatch(node_1, node_2):
     mismatch = id1 != id2
 
     # If the id contains a few numbers then probably another sort of id (like ads)
-    if mismatch and len(re.findall('[0-9]', id1)) > 3:
+    if mismatch and id1 is not None and len(re.findall('[0-9]', id1)) > 3:
 
         # Base your decision on other tags. Maybe use Levenshtein distance.
         att1 = re.sub("id=\".*?\"", "", add_attributes(node_1))
@@ -271,6 +271,7 @@ def auto_ex(node_1, node_2):
         #print("one = " + str(child.tag) + add_attributes(child) + ", second = " + str(target.tag) + add_attributes(
         #    target))
 
+        # Handle tag mismatches
         if mismatch(child, target):
             if contains(node_2, count, child):
                 wrapper += "(<" + target.tag.upper() + "... >)?"
@@ -286,17 +287,20 @@ def auto_ex(node_1, node_2):
         if child.text is not None:
             new_tag += get_smt(child.text, target.text)
 
-
+        # Handle children of this node
         new_tag += auto_ex(child, target)
 
+        # Add a closing tag
         new_tag += "</" + str(child.tag).upper() + ">"
 
+        # Handle text after the current node
         if child.tail is not None:
             tail = child.tail.lstrip().rstrip()
             if len(tail) > 0:
                 new_tag += get_smt(tail, target.tail.lstrip().rstrip())
-                print("TEXT AFTER = " + tail)
+                #print("TEXT AFTER = " + tail)
 
+        # Replace multiple occurrences with a special tag
         if new_tag == prev_tag:
             wrapper = re.sub(new_tag + "$", "(" + new_tag + ")+", wrapper)
             continue
@@ -306,6 +310,7 @@ def auto_ex(node_1, node_2):
         prev_tag = new_tag
         count += 1
 
+        # If this is the last tag in node_1 and there are no nodes left in node_2 this  must be an optional
         if i == len(node_1.getchildren()) - 1 \
                 and count < len(node_2.getchildren()) \
                 and mismatch(child, node_2.getchildren()[count]):
@@ -363,10 +368,14 @@ for site in sites:
         if args.type == 'B':
             data = x_path(site, html_content)
         if args.type == 'C':
-            '''html1 = open('../input-extraction/example1.html', mode='r', encoding=encoding).read()
-            html2 = open('../input-extraction/example2.html', mode='r', encoding=encoding).read()'''
+            '''
+            html1 = open('../input-extraction/example1.html', mode='r', encoding=encoding).read()
+            html2 = open('../input-extraction/example2.html', mode='r', encoding=encoding).read()
             html1 = open('../input-extraction/rtvslo.si/Audi A6 50 TDI quattro_ nemir v premijskem razredu - RTVSLO.si.html', mode='r', encoding=encoding).read()
             html2 = open('../input-extraction/rtvslo.si/Volvo XC 40 D4 AWD momentum_ suvereno med najboljše v razredu - RTVSLO.si.html', mode='r', encoding=encoding).read()
+            '''
+            html1 = open('../input-extraction/mimovrste.si/Continental guma PremiumContact 6 205_55R16 91V _ mimovrste=).html', mode='r', encoding=encoding).read()
+            html2 = open('../input-extraction/mimovrste.si/Rokib dezinfekcijsko sredstvo za roke, 70% alkohola, 500 ml _ mimovrste=).html', mode='r', encoding=encoding).read()
             data = auto_extraction(html1, html2)
 
         print(data)
