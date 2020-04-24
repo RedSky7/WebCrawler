@@ -96,22 +96,154 @@ This too can be seen in figure~\ref{fig_ceneje}.
 
 \section{Regular Expressions Implementation}
 
-rtvslo.si
-\begin{itemize}
-\item{title: <h1>(.*?)</h1>}
-\item{}
-\item{}
-\item{}
-\item{}
-\end{itemize}
+Bellow is the list of all regular expressions that were used on the target web pages.
+
+\subsection{rtvslo.si}
+\verb{
+	Title: 				<h1>(.*?)</h1>
+	SubTitle:			<div class=\"subtitle\">(.*?)</div>
+	Lead:				<p class=\"lead\">(.*?)</p>
+	Content:			<div class=\"article-body\">(.*?)</div>[ ]*<div class=\"article-column\">
+	Author: 			<div class=\"author-name\">(.*?)</div>
+	PublishedTime:		<div class=\"publish-meta\">(.*?)<br>
+}
+
+\subsection{overstock.com}
+\verb{
+	Title(s):			<td valign=\"top\">\W*<a.*?PROD_ID=([0-9]+)\".*?<b>(.*?)</b></a>
+	Content(s):			<td valign=\"top\">\W*<a.*?PROD_ID=([0-9]+)\".*?<span class=\"normal\">(.*?)<br>	
+	ListPrice(s):		<td valign=\"top\">\W*<a.*?PROD_ID=([0-9]+)\".*?<s>(.*?)</s>
+	Price(s):			<td valign=\"top\">\W*<a.*?PROD_ID=([0-9]+)\".*?<span class=\"bigred\"><b>(.*?)</b>
+	Saving(s):
+	SavingPercent(s):	<td valign=\"top\">\W*<a.*?PROD_ID=([0-9]+)\".*?<span class=\"littleorange\">(.*?) \(([0-9]{0,2}%)\)</span>		
+}
+
+\subsection{mimovrste.si}
+\verb{
+	Title:				<h3.*?>(.*?)</h3>
+	Description:		<p.*?itemprop=\"description\".*?>(.*?)<a
+	OldPrice:			<del.*?class=\"rrp-price\".*?>(.*?)</del>
+	Price:				<b class=\"pro-price.*?>(.*?)</b>
+	Availability:		<a data-sel=\"availability-detail\".*?>(.*?)</a>
+	Tags:				<em class=\"label.*?>(.*?)</em>
+	Savings:			<div class=\"label--round-sale.*?>(.*?)</div>
+}
+
+\subsection{ceneje.si}
+\verb{
+	Image(s):			<div class=\"innerProductBox\">.*?<img.*?alt=\"(.*?)\".*?src=\"(.*?)\"
+	Titles(s):			<div class=\"innerProductBox\">.*?<img.*?alt=\"(.*?)\".*?<h3>\W*<.*?>(.*?)</.*?>
+	MinPrice(s):		<div class=\"innerProductBox\">.*?<img.*?alt=\"(.*?)\".*?<b>(.*?)</b>
+	Store(s):			<div class=\"innerProductBox\">.*?<img.*?alt=\"(.*?)\".*?class=\"qtySellers\">\W*<b>(.*?)</b>
+	Action(s):			<div class=\"innerProductBox\">.*?<img.*?alt=\"(.*?)\".*?<div class=\"rBox\">\W*<.*?>(.*?)</.*?>
+}
 
 \section{XPath Implementation}
 
-TODO
+Bellow are the lists of XPath expressions for every of the targeted pages.
+
+
+\subsection{rtvslo.si}
+\verb{
+	Title:				//*[@id=\"main-container\"]/div[3]/div/header/h1/text()
+	SubTitle:			//*[@id=\"main-container\"]/div[3]/div/header/div[2]/text()
+	Lead:				//*[@id=\"main-container\"]/div[3]/div/header/p/text()
+	Content:			string(//*[@id=\"main-container\"]/div[3]/div/div[2])
+	Author:				//*[@id=\"main-container\"]/div[3]/div/div[1]/div[1]/div/text()
+	PublishedTime:		//*[@id=\"main-container\"]/div[3]/div/div[1]/div[2]/text()[1]
+}
+
+%TODO: FIND IF THIS CAN BE SIMPLIFIED!
+\subsection{overstock.si}
+\verb{
+	Title(s): 			/html/body/table[2]/tbody/tr[1]/td[5]/table/tbody/tr[2]/td/table/tbody/tr/td/table/tbody/tr[" + str(i) + "]/td[2]/a/b/text()
+	Content(s):			/html/body/table[2]/tbody/tr[1]/td[5]/table/tbody/tr[2]/td/table/tbody/tr/td/table/tbody/tr[" + str(i) + "]/td[2]/table/tbody/tr/td[2]/span/text()
+	ListPrice(s):		/html/body/table[2]/tbody/tr[1]/td[5]/table/tbody/tr[2]/td/table/tbody/tr/td/table/tbody/tr[" + str(i) + "]/td[2]/table/tbody/tr/td[1]/table/tbody/tr[1]/td[2]/s/text()
+	Price(s):			/html/body/table[2]/tbody/tr[1]/td[5]/table/tbody/tr[2]/td/table/tbody/tr/td/table/tbody/tr[" + str(i) + "]/td[2]/table/tbody/tr/td[1]/table/tbody/tr[2]/td[2]/span/b/text()
+	Saving(s):			
+	SavingPercent(s):	/html/body/table[2]/tbody/tr[1]/td[5]/table/tbody/tr[2]/td/table/tbody/tr/td/table/tbody/tr[" + str(i) + "]/td[2]/table/tbody/tr/td[1]/table/tbody/tr[3]/td[2]/span/text()
+}
+
+%TODO: FIX TAGS BELLOW!
+\subsection{mimovrste.si}
+\verb{
+	Title:				//*[@id=\"content\"]/div/article/div[1]/section[2]/h3/text()
+	Description:		//*[@id=\"content\"]/div/article/div[1]/section[2]/p[2]/text()
+	OldPrice:			//*[@id=\"content\"]/div/article/div[1]/section[2]/div[3]/div[1]/div[1]/div/del/text()
+	Price:				//*[@class=\"price-wrapper\"]/div[1]/div[1]/b/text()
+	Availability:		//*[@class=\"delivery-wrapper\"]/a/text()
+	Tags:
+	Savings:			//*[@id=\"content\"]/div/article/div[1]/section[2]/div[3]/div[1]/div[2]/text()
+}
+
+\subsection{ceneje.si}
+\verb{
+	Image(s):			//*[@id=\"productGrid\"]/div[" + str(i) + "]/div/div[1]/a/img/@src
+	Title(s):			//*[@id=\"productGrid\"]/div[" + str(i) + "]/div/div[2]/h3/a/text()
+	MinPrice(s):		//*[@id=\"productGrid\"]/div[" + str(i) + "]/div/div[2]/p/a[1]/b/text()
+	Store(s):			//*[@id=\"productGrid\"]/div[" + str(i) + "]/div/div[2]/p/a[2]/b/text()
+	Action(s):			//*[@id=\"productGrid\"]/div[" + str(i) + "]/div/div[3]/a/text()
+}
 
 \section{Automatic Web Extraction Implementation}
 
-TODO 
+\subsection{Pseuocode}
+
+\verb{
+	for child in tree1:
+
+        # Check if there is any node on count position in tree2
+        if count >= len(node_2.getchildren()):
+            wrapper += "(<" + str(child.tag).upper() + "... >)?"
+            continue
+
+        target = node_2.getchildren()[count]
+
+        # Handle tag mismatches
+        if mismatch(child, target):
+            if contains(node_2, count, child):
+                wrapper += "(<" + target.tag.upper() + "... >)?"
+                count += 1
+                target = node_2.getchildren()[count]
+            else:
+                wrapper += "(<" + str(child.tag).upper() + "... >)?"
+                continue
+        # Add starting tag
+        new_tag = "<" + str(child.tag).upper() + ">"
+
+        # Add text inside of the tag
+        if child.text is not None:
+            new_tag += get_smt(child.text, target.text)
+
+        # Handle children of this node
+        new_tag += auto_ex(child, target)
+
+        # Add a closing tag
+        new_tag += "</" + str(child.tag).upper() + ">"
+
+        # Handle text after the current node
+        if child.tail is not None:
+            tail = child.tail
+            if len(tail) > 0:
+                new_tag += get_smt(tail, target.tail)
+
+        # Replace multiple occurrences with a special tag
+        if new_tag == prev_tag:
+            wrapper = re.sub(new_tag + "$", "(" + new_tag + ")+", wrapper)
+            continue
+
+        wrapper += new_tag
+
+        prev_tag = new_tag
+        count += 1
+
+        # If this is the last node in tree1 but there are still nodes in tree2 this one must be optional
+        if node_exists(tree2, level, count):
+            wrapper += "(<" + node_that_exists_in_tree2 + "... >)?"
+
+    return wrapper
+}
+\subsection{Results}
 
 \section{Conclusion}
 

@@ -260,16 +260,13 @@ def auto_ex(node_1, node_2):
     prev_tag = ""
     count = 0
     for i, child in enumerate(node_1.getchildren()):
-        # Check if there is no nodes left to check in node_2
 
+        # Check if there is any node on count position in tree2
         if count >= len(node_2.getchildren()):
             wrapper += "(<" + str(child.tag).upper() + "... >)?"
             continue
 
         target = node_2.getchildren()[count]
-
-        #print("one = " + str(child.tag) + add_attributes(child) + ", second = " + str(target.tag) + add_attributes(
-        #    target))
 
         # Handle tag mismatches
         if mismatch(child, target):
@@ -280,10 +277,10 @@ def auto_ex(node_1, node_2):
             else:
                 wrapper += "(<" + str(child.tag).upper() + "... >)?"
                 continue
-
-        #new_tag = "<" + str(child.tag).upper() + add_attributes(child) + ">"
+        # Add starting tag
         new_tag = "<" + str(child.tag).upper() + ">"
 
+        # Add text inside of the tag
         if child.text is not None:
             new_tag += get_smt(child.text, target.text)
 
@@ -310,7 +307,7 @@ def auto_ex(node_1, node_2):
         prev_tag = new_tag
         count += 1
 
-        # If this is the last tag in node_1 and there are no nodes left in node_2 this  must be an optional
+        # If this is the last node in tree1 but there are still nodes in tree2 this one must be optional
         if i == len(node_1.getchildren()) - 1 \
                 and count < len(node_2.getchildren()) \
                 and mismatch(child, node_2.getchildren()[count]):
