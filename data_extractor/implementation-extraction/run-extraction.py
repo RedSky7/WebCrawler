@@ -230,7 +230,28 @@ def add_attributes(node):
     return result
 
 def id_mismatch(node_1, node_2):
-    return node_1.attrib.get('id', None) != node_2.attrib.get('id', None)
+    id1 = node_1.attrib.get('id', None)
+    id2 = node_2.attrib.get('id', None)
+    mismatch = id1 != id2
+
+    # If the id contains a few numbers then probably another sort of id (like ads)
+    if mismatch and len(re.findall('[0-9]', id1)) > 3:
+
+        # Base your decision on other tags. Maybe use Levenshtein distance.
+        att1 = re.sub("id=\".*?\"", "", add_attributes(node_1))
+        att2 = re.sub("id=\".*?\"", "", add_attributes(node_2))
+        return att1 != att2
+    return mismatch
+
+
+def mismatch(node_1, node_2):
+    return node_1.tag != node_2.tag or id_mismatch(node_1, node_2)
+
+def get_smt(node_1, node_2):
+    if node_1 == node_2:
+        return node_1
+    elif node_1 != node_2:
+        return "#text"
 
 def auto_ex(node_1, node_2):
     #TODO: FIX mismatches. which look for more than just one back one forward
@@ -240,34 +261,41 @@ def auto_ex(node_1, node_2):
     count = 0
     for i, child in enumerate(node_1.getchildren()):
         # Check if there is no nodes left to check in node_2
+
         if count >= len(node_2.getchildren()):
             wrapper += "(<" + str(child.tag).upper() + "... >)?"
             continue
 
         target = node_2.getchildren()[count]
 
-        print("one = " + str(child.tag) + add_attributes(child) + ", second = " + str(target.tag) + add_attributes(target))
+        #print("one = " + str(child.tag) + add_attributes(child) + ", second = " + str(target.tag) + add_attributes(
+        #    target))
 
-        if child.tag != target.tag or id_mismatch(child, target):
+        if mismatch(child, target):
             if contains(node_2, count, child):
                 wrapper += "(<" + target.tag.upper() + "... >)?"
                 count += 1
-                # CHECK AGAIN
+                target = node_2.getchildren()[count]
             else:
                 wrapper += "(<" + str(child.tag).upper() + "... >)?"
-            continue
+                continue
 
-        new_tag = "<" + str(child.tag).upper() + add_attributes(child) + ">"
+        #new_tag = "<" + str(child.tag).upper() + add_attributes(child) + ">"
+        new_tag = "<" + str(child.tag).upper() + ">"
 
         if child.text is not None:
-            if child.text == target.text:
-                new_tag += child.text
-            elif child.text != target.text:
-                new_tag += "#text"
+            new_tag += get_smt(child.text, target.text)
+
 
         new_tag += auto_ex(child, target)
 
         new_tag += "</" + str(child.tag).upper() + ">"
+
+        if child.tail is not None:
+            tail = child.tail.lstrip().rstrip()
+            if len(tail) > 0:
+                new_tag += get_smt(tail, target.tail.lstrip().rstrip())
+                print("TEXT AFTER = " + tail)
 
         if new_tag == prev_tag:
             wrapper = re.sub(new_tag + "$", "(" + new_tag + ")+", wrapper)
@@ -279,9 +307,10 @@ def auto_ex(node_1, node_2):
         count += 1
 
         if i == len(node_1.getchildren()) - 1 \
-            and count < len(node_2.getchildren()) \
-            and node_2.getchildren()[count].tag != child.tag:
+                and count < len(node_2.getchildren()) \
+                and mismatch(child, node_2.getchildren()[count]):
             wrapper += "(<" + node_2.getchildren()[count].tag.upper() + "... >)?"
+
     return wrapper
 
 
