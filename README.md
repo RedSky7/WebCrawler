@@ -16,6 +16,26 @@ __MAX_LINKS__ specifies the number of links that the crawler will visit (or atte
 
 __USER_AGENT__ specifies the name of the crawler, which you should change.
 
-
 Running:
 You can simply run the program preferably in IntelliJ.
+
+
+# DataExtractor
+
+A web data extractor implemented in Python 3.6 can be used to gather specific data from predetermined websites that are located inside of input-extraction directory.
+
+Required Python libraries:
+-sys,
+-os,
+-argparse,
+-json,
+-re,
+-lxml.html.
+
+Arguments for running run-extraction.py:
+-A: Regular Expressions extraction,
+-B: XPath extraction,
+-C: Automatic Web extraction.
+
+Running:
+You can simply run the program preferably in PyCharm, where you can provide arguments in EditConfigurations option, or run it via python in a command prompt. Arguments required are listed above.
