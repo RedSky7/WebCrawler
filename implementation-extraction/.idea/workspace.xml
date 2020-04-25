@@ -32,11 +32,20 @@
       <file leaf-file-name="run-extraction.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/run-extraction.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="44">
-              <caret line="54" column="57" selection-start-line="54" selection-start-column="57" selection-end-line="54" selection-end-column="57" />
+            <state relative-caret-position="16">
+              <caret line="329" column="59" selection-start-line="329" selection-start-column="59" selection-end-line="329" selection-end-column="59" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="clean.py" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/lxml/html/clean.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="169">
+              <caret line="216" column="8" selection-start-line="216" selection-start-column="8" selection-end-line="216" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -82,11 +91,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="data_Rokib dezinfekcijsko sredstvo za roke, 70% alkohola, 500 ml _ mimovrste=).json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data_Rokib dezinfekcijsko sredstvo za roke, 70% alkohola, 500 ml _ mimovrste=).json">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
       <file leaf-file-name="data_jewelry01.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/data_jewelry01.json">
           <provider selected="true" editor-type-id="text-editor">
@@ -116,9 +120,10 @@
     <findStrings>
       <find>main-container</find>
       <find>iAd</find>
-      <find>header</find>
       <find>#text</find>
       <find>print(</find>
+      <find>header</find>
+      <find>HEADER</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -131,7 +136,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="1942" />
     <option name="y" value="-18" />
     <option name="width" value="1440" />
@@ -217,7 +222,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="1912" y="-8" width="1936" height="1056" extended-state="7" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12760417" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -225,7 +230,7 @@
       <window_info anchor="bottom" id="Find" order="1" weight="0.32943678" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="7" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.5462274" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.40807652" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -301,16 +306,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/run-extraction.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4726">
-          <caret line="278" lean-forward="true" selection-start-line="278" selection-end-line="278" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/sre_parse.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17340">
@@ -581,10 +576,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/lxml/html/clean.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="216" column="8" selection-start-line="216" selection-start-column="8" selection-end-line="216" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/run-extraction.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="54" column="57" selection-start-line="54" selection-start-column="57" selection-end-line="54" selection-end-column="57" />
+        <state relative-caret-position="16">
+          <caret line="329" column="59" selection-start-line="329" selection-start-column="59" selection-end-line="329" selection-end-column="59" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>

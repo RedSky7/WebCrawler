@@ -327,7 +327,7 @@ def auto_extraction(html1, html2):
     tree1 = html.fromstring(html1)
     tree2 = html.fromstring(html2)
 
-    cleaner = Cleaner(style=True, remove_unknown_tags=False)
+    cleaner = Cleaner(style=True, kill_tags={"nav", "footer"}, remove_unknown_tags=False)
     tree1 = cleaner.clean_html(tree1)
     tree2 = cleaner.clean_html(tree2)
 
