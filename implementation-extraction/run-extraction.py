@@ -1,12 +1,13 @@
+import sys
 from os import walk
 import argparse, json, re
 from lxml import html
+from lxml.html.clean import Cleaner
 
 
 #
 # Regular expressions
 #
-from lxml.html.clean import Cleaner
 
 
 def extract(match, group_number=1):
@@ -52,13 +53,6 @@ def regular_expressions(site_name, html_content):
         for item in wholeSavings:
             savings[item.group(1)] = item.group(2)
             savingsPercent[item.group(1)] = item.group(3)
-
-        print(len(titles))
-        print(len(contents))
-        print(len(listPrices))
-        print(len(prices))
-        print(len(savings))
-        print(len(savingsPercent))
 
         for (key, value) in titles.items():
             sub_extracted = {}
@@ -136,8 +130,10 @@ def x_path(site_name, html_content):
         fail_count = 0
         while True:
 
+            # This is more robust but longer
             #item = "/html/body/table[2]/tbody/tr[1]/td[5]/table/tbody/tr[2]/td/table/tbody/tr/td/table/tbody/tr[" + str(i) + "]/"
-            #item = "/html/body/table[2]/tbody/tr[1]/td[5]/table/tbody/tr[2]/td/table/tbody/tr/td/table/tbody/tr[1]"
+
+            # This works but only because of the design choice of this table having a padding of 2.
             item = "//table[@cellpadding='2']/tbody/tr[" + str(i) + "]/"
             title = extract_x_path(tree.xpath(item + "td[2]/a/b/text()"))
 
@@ -259,6 +255,11 @@ def get_smt(node_1, node_2):
     elif node_1 != node_2:
         return "#text"
 
+def get_target(tree, position):
+    if tree is None or position >= len(tree.getchildren()):
+        return None
+    return tree.getchildren()[position]
+
 def auto_ex(node_1, node_2):
     #TODO: FIX mismatches. which look for more than just one back one forward
 
@@ -268,18 +269,17 @@ def auto_ex(node_1, node_2):
     for i, child in enumerate(node_1.getchildren()):
 
         # Check if there is any node on count position in tree2
-        if count >= len(node_2.getchildren()):
+        target = get_target(node_2, count)
+        if target is None:
             wrapper += "(<" + str(child.tag).upper() + "... >)?"
             continue
-
-        target = node_2.getchildren()[count]
 
         # Handle tag mismatches
         if mismatch(child, target):
             if contains(node_2, count, child):
                 wrapper += "(<" + target.tag.upper() + "... >)?"
                 count += 1
-                target = node_2.getchildren()[count]
+                target = get_target(node_2, count)
             else:
                 wrapper += "(<" + str(child.tag).upper() + "... >)?"
                 continue
@@ -337,7 +337,13 @@ def auto_extraction(html1, html2):
     return result
 
 
-
+def get_html_content(site, file):
+    root = '../input-extraction/' + site + "/"
+    encoding = 'utf-8'
+    if site == 'overstock.com':
+        encoding = 'unicode_escape'
+    html_content = open(root + file, mode='r', encoding=encoding).read()
+    return html_content
 
 
 
@@ -355,43 +361,35 @@ sites = ['rtvslo.si', 'overstock.com', 'mimovrste.si', 'ceneje.si']
 for site in sites:
     root = '../input-extraction/' + site + "/"
     (_, _, filenames) = next(walk(root))
+    html_files = []
     for file in filenames:
-        if not file.endswith(".html"):
-            continue
+        if file.endswith(".html"):
+            html_files.append(file)
 
-        data = None
+    if args.type == 'A' or args.type == 'B':
+        for file in html_files:
 
-        encoding = 'utf-8'
-        if site == 'overstock.com':
-            encoding = 'unicode_escape'
-        html_content = open(root + file, mode='r', encoding=encoding).read()
+            html_content = get_html_content(site, file)
 
-        if args.type == 'A':
-            data = regular_expressions(site, html_content)
-        if args.type == 'B':
-            data = x_path(site, html_content)
-        if args.type == 'C':
-            '''
-            html1 = open('../input-extraction/example1.html', mode='r', encoding=encoding).read()
-            html2 = open('../input-extraction/example2.html', mode='r', encoding=encoding).read()
-            '''
+            if args.type == 'A':
+                data = regular_expressions(site, html_content)
+            else:
+                data = x_path(site, html_content)
 
-            '''
-            html1 = open('../input-extraction/rtvslo.si/Audi A6 50 TDI quattro_ nemir v premijskem razredu - RTVSLO.si.html', mode='r', encoding=encoding).read()
-            html2 = open('../input-extraction/rtvslo.si/Volvo XC 40 D4 AWD momentum_ suvereno med najboljše v razredu - RTVSLO.si.html', mode='r', encoding=encoding).read()
-            html1 = open('../input-extraction/overstock.com/jewelry01.html', mode='r', encoding=encoding).read()
-            html2 = open('../input-extraction/overstock.com/jewelry02.html', mode='r', encoding=encoding).read()
-            html1 = open('../input-extraction/mimovrste.si/Continental guma PremiumContact 6 205_55R16 91V _ mimovrste=).html', mode='r', encoding=encoding).read()
-            html2 = open('../input-extraction/mimovrste.si/Rokib dezinfekcijsko sredstvo za roke, 70% alkohola, 500 ml _ mimovrste=).html', mode='r', encoding=encoding).read()
-            '''
-            html1 = open('../input-extraction/ceneje.si/Rezultati iskanja_ ssd samsung 560 evo - Ceneje.si.html', mode='r', encoding=encoding).read()
-            html2 = open('../input-extraction/ceneje.si/Tekalne steze - Ceneje.si.html', mode='r', encoding=encoding).read()
-            data = auto_extraction(html1, html2)
+            json.dump(data, sys.stdout, indent=4)
+            with open("data_" + file.replace(".html", "") + ".json", "w", encoding='utf-8') as f:
+                json.dump(data, f, ensure_ascii=False, indent=4)
+
+    elif args.type == 'C':
+
+        file_1 = html_files[0]
+        file_2 = html_files[1]
+
+        html1 = get_html_content(site, file_1)
+        html2 = get_html_content(site, file_2)
+
+        data = auto_extraction(html1, html2)
 
         print(data)
-        print("\n")
-        with open("data_" + file.replace(".html", "") + ".json", "w", encoding='utf-8') as f:
-            json.dump(data, f, ensure_ascii=False, indent=4)
+        print("\n\n\n-------\n\n\n")
 
-        if args.type == 'C':
-            exit(0)
