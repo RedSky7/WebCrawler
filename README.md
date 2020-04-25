@@ -36,3 +36,6 @@ Arguments for running run-extraction.py:
 -A: Regular Expressions extraction,
 -B: XPath extraction,
 -C: Automatic Web extraction.
+
+Running:
+You can simply run the program preferably in PyCharm, where you can provide arguments in EditConfigurations option, or run it via python in a command prompt. Arguments required are listed above.
