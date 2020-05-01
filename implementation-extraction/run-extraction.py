@@ -40,6 +40,7 @@ def regular_expressions(site_name, html_content):
         extracted['PublishedTime'] = extract(re.search("<div class=\"publish-meta\">(.*?)<br>", html_content))
 
     elif site_name == "overstock.com":
+        extracted_array = []
         items = "<td valign=\"top\">\W*<a.*?PROD_ID=([0-9]+)\".*?"
 
         titles = extract_this(re.finditer(items + "<b>(.*?)</b></a>", html_content))
@@ -64,7 +65,8 @@ def regular_expressions(site_name, html_content):
             sub_extracted['Saving'] = savings.get(key, '')
             sub_extracted['SavingPercent'] = savingsPercent.get(key, '')
 
-            extracted[key] = sub_extracted
+            extracted_array.append(sub_extracted)
+        return extracted_array
 
     elif site_name == "mimovrste.si":
         extracted['Title'] = extract(re.search("<h3.*?>(.*?)</h3>", html_content))
@@ -81,6 +83,8 @@ def regular_expressions(site_name, html_content):
         extracted['Savings'] = extract(re.search("<div class=\"label--round-sale.*?>(.*?)</div>", html_content))
 
     elif site_name == "ceneje.si":
+        extracted_array = []
+
         items = "<div class=\"innerProductBox\">.*?<img.*?alt=\"(.*?)\".*?"
 
         images = extract_this(re.finditer(items + "src=\"(.*?)\"", html_content))
@@ -98,7 +102,8 @@ def regular_expressions(site_name, html_content):
             sub_extracted['Stores'] = stores.get(key,'')
             sub_extracted['Action'] = actions.get(key,'')
 
-            extracted[key] = sub_extracted
+            extracted_array.append(sub_extracted)
+        return extracted_array
 
     return extracted
 
@@ -126,6 +131,8 @@ def x_path(site_name, html_content):
         extracted['PublishedTime'] = extract_x_path(tree.xpath("//*[@id=\"main-container\"]/div[3]/div/div[1]/div[2]/text()[1]"))
 
     elif site_name == "overstock.com":
+        extracted_array = []
+
         i = 1
         fail_count = 0
         while True:
@@ -164,9 +171,10 @@ def x_path(site_name, html_content):
             sub_extracted['Saving'] = saving
             sub_extracted['SavingPercent'] = savingPercent
 
-            extracted[title] = sub_extracted
+            extracted_array.append(sub_extracted)
 
             i = i + 1
+        return extracted_array
 
     elif site_name == "mimovrste.si":
         extracted['Title'] = extract_x_path(tree.xpath("//*[@id=\"content\"]/div/article/div[1]/section[2]/h3/text()"))
@@ -190,6 +198,8 @@ def x_path(site_name, html_content):
 
     elif site_name == "ceneje.si":
         i = 1
+        extracted_array = []
+
         while True:
             item = "//*[@id=\"productGrid\"]/div[" + str(i) + "]/"
             # sub_extracted['Image'] = item.xpath("div/div[1]/a/img/@src") and was sub="span"
@@ -213,9 +223,10 @@ def x_path(site_name, html_content):
             sub_extracted['Stores'] = store
             sub_extracted['Action'] = action
 
-            extracted[title] = sub_extracted
+            extracted_array.append(sub_extracted)
 
             i = i + 1
+        return extracted_array
 
     return extracted
 
