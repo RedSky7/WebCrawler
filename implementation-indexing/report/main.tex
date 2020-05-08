@@ -92,43 +92,105 @@ If this was the case we saved the frequency, document and indices and proceeded 
 After searching all of the documents we proceeded with merging the results, adding snippets, sorting them, formatting the output and sending everything to the standard output.
 
 \section{Database description}
-%TODO: Describe the database. '
 
-%Number of indexed words:
-%Words and documents with highest frequencies.
+From the html pages we have extracted a total of 48.081 unique words that were then saved to IndexWord table.
+Word with the highest frequency on a given site was 'proizvodnja' with a frequency of 2266 on site evem.gov.si.
+Word with the highest frequency over all the sites was 'slovenije' with a frequency of 9105.
 
 \section{Results}
 
 From the results it is apparent that the approach using the inverted index data is far superior to the one that manually checks all of the documents.
 Time needed for each approach can be seen in table ~\ref{tab1}.
 
-
-%TODO: Fill with data
 \begin{table}[ht]
 \begin{tabu} to 1.0\columnwidth {|X[l]| X[l] | X[l] |}
 \hline
 query/method            & inverted index & manual checking \\ \hline
-predelovalne dejavnosti &                &                 \\ \hline
-trgovina                &                &                 \\ \hline
-social services         &                &                 \\ \hline
--                       &                &                 \\ \hline
--                       &                &                 \\ \hline
--                       &                &                 \\ \hline
+predelovalne dejavnosti &      19ms   (20ms)       &           92085ms      \\ \hline
+trgovina                &      4ms     (5ms)     &         92414ms        \\ \hline
+social services         &       69ms    (5ms)     &         92335ms        \\ \hline
+robot                       &        124ms (5ms)        &          92516ms       \\ \hline
+davčna olajšava           140ms   (5ms)         &        93280ms        &                 \\ \hline
+podatki                       &         24ms (20ms)      &        93650ms         \\ \hline
 \end{tabu}
 \label{tab1}
-\caption{Comparison of time needed to gain a query result using the inverted index and manual checking methods}
+\caption{Comparison of time needed to gain a query result using the inverted index and manual checking methods. In brackets is the time needed only for the SQL query without any post-processing.}
 \end{table}
 
-The actual results gathered using the inverted index for the above mentioned queries can be seen bellow:
+From the table it can be seen that manual checking roughly takes the same amount of time regardless of the input.
+That is because it must check all of the document as it does not know which contain any of the query words.
+The inverted index method takes a much smaller amount of time. 
+This time does vary a lot but always performs in under 200ms while the manual approach takes a minute and a half.
 
-%TODO: Fill with data
+The actual results gathered using the inverted index for the above mentioned queries can be seen in the following subsections.
+The outputs have been cut to only keep the top 10 results and maximum of 5 snippets.
+
+\onecolumn
 \subsection{predelovalne dejavnosti}
-\subsection{trgovina}
-\subsection{social services}
-\subsection{-}
-\subsection{-}
-\subsection{-}
 
+Result of query 'predelovalne dejavnosti'.
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=1\columnwidth]{predelovalne_dejavnosti.png}
+    \label{fig1}
+\end{figure}
+\clearpage
+
+\subsection{trgovina}
+
+Result of query 'trgovina'.
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=1\columnwidth]{trgovina.png}
+
+    \label{fig2}
+\end{figure}
+
+
+\subsection{social services}
+
+Result of query 'social services'.
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=1\columnwidth]{social_services.png}
+
+    \label{fig3}
+\end{figure}
+
+\clearpage
+
+\subsection{robot}
+Result of query 'robot'.
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=1\columnwidth]{robot.png}
+
+    \label{fig4}
+\end{figure}
+
+
+\subsection{davčna olajšava}
+Result of query 'davčna olajšava'.
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=1\columnwidth]{davcna_olajsava.png}
+
+    \label{fig5}
+\end{figure}
+\clearpage
+
+\subsection{podatki}
+
+Result of query 'podatki'.
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=1\columnwidth]{podatki.png}
+
+    \label{fig6}
+\end{figure}
+\clearpage
+
+\twocolumn
 \section{Conclusion}
 
 We were successful in implementing the invert index approach as well as the manual checking one.

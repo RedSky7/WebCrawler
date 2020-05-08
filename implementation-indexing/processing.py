@@ -74,10 +74,8 @@ def handle_indexing():
 
 def index_pages():
     sites = ['e-prostor.gov.si', 'e-uprava.gov.si', 'evem.gov.si', 'podatki.gov.si']
-    remembered_tokens = []
     data = []
-
-    count = 0
+    allTokens = []
 
     for site in sites:
         root = '../input-indexing/' + site + "/"
@@ -88,21 +86,21 @@ def index_pages():
                 html_files.append(file)
 
         for file in html_files:
-            #print("file = " + file)
+            print("file = " + file)
 
             text = get_text(get_html_content(site, file))
 
             tokens = retrieve_tokens(text)
 
-            print(tokens)
+            allTokens += tokens
+            #print(tokens)
+            #print(dist_words)
 
             pre = time.time()
 
             freq_table = {}
             indices = {}
             for i, token in enumerate(tokens):
-                if token not in remembered_tokens:
-                    remembered_tokens.append(token)
 
                 #https://towardsdatascience.com/text-summarization-using-tf-idf-e64a0644ace3
                 if token in freq_table:
@@ -112,17 +110,15 @@ def index_pages():
                     freq_table[token] = 1
                     indices[token] = [str(i)]
 
-            print("tokens = " + str(time.time() - pre))
+            #print("tokens = " + str(time.time() - pre))
 
             for word, frequency in freq_table.items():
                 data.append((word, site + '/' + file, frequency, ','.join(indices[word])))
 
+    text_counts = nltk.Counter(allTokens)
+    dist_words = set(text_counts)
 
-            count = count + 1
-            if count > 100:
-                break
-
-    return [(token,) for token in remembered_tokens], data
+    return [(token,) for token in dist_words], data
 
 def get_snippets(document, indexes):
     snippets = []
@@ -133,6 +129,8 @@ def get_snippets(document, indexes):
         index = int(index)
         content = tokens[index - 3 : index + 3]
         snippets.append(' '.join(content))
+        #if len(snippets) > 4:
+        #    break
     return ' ... '.join(snippets)
 
 def format_results(query, time, results):

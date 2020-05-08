@@ -32,6 +32,8 @@ for row in manual_results:
     else:
         sub_results[document] = [(frequency, document, indexes)]
 
+print("Results found. Merging results and processing snippets...")
+
 time_taken = (time.time() - time_before) * 1000
 
 results = []

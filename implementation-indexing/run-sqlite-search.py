@@ -20,13 +20,17 @@ c = conn.cursor()
 sub_results = {}
 time_before = time.time()
 
+times = 0
 for query_word in queries:
+
+    tim_bef = time.time()
     select = "SELECT frequency, documentName, indexes " \
              "FROM Posting WHERE word = ? " \
              "ORDER BY frequency DESC " \
-             "LIMIT 10"
+             #"LIMIT 10"
 
     c.execute(select, (query_word,))
+    times += (time.time() - tim_bef)
 
     for row in c.fetchall():
         frequency, document, indexes = row[0], row[1], row[2]
@@ -35,6 +39,11 @@ for query_word in queries:
             sub_results[document].append((frequency, document, indexes))
         else:
             sub_results[document] = [(frequency, document, indexes)]
+
+print("Results found. Merging results and processing snippets...")
+#select1 = "SELECT documentName, frequency FROM Posting ORDER BY frequency DESC LIMIT 10"
+#select1 = "SELECT word, documentName, SUM(frequency) AS alt FROM Posting GROUP BY word ORDER BY alt DESC LIMIT 10"
+
 
 time_taken = (time.time() - time_before) * 1000
 
@@ -47,4 +56,4 @@ results.sort(key=lambda tup: tup[0], reverse=True)  # sorts in place
 
 print(format_results(query, time_taken, results))
 
-
+print(times)
