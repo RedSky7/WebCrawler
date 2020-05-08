@@ -37,5 +37,22 @@ Arguments for running run-extraction.py:
 -B: XPath extraction,
 -C: Automatic Web extraction.
 
+# Indexer
+
+Data indexer implemented in Python can be used to extract text from a website, process it and store it into a database. Then search can be performed using run-sqlite-search.py or run-basic-search.py with an argument of one/multiple words which returns the number of apperances and sites where it has been found.
+
+Required Python libraries:
+-time,
+-nltk,
+-lxml,
+-os,
+-argparse,
+-re,
+-sqlite3.
+
+Arguments for running run-sqlite-search.py and run-basic-search.py:
+- one or multiple words to be searched.
+
+------------------------
 Running:
-You can simply run the program preferably in PyCharm, where you can provide arguments in EditConfigurations option, or run it via python in a command prompt. Arguments required are listed above.
+You can simply run the DataExtractor and Indexer programs preferably in PyCharm, where you can provide arguments in EditConfigurations option, or run it via python in a command prompt. Arguments required are listed above.
