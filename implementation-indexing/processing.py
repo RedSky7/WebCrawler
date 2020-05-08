@@ -76,6 +76,8 @@ def index_pages():
     remembered_tokens = []
     data = []
 
+    count = 0
+
     for site in sites:
         root = '../input-indexing/' + site + "/"
         (_, _, filenames) = next(walk(root))
@@ -85,6 +87,7 @@ def index_pages():
                 html_files.append(file)
 
         for file in html_files:
+            print("file = " + file)
 
             text = get_text(get_html_content(site, file))
 
@@ -106,6 +109,12 @@ def index_pages():
 
             for word, frequency in freq_table.items():
                 data.append((word, site + '/' + file, frequency, ','.join(indices[word])))
+
+
+            count = count + 1
+            if count > 100:
+                break
+
 
     return [(token,) for token in remembered_tokens], data
 

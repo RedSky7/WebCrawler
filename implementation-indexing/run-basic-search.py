@@ -9,12 +9,18 @@ if not os.path.exists("inverted-index.db"):
 query = "trgovina"
 
 time_before = time.time()
-#TODO: Handle index_pages. TK
-index_pages()
+_, data = index_pages()
+manual_results = []
+for row in data:
+    if row[0] != query:
+        continue
+    manual_results.append((int(row[2]), row[1], row[3]))
 time_taken = (time.time() - time_before) * 1000
 
+manual_results.sort(key=lambda tup: tup[0])  # sorts in place
+
 results = []
-for row in c.fetchall():
+for row in manual_results:
     frequency, document, indexes = row[0], row[1], row[2]
     snippet = get_snippet(document, indexes.split(","))
     results.append((frequency, document, snippet))
