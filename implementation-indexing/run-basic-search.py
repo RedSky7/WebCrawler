@@ -8,8 +8,8 @@ parser.add_argument('query', metavar='T', type=str, help='query words.')
 
 args = parser.parse_args()
 
-if not os.path.exists("inverted-index.db"):
-    handle_indexing()
+#if not os.path.exists("inverted-index.db"):
+#    handle_indexing()
 
 query = args.query
 queries = query.split(" ")
@@ -41,6 +41,6 @@ for document, list in sub_results.items():
 
 results.sort(key=lambda tup: tup[0], reverse=True)  # sorts in place
 
-print(format_results(query, time_taken, results[:10]))
+print(format_results(query, time_taken, results))
 
 

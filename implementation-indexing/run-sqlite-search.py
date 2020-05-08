@@ -45,6 +45,6 @@ for document, list in sub_results.items():
 
 results.sort(key=lambda tup: tup[0], reverse=True)  # sorts in place
 
-print(format_results(query, time_taken, results[:10]))
+print(format_results(query, time_taken, results))
 
 
