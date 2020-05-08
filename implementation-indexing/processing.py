@@ -1,3 +1,5 @@
+import time
+
 import nltk
 
 #Dependencies
@@ -87,11 +89,13 @@ def index_pages():
                 html_files.append(file)
 
         for file in html_files:
-            print("file = " + file)
+            #print("file = " + file)
 
             text = get_text(get_html_content(site, file))
 
             tokens = retrieve_tokens(text)
+
+            pre = time.time()
 
             freq_table = {}
             indices = {}
@@ -107,6 +111,8 @@ def index_pages():
                     freq_table[token] = 1
                     indices[token] = [str(i)]
 
+            print("tokens = " + str(time.time() - pre))
+
             for word, frequency in freq_table.items():
                 data.append((word, site + '/' + file, frequency, ','.join(indices[word])))
 
@@ -115,10 +121,9 @@ def index_pages():
             if count > 100:
                 break
 
-
     return [(token,) for token in remembered_tokens], data
 
-def get_snippet(document, indexes):
+def get_snippets(document, indexes):
     snippets = []
     site, file = document.split("/")
     text = get_text(get_html_content(site, file))
@@ -131,12 +136,12 @@ def get_snippet(document, indexes):
 
 def format_results(query, time, results):
     head = "Results for a query: \"{}\"\n\n" \
-    "Results found in {:.0f}ms.\n\n" \
-    "Frequencies Document                                  Snippet\n" \
-    "----------- ----------------------------------------- -----------------------------------------------------------\n".format(query, time)
+    "\tResults found in {}ms.\n\n" \
+    "\tFrequencies Document                                  Snippet\n" \
+    "\t----------- ----------------------------------------- -----------------------------------------------------------\n".format(query, int(time))
     body = ''
     for frequency, document, snippet in results:
-        body += '{}\t\t\t{}\t\t\t{}\n'.format(frequency, document, snippet)
+        body += '\t{}\t\t\t{}\t\t\t{}\n'.format(frequency, document, snippet)
 
     return head + body
 
