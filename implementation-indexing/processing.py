@@ -28,66 +28,113 @@ def get_html_content(site, file):
     html_content = re.sub("<\?xml.*?\?>", "", html_content)
     return html_content
 
-conn = sqlite3.connect('inverted-index.db')
-c = conn.cursor()
+def get_text(html_content):
+    tree = html.fromstring(html_content)
+    cleaner = Cleaner(style=True, kill_tags={"nav", "footer"}, remove_unknown_tags=False)
+    tree = cleaner.clean_html(tree)
+    text = tree.body.text_content()
+    return text
 
-c.execute("CREATE TABLE IndexWord (\
-  word TEXT PRIMARY KEY\
-)")
-c.execute("CREATE TABLE Posting (\
-  word TEXT NOT NULL,\
-  documentName TEXT NOT NULL,\
-  frequency INTEGER NOT NULL,\
-  indexes TEXT NOT NULL,\
-  PRIMARY KEY(word, documentName),\
-  FOREIGN KEY (word) REFERENCES IndexWord(word)\
-)")
+def create_database():
+    conn = sqlite3.connect('inverted-index.db')
+    c = conn.cursor()
 
-sites = ['e-prostor.gov.si', 'e-uprava.gov.si', 'evem.gov.si', 'podatki.gov.si']
-remembered_tokens = []
+    c.execute("CREATE TABLE IndexWord (\
+          word TEXT PRIMARY KEY\
+        )")
+    conn.commit()
 
-for site in sites:
-    root = '../input-indexing/' + site + "/"
-    (_, _, filenames) = next(walk(root))
-    html_files = []
-    for file in filenames:
-        if file.endswith(".html"):
-            html_files.append(file)
+    c.execute("CREATE TABLE Posting (\
+          word TEXT NOT NULL,\
+          documentName TEXT NOT NULL,\
+          frequency INTEGER NOT NULL,\
+          indexes TEXT NOT NULL,\
+          PRIMARY KEY(word, documentName),\
+          FOREIGN KEY (word) REFERENCES IndexWord(word)\
+        )")
+    conn.commit()
 
-    for file in html_files:
-        print(file)
-        html_content = get_html_content(site, file)
-        tree = html.fromstring(html_content)
-        cleaner = Cleaner(style=True, kill_tags={"nav", "footer"}, remove_unknown_tags=False)
-        tree1 = cleaner.clean_html(tree)
-        text = tree.body.text_content()
-        #print(text)
 
-        tokens = retrieve_tokens(text)
+def index_pages():
+    conn = sqlite3.connect('inverted-index.db')
+    c = conn.cursor()
 
-        freq_table = {}
-        indices = {}
-        for i, token in enumerate(tokens):
-            if token not in remembered_tokens:
-                print(token)
-                insert = "INSERT INTO IndexWord VALUES ('" + token + "')"
-                c.execute(insert)
+    sites = ['e-prostor.gov.si', 'e-uprava.gov.si', 'evem.gov.si', 'podatki.gov.si']
+    remembered_tokens = []
 
-                remembered_tokens.append(token)
+    for site in sites:
+        root = '../input-indexing/' + site + "/"
+        (_, _, filenames) = next(walk(root))
+        html_files = []
+        for file in filenames:
+            if file.endswith(".html"):
+                html_files.append(file)
 
-            #https://towardsdatascience.com/text-summarization-using-tf-idf-e64a0644ace3
-            if token in freq_table:
-                freq_table[token] += 1
-                indices[token].append(str(i))
-            else:
-                freq_table[token] = 1
-                indices[token] = [str(i)]
+        for file in html_files:
 
-        #print(freq_table)
-        #print(indices)
-        for word, frequency in freq_table.items():
-            insert = "INSERT INTO Posting VALUES (%s ,%s ,%s, %s)"
-            data = (word, site + '/' + file, frequency, ','.join(indices[word]))
-            print(insert)
-            c.execute(insert, data)
+            text = get_text(get_html_content(site, file))
+
+            tokens = retrieve_tokens(text)
+            tokens_to_insert = []
+
+            freq_table = {}
+            indices = {}
+            for i, token in enumerate(tokens):
+                if token not in remembered_tokens:
+                    tokens_to_insert.append((token,))
+                    remembered_tokens.append(token)
+
+                #https://towardsdatascience.com/text-summarization-using-tf-idf-e64a0644ace3
+                if token in freq_table:
+                    freq_table[token] += 1
+                    indices[token].append(str(i))
+                else:
+                    freq_table[token] = 1
+                    indices[token] = [str(i)]
+
+            '''for word, frequency in freq_table.items():
+                data = (word, site + '/' + file, frequency, ','.join(indices[word]))
+                insert = ("INSERT INTO Posting VALUES (?, ?, ?, ?)")
+                print(insert)
+                print(data)
+                c.execute(insert, data)
+                conn.commit()'''
+
+            if len(tokens_to_insert) > 0:
+                insert = "INSERT INTO IndexWord VALUES (?)"
+                print(tokens_to_insert)
+                c.executemany(insert, tokens_to_insert)
+                conn.commit()
+
+            data = []
+            for word, frequency in freq_table.items():
+                data.append((word, site + '/' + file, frequency, ','.join(indices[word])))
+
+            print(data)
+            insert = ("INSERT INTO Posting (word, documentName, frequency, indexes) "
+                      "VALUES (?, ?, ?, ?)")
+            c.executemany(insert, data)
+            conn.commit()
+
+def get_snippet(document, indexes):
+    snippets = []
+    site, file = document.split("/")
+    text = get_text(get_html_content(site, file))
+    tokens = retrieve_tokens(text)
+    for index in indexes:
+        index = int(index)
+        content = tokens[index - 3 : index + 3]
+        snippets.append(' '.join(content))
+    return ' ... '.join(snippets)
+
+def format_results(query, time, results):
+    head = "Results for a query: \"{}\"\n\n" \
+    "Results found in {:.0f}ms.\n\n" \
+    "Frequencies Document                                  Snippet\n" \
+    "----------- ----------------------------------------- -----------------------------------------------------------\n".format(query, time)
+    body = ''
+    for frequency, document, snippet in results:
+        body += '{}\t\t\t{}\t\t\t{}\n'.format(frequency, document, snippet)
+
+    return head + body
 
