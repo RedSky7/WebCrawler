@@ -1,11 +1,10 @@
 import os
-from processing import index_pages, format_results, get_snippet, create_database
+from processing import format_results, get_snippet, handle_indexing
 import sqlite3
 import time
 
 if not os.path.exists("inverted-index.db"):
-    create_database()
-    index_pages()
+    handle_indexing()
 
 # TODO: Get real query. TK
 query = "trgovina"

@@ -1,17 +1,16 @@
 import os
-from processing import index_pages, format_results, get_snippet, create_database
-import sqlite3
+from processing import format_results, get_snippet, handle_indexing, index_pages
 import time
 
 if not os.path.exists("inverted-index.db"):
-    create_database()
-    index_pages()
+    handle_indexing()
 
 # TODO: Get real query. TK
 query = "trgovina"
 
 time_before = time.time()
-#TODO: Open sequentially.
+#TODO: Handle index_pages. TK
+index_pages()
 time_taken = (time.time() - time_before) * 1000
 
 results = []

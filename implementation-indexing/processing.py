@@ -55,12 +55,26 @@ def create_database():
     conn.commit()
 
 
-def index_pages():
+def handle_indexing():
     conn = sqlite3.connect('inverted-index.db')
     c = conn.cursor()
 
+    create_database()
+    tokens_to_insert, data = index_pages()
+
+    insert = "INSERT INTO IndexWord VALUES (?)"
+    c.executemany(insert, tokens_to_insert)
+    conn.commit()
+
+    insert = ("INSERT INTO Posting (word, documentName, frequency, indexes) "
+              "VALUES (?, ?, ?, ?)")
+    c.executemany(insert, data)
+    conn.commit()
+
+def index_pages():
     sites = ['e-prostor.gov.si', 'e-uprava.gov.si', 'evem.gov.si', 'podatki.gov.si']
     remembered_tokens = []
+    data = []
 
     for site in sites:
         root = '../input-indexing/' + site + "/"
@@ -75,13 +89,11 @@ def index_pages():
             text = get_text(get_html_content(site, file))
 
             tokens = retrieve_tokens(text)
-            tokens_to_insert = []
 
             freq_table = {}
             indices = {}
             for i, token in enumerate(tokens):
                 if token not in remembered_tokens:
-                    tokens_to_insert.append((token,))
                     remembered_tokens.append(token)
 
                 #https://towardsdatascience.com/text-summarization-using-tf-idf-e64a0644ace3
@@ -92,29 +104,10 @@ def index_pages():
                     freq_table[token] = 1
                     indices[token] = [str(i)]
 
-            '''for word, frequency in freq_table.items():
-                data = (word, site + '/' + file, frequency, ','.join(indices[word]))
-                insert = ("INSERT INTO Posting VALUES (?, ?, ?, ?)")
-                print(insert)
-                print(data)
-                c.execute(insert, data)
-                conn.commit()'''
-
-            if len(tokens_to_insert) > 0:
-                insert = "INSERT INTO IndexWord VALUES (?)"
-                print(tokens_to_insert)
-                c.executemany(insert, tokens_to_insert)
-                conn.commit()
-
-            data = []
             for word, frequency in freq_table.items():
                 data.append((word, site + '/' + file, frequency, ','.join(indices[word])))
 
-            print(data)
-            insert = ("INSERT INTO Posting (word, documentName, frequency, indexes) "
-                      "VALUES (?, ?, ?, ?)")
-            c.executemany(insert, data)
-            conn.commit()
+    return [(token,) for token in remembered_tokens], data
 
 def get_snippet(document, indexes):
     snippets = []
