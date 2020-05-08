@@ -16,9 +16,8 @@ import re
 
 def retrieve_tokens(text):
     tokens = nltk.word_tokenize(text)
-    # TODO: Maybe stem of words, remove special characters. TK
-    tokens = [re.sub("\'", "", word.lower()) for word in tokens]
-    cleaned = [word for word in tokens if word not in stop_words_slovene]
+    tokens = [(''.join(e for e in word if e.isalnum())) for word in tokens]
+    cleaned = [word.lower() for word in tokens if word.lower() not in stop_words_slovene and len(word) > 0]
     return cleaned
 
 
@@ -94,6 +93,8 @@ def index_pages():
             text = get_text(get_html_content(site, file))
 
             tokens = retrieve_tokens(text)
+
+            print(tokens)
 
             pre = time.time()
 
